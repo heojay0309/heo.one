@@ -5,10 +5,9 @@ import NavProjectBox from './NavSection/NavProjectBox';
 interface IButton {
   children: React.ReactNode;
   toggle: boolean;
-  setToggle: (val:boolean) => void;
+  setToggle: (val: boolean) => void;
 }
 const Button = ({ children, toggle, setToggle }: IButton) => {
-
   const buttonRef = useRef<HTMLDivElement>(null);
 
   const handleClickOutside = (event: MouseEvent) => {
@@ -48,7 +47,6 @@ const Button = ({ children, toggle, setToggle }: IButton) => {
       role="button"
     >
       {children}
-    
     </div>
   );
 };

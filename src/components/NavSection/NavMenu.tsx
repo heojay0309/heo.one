@@ -42,11 +42,11 @@ const NavMenu = () => {
           <span className="group-hover:opacity-80 select-none">Projects</span>
         </Button>
         <div
-          className={`absolute top-[36px] left-[-10px] bg-red-300 h-[40px] w-[120px] ${
+          className={`absolute top-[36px] left-[-16px] h-[40px] w-[128px] ${
             projectToggle
-              ? 'translate-y-[-5px] delay-75 visible'
-              : 'translate-y-[8px] collapse '
-          }  transition-transform ease-in duration-150`}
+              ? 'translate-y-[0px] visible duration-300'
+              : 'translate-y-[8px] collapse duration-150'
+          }  transition-transform ease-in`}
         >
           <NavProjectBox />
         </div>
@@ -63,23 +63,28 @@ const NavMenu = () => {
       {/* FOR MOBILE SCREENS */}
       <div className="tablet:hidden flex items-center z-30 justify-center overflow-hidden ">
         <button onClick={() => setMenuToggle(!menuToggle)}>
-          <div
-            className={`transition-all will-change-transform ease-in duration-500 delay-150`}
-          >
-            {menuToggle ? (
-              <MdClose className="select-none" />
-            ) : (
-              <MdMenu className="select-none" />
-            )}
+          <div className="relative">
+            <MdClose
+              className={`absolute select-none transition-all duration-150 ease-in-out ${
+                menuToggle ? ' visible opacity-100' : 'collapse opacity-0'
+              }`}
+            />
+            <MdMenu
+              className={` select-none transition-all duration-150 ease-in-out ${
+                !menuToggle ? 'visible opacity-100' : 'collapse opacity-0'
+              }`}
+            />
           </div>
         </button>
       </div>
       <div
         className={`absolute ${
-          menuToggle ? 'translate-y-[300px] opacity-100 flex' : ' opacity-50'
-        } transition-all ease-in z-20 w-full right-[0px] top-[-300px] duration-300 tablet:hidden`}
+          menuToggle
+            ? 'visible translate-y-[300px] opacity-100 flex'
+            : 'collapse opacity-50'
+        } transition-all ease-in z-20 w-full right-[0px] top-[-316px] duration-300 tablet:hidden`}
       >
-        <div className="w-screen h-1/5">
+        <div className="w-screen h-1/5 opacity-85">
           <NavMenuDropdown
             menuToggle={menuToggle}
             setMenuToggle={setMenuToggle}

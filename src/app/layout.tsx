@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#FDFDFD] text-[#000] relative`}>
+      <body
+        className={`${inter.className} bg-[#FDFDFD] text-[#000] relative laptop:max-w-[1440px] mx-auto h-screen`}
+      >
         <Navbar />
         {children}
         {modal}

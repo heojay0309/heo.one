@@ -8,7 +8,7 @@ const Intro = () => {
           src={'/selfie.png'}
           alt="profile"
           priority={true}
-          className="object-fill laptop:self-start self-center -z-30 tablet:z-auto"
+          className="object-fill laptop:self-start self-center tablet:z-auto"
           width={200}
           height={200}
         />
