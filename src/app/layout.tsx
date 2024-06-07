@@ -19,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} bg-[#FDFDFD] text-[#000] relative  mx-auto`}
-      >
+      <body className={`${inter.className} bg-[#FDFDFD] text-[#000] relative`}>
         <Navbar />
         {children}
         {modal}

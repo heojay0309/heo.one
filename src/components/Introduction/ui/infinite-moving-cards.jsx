@@ -106,7 +106,7 @@ export const InfiniteMovingCards = ({
               width={320}
               className="object-contain"
             />
-            <div className="opacity-0 h4 group-hover:opacity-100 delay-150 duration-300 transition-opacity text-center">
+            <div className="opacity-0 h4 group-hover:opacity-80 delay-150 duration-300 transition-opacity text-center">
               {item.title}
             </div>
           </Link>

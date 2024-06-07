@@ -15,9 +15,15 @@ const NavMenu = () => {
   const [menuToggle, setMenuToggle] = useState(false);
   const MenuIcons = ({ name, image, href }: MenuTypes) => {
     return (
-      <Link href={href} className="flex gap-[8px]">
-        <Image alt={name} height={24} width={24} src={image} />
-        <span>{name}</span>
+      <Link href={href} className="flex gap-[8px] group">
+        <Image
+          alt={name}
+          height={24}
+          width={24}
+          src={image}
+          className="group-hover:opacity-80 select-none"
+        />
+        <span className="group-hover:opacity-80 select-none">{name}</span>
       </Link>
     );
   };
@@ -31,19 +37,20 @@ const NavMenu = () => {
             alt={'Projects'}
             height={24}
             width={24}
-            className=" group-hover:opacity-80"
+            className=" group-hover:opacity-80 select-none"
           />
-          <span className="group-hover:opacity-80">Projects</span>
+          <span className="group-hover:opacity-80 select-none">Projects</span>
         </Button>
-        {projectToggle && (
-          <div
-            className={`absolute top-[36px] translate-x-[-8px] h-[40px] w-[120px] opacity-0 ${
-              projectToggle && 'opacity-100'
-            }  transition-all ease-in`}
-          >
-            <NavProjectBox />
-          </div>
-        )}
+        <div
+          className={`absolute top-[36px] left-[-10px] bg-red-300 h-[40px] w-[120px] ${
+            projectToggle
+              ? 'translate-y-[-5px] delay-75 visible'
+              : 'translate-y-[8px] collapse '
+          }  transition-transform ease-in duration-150`}
+        >
+          <NavProjectBox />
+        </div>
+
         {navMenuIcons.map((item) => (
           <MenuIcons
             name={item.name}
@@ -53,7 +60,8 @@ const NavMenu = () => {
           />
         ))}
       </div>
-      <div className="tablet:hidden flex items-center z-20 justify-center overflow-hidden ">
+      {/* FOR MOBILE SCREENS */}
+      <div className="tablet:hidden flex items-center z-30 justify-center overflow-hidden ">
         <button onClick={() => setMenuToggle(!menuToggle)}>
           <div
             className={`transition-all will-change-transform ease-in duration-500 delay-150`}
@@ -69,10 +77,13 @@ const NavMenu = () => {
       <div
         className={`absolute ${
           menuToggle ? 'translate-y-[300px] opacity-100 flex' : ' opacity-50'
-        } transition-all ease-in w-full right-[0px] top-[-300px] duration-300`}
+        } transition-all ease-in z-20 w-full right-[0px] top-[-300px] duration-300 tablet:hidden`}
       >
         <div className="w-screen h-1/5">
-          <NavMenuDropdown menuToggle={menuToggle} />
+          <NavMenuDropdown
+            menuToggle={menuToggle}
+            setMenuToggle={setMenuToggle}
+          />
         </div>
       </div>
     </>

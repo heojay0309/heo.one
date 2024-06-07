@@ -59,7 +59,13 @@ const ProjectMenu = () => {
   );
 };
 
-const NavMenuDropdown = ({ menuToggle }: { menuToggle: boolean }) => {
+const NavMenuDropdown = ({
+  menuToggle,
+  setMenuToggle,
+}: {
+  menuToggle: boolean;
+  setMenuToggle: (val: boolean) => void;
+}) => {
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
@@ -72,7 +78,9 @@ const NavMenuDropdown = ({ menuToggle }: { menuToggle: boolean }) => {
     return (
       <Link
         href={href}
-        onClick={() => console.log('hi')}
+        onClick={() => {
+          setMenuToggle(false);
+        }}
         className="flex gap-[16px] px-[32px] z-20 py-[16px] bg-[#F0F0F0] border-black border-opacity-50 hover:bg-[#D0D0D0] rounded-t-[4px] "
       >
         <Image alt={name} height={24} width={24} src={image} />

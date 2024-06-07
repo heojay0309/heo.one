@@ -5,6 +5,7 @@ export type ProjectDataType = {
   location: string;
   description: string[];
   images: string[];
+  blurHash: string[];
   url: string;
 };
 export type IProjectData = {
@@ -29,6 +30,12 @@ export const projectData: IProjectData = {
       '/projects/preps/preps3.png',
       '/projects/preps/preps4.png',
     ],
+    blurHash: [
+      'L88EY$js.mf5E1ay%gjt%0j[xva|',
+      'LE7Uo1j[?wayM{ayxvfQ%MfRRjfR',
+      'LA7xL8of?^RiInfRx]ax%0WBbJt7',
+      'LE97*8-q?wIUNGa~xujYRkIVRjxu',
+    ],
     url: 'https://www.preps-ai.com',
   },
   Giverr: {
@@ -50,6 +57,15 @@ export const projectData: IProjectData = {
       '/projects/giverr/giverr6.png',
       '/projects/giverr/giverr7.png',
     ],
+    blurHash: [
+      'LDMtXP-;*D4m_4M{tRxu00ofM|of',
+      'LFMat=-=#54m~qM{f,xv00ofkXkC',
+      'LON,-y-p5_9G?bM{s:xt00ofs*j?',
+      'LGNdUQ?b4:4T~qIUkD%M00t7xuoe',
+      'LGNdUQ?b4:4T~qIUkD%M00t7xuoe',
+      'LGNdUQ?b4:4T~qIUkD%M00t7xuoe',
+      'LGNdUQ?b4:4T~qIUkD%M00t7xuoe',
+    ],
     url: '',
   },
   Mustadd: {
@@ -69,6 +85,12 @@ export const projectData: IProjectData = {
       '/projects/mustadd/mustadd3.png',
       '/projects/mustadd/mustadd4.png',
     ],
+    blurHash: [
+      'LdF~p%t6_NRjRjWBt7of%MofRPWB',
+      'LYGI$Kt7_NRjWBRjogt7xuofV@Rj',
+      'LbF$hYxu_NRjWVRjozt7%Mt7M{Rj',
+      'LbF$hYxu_NRjWVRjozt7%Mt7M{Rj',
+    ],
     url: '',
   },
   Mellow: {
@@ -83,14 +105,20 @@ export const projectData: IProjectData = {
       'Managed variables such as feature informations and colors from the outside of the components for easier changes or updates',
     ],
     images: [
-      '/Mellow/mellow_1.png',
-      '/Mellow/mellow_2.png',
-      '/Mellow/mellow_3.png',
-      '/Mellow/mellow_4.png',
-      '/Mellow/mellow_5.png',
-      '/Mellow/mellow_6.png',
-      '/Mellow/mellow_7.png',
-      '/Mellow/mellow_8.png',
+      '/projects/mellow/mellow1.png',
+      '/projects/mellow/mellow2.png',
+      '/projects/mellow/mellow3.png',
+      '/projects/mellow/mellow4.png',
+      '/projects/mellow/mellow5.png',
+      '/projects/mellow/mellow6.png',
+    ],
+    blurHash: [
+      'LBPQEOV@00%L~qV@WXt700oz-;Rj',
+      'LBO|nZxZ00Nx~qayogjs00Nex]xC',
+      'LCPGpos:00X6~qayWXoL00W.%2n+',
+      'LBO|nZxZ00Nx~qayogjs00Nex]xC',
+      'LBO|nZxZ00Nx~qayogjs00Nex]xC',
+      'LNI5iBj[.SoL4nay-;fQ~qj[9Faz',
     ],
     url: 'https://mellow-eta.vercel.app/',
   },

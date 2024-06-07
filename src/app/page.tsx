@@ -1,11 +1,8 @@
 import Intro from '@/components/Introduction/Intro';
 import ProjectSlide from '@/components/Introduction/project/ProjectSlide';
-import Navbar from '@/components/NavSection/Nav';
-import Image from 'next/image';
-
 export default function Home() {
   return (
-    <div className="flex flex-col laptop:justify-center gap-[64px] w-full laptop:max-w-[1440px] mx-auto flex-1 min-h-[90vh]">
+    <div className="flex bg-red-300 flex-col tablet:justify-around laptop:justify-center gap-[128px] tablet:gap-[64px] laptop:gap-[128px] w-full laptop:max-w-[1440px] mx-auto flex-1 h-full">
       <Intro />
       <ProjectSlide />
     </div>

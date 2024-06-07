@@ -5,7 +5,7 @@ import { IoMdMenu } from 'react-icons/io';
 
 const Navbar = () => {
   return (
-    <nav className="h3 flex justify-between items-center bg-inherit laptop:max-w-[1440px] mx-auto max-h-[64px] tablet:px-[64px] px-[32px] py-[32px] z-10">
+    <nav className="h3 flex h-full justify-between items-center bg-inherit laptop:max-w-[1440px] mx-auto max-h-[64px] tablet:px-[64px] px-[32px] py-[32px] z-10">
       <Link href="/" className="hover:opacity-80 ">
         <span>Jay Heo</span>
       </Link>
