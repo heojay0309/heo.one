@@ -18,7 +18,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="modal-backdrop">
+    <div className="modal-backdrop w-screen min-w-screen mx-auto">
       <div className="laptop:max-w-[1440px] mx-auto tablet:px-[64px] px-[32px] w-full relative">
         <dialog
           ref={dialogRef}

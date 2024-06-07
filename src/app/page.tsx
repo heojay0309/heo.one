@@ -2,7 +2,7 @@ import Intro from '@/components/Introduction/Intro';
 import ProjectSlide from '@/components/Introduction/project/ProjectSlide';
 export default function Home() {
   return (
-    <div className="flex py-[64px] flex-col tablet:justify-around laptop:justify-center gap-[128px] tablet:gap-[64px] laptop:gap-[128px] w-full laptop:max-w-[1440px] mx-auto flex-1 max-h-screen">
+    <div className="flex flex-col justify-center tablet:gap-[64px] max-w-[1440px] w-full  gap-[32px] bg-white">
       <Intro />
       <ProjectSlide />
     </div>

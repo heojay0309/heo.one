@@ -20,12 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-[#FDFDFD] text-[#000] relative laptop:max-w-[1440px] mx-auto h-screen`}
+        className={`${inter.className}  text-white pb-[44px] relative min-h-[100svh] min-w-[100wh] h-[100svh] bg-[#F0F0F0]`}
       >
         <Navbar />
-        {children}
+        <div className="flex-1 h-full w-full flex justify-center bg-black ">
+          {children}
+        </div>
         {modal}
-        {/* <div id="modal-root" /> */}
       </body>
     </html>
   );

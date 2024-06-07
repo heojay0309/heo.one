@@ -43,7 +43,7 @@ const Button = ({ children, toggle, setToggle }: IButton) => {
     <div
       ref={buttonRef}
       onClick={() => setToggle(!toggle)}
-      className="flex gap-[8px] relative group"
+      className="flex items-center gap-[8px] relative group opacity-80"
       role="button"
     >
       {children}

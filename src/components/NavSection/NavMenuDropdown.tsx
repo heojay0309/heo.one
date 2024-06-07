@@ -81,7 +81,7 @@ const NavMenuDropdown = ({
         onClick={() => {
           setMenuToggle(false);
         }}
-        className="flex gap-[16px] px-[32px] z-20 py-[16px] bg-[#F0F0F0] border-black border-opacity-50 hover:bg-[#D0D0D0]"
+        className="flex gap-[16px] px-[32px] z-20 py-[16px] bg-opacity-5 rounded-[8px] bg-black hover:bg-opacity-20"
       >
         <Image alt={name} height={24} width={24} src={image} />
         <span>{name}</span>
@@ -90,7 +90,7 @@ const NavMenuDropdown = ({
   };
 
   return (
-    <div className="pt-[64px] h-full flex flex-col border-black border-opacity-50 h4">
+    <div className="h-full flex flex-col h4 ">
       {navMenuIcons.map((item) => (
         <MenuIcons
           name={item.name}
@@ -104,11 +104,11 @@ const NavMenuDropdown = ({
           console.log('button');
           setToggle(!toggle);
         }}
-        className="relative bg-[#F0F0F0]"
+        className="relative"
       >
         <div
-          className={`flex gap-[16px]  w-full z-10 px-[32px] py-[16px] border-black border-opacity-50 hover:bg-black hover:bg-opacity-10 ${
-            toggle ? 'bg-[#D0D0D0]' : ''
+          className={`flex gap-[16px] w-full bg-black z-10 px-[32px] py-[16px] hover:bg-opacity-20 ${
+            toggle ? 'bg-opacity-20' : 'bg-opacity-5'
           }`}
         >
           <Image
@@ -122,8 +122,8 @@ const NavMenuDropdown = ({
         </div>
         <div
           className={`${
-            toggle ? 'translate-y-[224px] -z-20' : ''
-          } flex-col absolute w-full top-[-168px] rounded-b-[4px] bg-[#F0F0F0] -z-30 pl-[60px] gap-[16px] duration-300 ease-in-out transition-all`}
+            toggle ? 'translate-y-[224px] -z-20 visible' : 'collapse'
+          } flex-col absolute w-full top-[-168px] rounded-b-[4px] bg-opacity-5 bg-black -z-30 pl-[60px] gap-[16px] duration-300 ease-in-out transition-all`}
         >
           <ProjectMenu />
         </div>
