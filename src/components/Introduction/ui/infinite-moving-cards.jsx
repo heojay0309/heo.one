@@ -84,7 +84,7 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          ' flex min-w-full h-full shrink-0 gap-[32px] w-max flex-nowrap rounded-[16px]',
+          ' flex min-w-full shrink-0 gap-[8px] tablet:gap-[16px] w-max flex-nowrap rounded-[16px]',
           start && 'animate-scroll',
           pauseOnHover && 'hover:[animation-play-state:paused]'
         )}
@@ -97,7 +97,7 @@ export const InfiniteMovingCards = ({
               router.push(`/projects/${item.title}`);
             }}
             key={idx}
-            className="w-[400px] h-full group items-center justify-center hover:bg-black hover:bg-opacity-5 transition-all delay-150 rounded-[16px] max-w-full relative p-[16px] flex flex-col"
+            className="tablet:w-[400px] w-[360px] h-[240px] tablet:h-[320px] group items-center justify-center gap-[8px] bg-[#D9D9D9] bg-opacity-90 hover:bg-opacity-40 transition-all delay-150 rounded-[16px] relative py-[16px] flex flex-col"
           >
             <Image
               src={item.src}

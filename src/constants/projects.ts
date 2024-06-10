@@ -150,3 +150,15 @@ export const projectImages = [
     href: '/projects/Giverr',
   },
 ];
+
+export interface Navigations {
+  RESUME: string[];
+  PROFILES: string[];
+  PROJECTS: string[];
+}
+
+export const navigations: Navigations = {
+  RESUME: [],
+  PROFILES: ['LINKEDIN', 'GITHUB'],
+  PROJECTS: ['MELLOW', 'PREPS', 'MUSTADD', 'GIVERR'],
+};

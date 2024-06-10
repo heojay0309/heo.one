@@ -3,7 +3,7 @@ import { InfiniteMovingCards } from '@/components/Introduction/ui/infinite-movin
 
 const ProjectSlide = () => {
   return (
-    <div className="flex flex-col h-full items-center justify-start relative overflow-hidden py-[32px] laptop:py-[64px] bg-black">
+    <div className="flex flex-col items-center justify-start relative ">
       <InfiniteMovingCards
         items={projectImages}
         className="bg-inherit"
