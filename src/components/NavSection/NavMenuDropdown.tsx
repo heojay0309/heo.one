@@ -101,7 +101,6 @@ const NavMenuDropdown = ({
       ))}
       <button
         onClick={() => {
-          console.log('button');
           setToggle(!toggle);
         }}
         className="relative"
