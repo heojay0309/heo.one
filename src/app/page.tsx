@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <div className="grid laptop:grid-flow-col grid-flow-row laptop:grid-rows-4 laptop:grid-cols-6 tablet:grid-rows-5 tablet:grid-cols-4 grid-cols-4 tablet:gap-[32px] gap-[16px] h-full">
       <Vote />
-      {/* <div className="hidden laptop:inline-grid col-span-1 row-span-2"> */}
       <WorkTimeline mobileHidden />
       <Profile
         name={'LinkedIn'}
@@ -17,7 +16,6 @@ export default function Home() {
         orderTablet={1}
         mobileHidden
       />
-
       <Profile
         name={'GitHub'}
         order={2}

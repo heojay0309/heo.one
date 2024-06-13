@@ -11,11 +11,8 @@ const NavDrop = () => {
     <div className=" flex flex-col font-[600] text-[12px] text-center leading-[20px] tracking-[0.12em] gap-[4px] ">
       {Object.keys(navigations).map((el, index: number) => {
         return (
-          <>
-            <div
-              key={index}
-              className="flex gap-[8px] justify-end items-start text-white text-opacity-80 hover:text-opacity-90 active:text-opacity-100"
-            >
+          <div key={index} className="flex flex-col ">
+            <div className="flex gap-[8px] justify-end items-start text-white text-opacity-80 hover:text-opacity-90 active:text-opacity-100">
               {el}
               <Image
                 src={'/etc/dropdown_arrow.svg'}
@@ -44,7 +41,7 @@ const NavDrop = () => {
                 );
               }
             )}
-          </>
+          </div>
         );
       })}
     </div>
