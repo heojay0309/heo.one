@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Scrollbar styles for WebKit browsers */
+::-webkit-scrollbar {
+  width: 1px; /* Width of the scrollbar */
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Roundness of the thumb */
+  /* background-clip: content-box; Clipping to prevent thumb from being too big */
+  height: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Color of the track */
+  border-radius: 1px; /* Roundness of the track */
+  height: 150px;
+}
+
+.custom-scrollbar {
+  width: 1px;
+  height: 150px;
+}
+/* background: transparent; */
+
+.custom-scrollbar-thumb {
+  width: 100%;
+  height: 150px;
+  background: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .h1 {
   @apply font-semibold text-h1 leading-h1;
 }

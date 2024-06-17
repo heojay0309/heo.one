@@ -50,8 +50,8 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
         start={4}
       />
       <Card type={'description'}>
-        <div className="flex flex-row h-full overflow-y-scroll w-full tablet:pl-[88px] tablet:pr-[32px] pr-[8px] pl-[64px] tablet:py-[32px] pt-[8px] pb-[0px] gap-[16px]">
-          <div className="flex flex-col items-center h-full gap-[16px] overflow-y-scroll">
+        <div className="flex scroll-smooth relative flex-row h-full w-full pr-[16px] overflow-y-scroll  gap-[16px]">
+          <div className="flex flex-col  items-center h-full  pr-[16px] gap-[16px]">
             <div className="flex flex-col items-center gap-[16px]">
               <Image
                 src={`/projectSlides/${'Preps'}.png`}
@@ -87,14 +87,19 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
               consectetur, ultrices mauris.
             </div>
           </div>
-          <div className="flex flex-col w-full gap-[16px] items-center">
+          <div className="flex flex-col bg-red-300 overflow-visible relative h-full gap-[16px]  max-w-[40px] w-full justify-start items-center">
             <Image
               src={'/etc/close.svg'}
               alt={'close'}
               width={40}
               height={40}
+              className="absolute top-0"
             />
-            <div className="border-r h-[150px]" />
+            <div className="sticky custom-scrollbar group top-[56px] bg-red-300">
+              <div
+                className={` custom-scrollbar-thumb will-change-scroll`}
+              ></div>
+            </div>
           </div>
         </div>
       </Card>
