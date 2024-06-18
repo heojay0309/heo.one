@@ -9,12 +9,16 @@ const ProjectWrapper = ({
   orderMobile,
   orderTablet,
   start,
+  src,
+  mobileSrc,
 }: {
   label: string;
   order: number;
   orderMobile: number;
   orderTablet: number;
   start?: number;
+  src?: string;
+  mobileSrc?: string;
 }) => {
   const router = useRouter();
   return (

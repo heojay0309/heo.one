@@ -79,24 +79,32 @@ export default function Home() {
         order={1}
         orderMobile={15}
         orderTablet={3}
+        src="/projectIcons/project_Preps.svg"
+        mobileSrc="/projectSlides/Preps.png"
       />
       <ProjectWrapper
         label={'Mellow'}
         order={2}
         orderMobile={19}
         orderTablet={4}
+        src="/projectIcons/project_Mellow.svg"
+        mobileSrc="/projectSlides/Mellow.png"
       />
       <ProjectWrapper
         label={'Mustadd'}
         order={3}
         orderMobile={23}
         orderTablet={3}
+        src="/projectIcons/project_Mustadd.svg"
+        mobileSrc="/projectSlides/Mustadd.png"
       />
       <ProjectWrapper
         label={'Giverr'}
         order={4}
         orderMobile={27}
         orderTablet={4}
+        src="/projectIcons/project_Giverr.svg"
+        mobileSrc="/projectSlides/Giverr.png"
       />
     </div>
   );
