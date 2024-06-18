@@ -55,7 +55,7 @@ const ProjectWrapper = ({
             alt={label}
             height={40}
             width={40}
-            className="tablet:hidden"
+            className="tablet:hidden "
           />
           <div className="laptop:w-full laptop:flex-1 self-center font-bold laptop:text-[16px] tablet:text-[14px] laptop:leading-[24px] leading-[16px] flex laptop:gap-[16px] gap-[8px] w-full justify-between text-white text-opacity-80">
             {label}
