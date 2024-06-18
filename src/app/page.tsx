@@ -1,6 +1,5 @@
 import Intro from '@/components/Introduction/Intro';
 import Vote from '@/components/Vote';
-import ProjectSlide from '@/components/Introduction/project/ProjectSlide';
 import Profile from '@/components/wrapper/Profile';
 import ProjectWrapper from '@/components/wrapper/ProjectWrapper';
 import WorkTimeline from '@/components/WorkTimeline';
@@ -14,6 +13,7 @@ export default function Home() {
         order={4}
         orderMobile={1}
         orderTablet={1}
+        link={'https://www.linkedin.com/in/heo'}
         mobileHidden
       />
       <Profile
@@ -22,6 +22,7 @@ export default function Home() {
         orderMobile={2}
         orderTablet={2}
         mobileHidden
+        link={'https://www.github.com/heojay0309'}
       />
       <Profile
         name={'Resume'}
@@ -29,6 +30,7 @@ export default function Home() {
         orderMobile={3}
         orderTablet={3}
         mobileHidden
+        link={'/resume'}
       />
       <Profile
         name={'Email'}
@@ -36,6 +38,7 @@ export default function Home() {
         orderMobile={4}
         orderTablet={4}
         mobileHidden
+        link={'mailto:heojay0309@gmail.com'}
       />
       <Intro />
       <Profile
@@ -44,6 +47,7 @@ export default function Home() {
         orderMobile={1}
         orderTablet={1}
         hidden
+        link={'https://www.linkedin.com/in/heo'}
       />
       <Profile
         name={'GitHub'}
@@ -51,6 +55,7 @@ export default function Home() {
         orderMobile={4}
         orderTablet={4}
         hidden
+        link={'https://www.github.com/heojay0309'}
       />
       <Profile
         name={'Resume'}
@@ -58,6 +63,7 @@ export default function Home() {
         orderMobile={2}
         orderTablet={2}
         hidden
+        link={'/resume'}
       />
       <Profile
         name={'Email'}
@@ -65,6 +71,7 @@ export default function Home() {
         orderMobile={3}
         orderTablet={3}
         hidden
+        link={'mailto:heojay0309@gmail.com'}
       />
       <WorkTimeline hidden />
       <ProjectWrapper

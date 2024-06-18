@@ -18,6 +18,7 @@ export const projectData: IProjectData = {
     yearsWorked: '2023 - Present',
     location: 'Los Angeles, CA',
     description: [
+      'Preps is an AI powered mock interview simulator specifically for software engineers.',
       'AI-powered mock interview simulator for technical interview preps',
       'Designed and developed the beta version of our product’s main feature of communicating with our AI interviewer in real-time as well as sending and receiving the coding part of the interview',
       'Leveraged Next.js’s server-side rendering for optimized render time and minimize the latency in order to stay on par with other big tech competitors',

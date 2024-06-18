@@ -11,7 +11,7 @@
   background-color: #ffffff; /* Color of the scrollbar thumb */
   border-radius: 6px; /* Roundness of the thumb */
   /* background-clip: content-box; Clipping to prevent thumb from being too big */
-  height: 50px;
+  height: 150px;
 }
 
 ::-webkit-scrollbar-track {
@@ -20,16 +20,54 @@
   height: 150px;
 }
 
-.custom-scrollbar {
+/* .custom-scrollbar {
   width: 1px;
   height: 150px;
 }
-/* background: transparent; */
 
 .custom-scrollbar-thumb {
   width: 100%;
   height: 150px;
   background: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+} */
+
+.scrollContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.content {
+  height: 100%;
+  padding-right: 20px;
+  overflow-y: scroll;
+}
+
+/* Hide the default scrollbar */
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.customScrollbar {
+  width: 40px;
+  height: 100%;
+  background: transparent;
+}
+
+.customScrollbarThumb {
+  position: absolute;
+  width: 1px;
+  height: 150px;
+  /* background: #888; */
   border-radius: 6px;
   cursor: pointer;
 }
@@ -77,17 +115,6 @@
   height: 900px;
 }
 
-.scroll-container {
-  overflow-y: auto;
-  height: 400vh; /* or whatever height you need */
-  position: relative;
-}
-.scroll-container-horizontal {
-  overflow-x: auto;
-  width: 400vw;
-  position: relative;
-}
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -117,11 +144,6 @@ body {
     text-wrap: balance;
   }
 } */
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
 
 .modal-backdrop {
   position: absolute;

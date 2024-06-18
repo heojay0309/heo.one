@@ -17,6 +17,7 @@ const Resume = () => {
         fileUrl={'/resume/Jay_Resume.pdf'}
         plugins={[defaultLayoutPluginInstance]}
         viewMode={ViewMode.SinglePage}
+        theme={'dark'}
         defaultScale={1}
       />
     </Worker>

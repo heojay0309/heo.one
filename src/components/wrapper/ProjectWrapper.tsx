@@ -1,5 +1,7 @@
+'use client';
 import Image from 'next/image';
 import Card from './Card';
+import { useRouter } from 'next/navigation';
 
 const ProjectWrapper = ({
   label,
@@ -14,8 +16,11 @@ const ProjectWrapper = ({
   orderTablet: number;
   start?: number;
 }) => {
+  const router = useRouter();
   return (
     <div
+      role="button"
+      onClick={() => router.push(`/${label}`)}
       className={`${
         start
           ? `laptop:row-start-${start} laptop:col-start-1 row-start-1 col-start-${start}`
