@@ -17,16 +17,16 @@ export type ProjectDataType = {
   url: string;
 };
 export type IProjectData = {
-  [key in 'Preps' | 'Giverr' | 'Mustadd' | 'Mellow']: ProjectDataType;
+  [key in 'preps' | 'giverr' | 'mustadd' | 'mellow']: ProjectDataType;
 };
 
 const ProjectCard = ({ name }: { name: keyof IProjectData }) => {
   return (
     <Card type={'description'}>
       {/* <div className="flex relative flex-row h-full w-full pr-4 overflow-y-scroll gap-4"> */}
-      <div className="flex scroll-smooth relative flex-row h-full w-full pr-[16px] gap-[16px]">
+      <div className="flex scroll-smooth relative flex-row h-full w-full pr-[16px] justify-center gap-[16px]">
         <CustomScrollbar>
-          <div className="flex flex-col  items-center h-full  pr-[16px] gap-[16px]">
+          <div className="flex flex-col  items-center h-full pr-[16px] gap-[16px]">
             <div className="flex flex-col items-center gap-[16px]">
               <Image
                 src={`/projectSlides/${name}.png`}

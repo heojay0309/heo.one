@@ -55,7 +55,7 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
         src="/projectIcons/project_giverr.svg"
         mobileSrc="/projectSlides/giverr.png"
       />
-      <ProjectCard name={project} />
+      <ProjectCard name={project.toLowerCase()} />
     </div>
   );
 };

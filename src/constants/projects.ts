@@ -9,10 +9,10 @@ export type ProjectDataType = {
   url: string;
 };
 export type IProjectData = {
-  [key in 'Preps' | 'Giverr' | 'Mustadd' | 'Mellow']: ProjectDataType;
+  [key in 'preps' | 'giverr' | 'mustadd' | 'mellow']: ProjectDataType;
 };
 export const projectData: IProjectData = {
-  Preps: {
+  preps: {
     projectName: 'Preps',
     position: 'Co-Founder & Lead Frontend Developer',
     yearsWorked: '2023 - Present',
@@ -39,7 +39,7 @@ export const projectData: IProjectData = {
     ],
     url: 'https://www.preps-ai.com',
   },
-  Giverr: {
+  giverr: {
     projectName: 'Giverr',
     position: 'Frontend Developer',
     yearsWorked: 'Aug 2023 - Present',
@@ -69,7 +69,7 @@ export const projectData: IProjectData = {
     ],
     url: '',
   },
-  Mustadd: {
+  mustadd: {
     projectName: 'Mustadd',
     position: 'Frontend Developer',
     yearsWorked: 'Aug 2022 - Aug 2023',
@@ -94,7 +94,7 @@ export const projectData: IProjectData = {
     ],
     url: '',
   },
-  Mellow: {
+  mellow: {
     projectName: 'Mellow',
     position: 'Frontend Developer',
     yearsWorked: 'Aug 2023',
