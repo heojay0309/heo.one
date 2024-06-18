@@ -17,8 +17,8 @@ const ProjectWrapper = ({
   orderMobile: number;
   orderTablet: number;
   start?: number;
-  src?: string;
-  mobileSrc?: string;
+  src: string;
+  mobileSrc: string;
 }) => {
   const router = useRouter();
   return (
@@ -44,14 +44,14 @@ const ProjectWrapper = ({
           } laptop:flex-row tablet:flex-col justify-center self-center laptop:gap-[16px] gap-[8px] items-center laptop:p-[32px] p-[16px]  relative`}
         >
           <Image
-            src={`/projectSlides/${label}.png`}
+            src={mobileSrc}
             alt={label}
             height={128}
             width={128}
             className="object-contain laptop:h-[128px] tablet:h-[96px] w-[128px] tablet:flex hidden"
           />
           <Image
-            src={`/projectIcons/project_${label}.svg`}
+            src={src}
             alt={label}
             height={40}
             width={40}
