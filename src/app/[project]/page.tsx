@@ -9,13 +9,15 @@ type ParamsType = {
   project: 'Preps' | 'Giverr' | 'Mustadd' | 'Mellow';
 };
 
+type CurrentProjectType = 'preps' | 'giverr' | 'mustadd' | 'mellow';
+
 interface IProjectPageProps {
   params: ParamsType;
 }
 
 const ProjectPage = ({ params }: IProjectPageProps) => {
   const { project } = params;
-  const currentProject = projectData[`${project}`];
+  const currentProject = project.toLowerCase() as CurrentProjectType;
 
   return (
     <div className="grid laptop:grid-flow-col grid-flow-row laptop:grid-rows-4 laptop:grid-cols-6 tablet:grid-rows-5 tablet:grid-cols-4 grid-cols-4 tablet:gap-[32px] gap-[16px] h-full">
@@ -55,7 +57,7 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
         src="/projectIcons/project_giverr.svg"
         mobileSrc="/projectSlides/giverr.png"
       />
-      <ProjectCard name={project.toLowerCase()} />
+      <ProjectCard name={currentProject} />
     </div>
   );
 };

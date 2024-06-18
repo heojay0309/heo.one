@@ -1,24 +1,8 @@
 'use client';
 import Image from 'next/image';
-import ProjectDetails from '@/components/ProjectInfo/ProjectDetails';
 import Card from '@/components/wrapper/Card';
-import Link from 'next/link';
-import { useEffect, useRef } from 'react';
 import CustomScrollbar from './CustomScrollbar';
-import { projectData } from '@/constants/projects';
-export type ProjectDataType = {
-  projectName: string;
-  position: string;
-  yearsWorked: string;
-  location: string;
-  description: string[];
-  images: string[];
-  blurHash: string[];
-  url: string;
-};
-export type IProjectData = {
-  [key in 'preps' | 'giverr' | 'mustadd' | 'mellow']: ProjectDataType;
-};
+import { projectData, IProjectData } from '@/constants/projects';
 
 const ProjectCard = ({ name }: { name: keyof IProjectData }) => {
   return (

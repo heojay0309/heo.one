@@ -8,9 +8,11 @@ export type ProjectDataType = {
   blurHash: string[];
   url: string;
 };
+
 export type IProjectData = {
   [key in 'preps' | 'giverr' | 'mustadd' | 'mellow']: ProjectDataType;
 };
+
 export const projectData: IProjectData = {
   preps: {
     projectName: 'Preps',
