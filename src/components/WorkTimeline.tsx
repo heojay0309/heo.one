@@ -51,15 +51,15 @@ const WorkTimeline = ({
           : ''
       } ${mobileHidden ? 'hidden laptop:flex' : ''}`}
     >
-      <div className="flex flex-col justify-center gap-[16px] h-full py-[32px]">
+      <div className="flex flex-col justify-center gap-[16px] py-[32px]">
         {Object.keys(timeline).map((time, index) => {
           return (
-            <>
-              <div
-                className="flex justify-between gap-[11px] items-center relative"
-                key={index}
-              >
-                <div className="flex flex-col opacity-80 ">
+            <div
+              key={index}
+              className="flex flex-col justify-between gap-[8px] items-center relative"
+            >
+              <div className="flex justify-between gap-[11px] items-center ">
+                <div className="flex flex-col opacity-80">
                   <div className="text-[8px] leading-[12px]">
                     {timeline[time].month}
                   </div>
@@ -68,10 +68,10 @@ const WorkTimeline = ({
                     {timeline[time].year}
                   </div>
                 </div>
-                <div className="w-[16px] h-[16px] rounded-full border-white border flex relative items-center justify-center">
+                <div className="w-[16px] h-[16px] rounded-full border-white border flex  relative items-center justify-center">
                   <div className="w-[12px] h-[12px] rounded-full bg-white opacity-40"></div>
                 </div>
-                <div className="text-[12px] leading-[16px] ">
+                <div className="text-[12px] leading-[16px]">
                   {time} <br />
                   <span className=" whitespace-nowrap text-[8px] leading-[12px]">
                     {timeline[time].title}
@@ -79,9 +79,9 @@ const WorkTimeline = ({
                 </div>
               </div>
               {index !== Object.keys(timeline).length - 1 && (
-                <div className="border-l h-[16px] self-center border-white border-opacity-10"></div>
+                <div className="border-l h-[16px] absolute w-full bottom-[-16px] left-[31.5%] border-white border-opacity-10" />
               )}
-            </>
+            </div>
           );
         })}
       </div>

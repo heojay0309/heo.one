@@ -29,28 +29,28 @@ const ProjectWrapper = ({
       onClick={() => router.push(`/${label}`)}
       className={`${
         start
-          ? `laptop:row-start-${start} laptop:col-start-1 col-start-${start}`
+          ? `laptop:row-start-${start}  laptop:col-start-1 col-start-${start}`
           : 'laptop:col-start-5'
-      } tablet:gap-[32px] gap-[8px] tablet:flex-col laptop:flex-row flex laptop:col-span-2 laptop:grid-flow-col tablet:col-span-1 col-span-2 row-span-1 `}
+      } tablet:gap-[32px] gap-[8px] tablet:flex-col laptop:flex-row flex laptop:col-span-2 laptop:grid-flow-col tablet:col-span-1 col-span-2 row-span-1`}
     >
       <Card
         order={order}
         orderMobile={orderMobile}
         orderTablet={orderTablet}
         type="projects"
-        className="w-full h-full"
+        className="w-full h-full hover:bg-opacity-20 active:bg-opacity-40"
       >
         <div
-          className={`w-full h-full flex-1 flex ${
+          className={`w-full h-full  flex ${
             start ? 'flex-col' : 'flex-row'
-          } laptop:flex-row tablet:flex-col justify-center self-center tablet:gap-[16px] gap-[8px] items-center laptop:p-[32px] tablet:p-[16px] p-[8px] relative`}
+          } laptop:flex-row tablet:flex-col justify-center laptop:gap-[16px] gap-[8px] items-center p-[16px]  relative`}
         >
           <Image
             src={mobileSrc}
             alt={label}
             height={128}
             width={128}
-            className="object-contain laptop:h-[128px] tablet:h-[96px] w-[128px] tablet:flex hidden"
+            className="object-contain tablet:p-[8px] laptop:h-[128px] tablet:h-[96px] w-[128px] tablet:flex hidden"
           />
           <Image
             src={src}
@@ -59,7 +59,11 @@ const ProjectWrapper = ({
             width={40}
             className="tablet:hidden object-contain"
           />
-          <div className="laptop:flex-1 w-full self-center font-bold laptop:text-[16px] tracking-[0em] tablet:text-[14px] laptop:leading-[24px] leading-[16px] flex laptop:gap-[16px] gap-[8px] tablet:justify-between justify-center text-white text-opacity-80 ">
+          <div
+            className={`${
+              hideArrow ? '' : 'flex-1'
+            } tablet:flex-auto tablet:w-full self-center font-bold laptop:text-[16px] tracking-[0em] tablet:text-[14px] laptop:leading-[24px] leading-[16px] flex laptop:gap-[16px] gap-[8px] justify-between  text-white text-opacity-80 laptop:px-[32px] px-[16px] `}
+          >
             {label}
             <Image
               src={'/etc/rightArrow.svg'}
@@ -67,7 +71,7 @@ const ProjectWrapper = ({
               height={16}
               width={8}
               className={`${
-                hideArrow ? 'hidden tablet:block ' : 'block'
+                hideArrow ? 'hidden tablet:block' : 'block'
               } self-center`}
             />
           </div>

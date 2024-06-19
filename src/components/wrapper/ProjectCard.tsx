@@ -7,7 +7,6 @@ import { projectData, IProjectData } from '@/constants/projects';
 const ProjectCard = ({ name }: { name: keyof IProjectData }) => {
   return (
     <Card type={'description'} className="pb-[40px]">
-      {/* <div className="flex relative flex-row h-full w-full pr-4 overflow-y-scroll gap-4"> */}
       <div className="flex scroll-smooth relative flex-row h-full w-full pr-[16px] justify-center gap-[16px]">
         <CustomScrollbar>
           <div className="flex flex-col items-center h-full pr-[16px] gap-[16px]">

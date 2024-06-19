@@ -32,7 +32,7 @@ const Profile = ({
         order={order}
         orderMobile={orderMobile}
         orderTablet={orderTablet}
-        className="h-full w-full"
+        className="h-full w-full hover:bg-opacity-20 active:bg-opacity-40"
       >
         <div
           className={`flex flex-col gap-[16px] tracking-[0.12em] items-center p-[16px]`}

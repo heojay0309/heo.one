@@ -22,8 +22,8 @@ const Card = ({
   className,
 }: ICardProps) => {
   const gridDictionary = {
-    one: 'row-span-1 col-span-1',
-    main: 'row-span-2 laptop:col-span-3 col-span-4',
+    one: 'row-span-1 col-span-1 hover:bg-opacity-80',
+    main: 'row-span-2 laptop:col-span-3 col-span-4 ',
     projects: 'row-span-1 laptop:col-span-2 tablet:col-span-1 col-span-2',
     timeline: 'row-span-2 laptop:col-span-1 col-span-2',
     description:
@@ -41,14 +41,6 @@ const Card = ({
         orderMobile ? `mobile:order-${orderMobile}` : '',
         className || ''
       )}
-      // className={cn(
-      //   'bg-white bg-opacity-10 border border-white border-opacity-10 flex items-center justify-center rounded-[8px]  tracking-[0.12em]',
-      //   (type === 'timeline' && gridDictionary['timeline']) ||
-      //     (type === 'main' && gridDictionary['main']) ||
-      //     (type === 'projects' && gridDictionary['projects']),
-      //   empty ? 'invisible' : 'visible',
-      //   className || ''
-      // )}
     >
       {children}
     </div>
