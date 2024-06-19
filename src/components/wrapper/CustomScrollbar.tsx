@@ -72,13 +72,13 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ children }) => {
     <div className={''}>
       <Link
         href={'/'}
-        className=" h-10 w-10 absolute top-0 tablet:right-[16px] right-[8px]"
+        className="h-10 w-10 absolute top-0 tablet:right-[16px] right-[8px]"
       >
         <Image src={'/etc/close.svg'} alt={'close'} width={40} height={40} />
       </Link>
       <div
         className={
-          'customScrollbar flex flex-col tablet:gap-[16px] gap-[8px] items-center absolute tablet:top-[48px] top-[24px] tablet:right-[16px] right-[8px]'
+          'customScrollbar flex flex-col tablet:gap-[16px] gap-[8px] items-center absolute top-[48px] tablet:right-[16px] right-[8px]'
         }
       >
         <div

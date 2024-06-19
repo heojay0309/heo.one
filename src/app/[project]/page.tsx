@@ -20,7 +20,7 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
   const currentProject = project.toLowerCase() as CurrentProjectType;
 
   return (
-    <div className="grid laptop:grid-flow-col grid-flow-row laptop:grid-rows-4 laptop:grid-cols-6 tablet:grid-rows-5 tablet:grid-cols-4 grid-cols-4 tablet:gap-[32px] gap-[16px] h-full">
+    <div className="grid laptop:grid-flow-col grid-flow-row laptop:grid-rows-4 laptop:grid-cols-6 tablet:grid-rows-5  tablet:grid-cols-4 grid-cols-8 grid-rows-5 tablet:gap-[32px] gap-[16px] h-full">
       <ProjectWrapper
         label={'Preps'}
         order={1}
@@ -29,6 +29,7 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
         start={1}
         src="/projectIcons/project_preps.svg"
         mobileSrc="/projectSlides/preps.png"
+        hideArrow
       />
       <ProjectWrapper
         label={'Mellow'}
@@ -38,6 +39,7 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
         start={2}
         src="/projectIcons/project_mellow.svg"
         mobileSrc="/projectSlides/mellow.png"
+        hideArrow
       />
       <ProjectWrapper
         label={'Mustadd'}
@@ -47,6 +49,7 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
         start={3}
         src="/projectIcons/project_mustadd.svg"
         mobileSrc="/projectSlides/mustadd.png"
+        hideArrow
       />
       <ProjectWrapper
         label={'Giverr'}
@@ -56,6 +59,7 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
         start={4}
         src="/projectIcons/project_giverr.svg"
         mobileSrc="/projectSlides/giverr.png"
+        hideArrow
       />
       <ProjectCard name={currentProject} />
     </div>
