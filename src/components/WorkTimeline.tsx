@@ -51,14 +51,14 @@ const WorkTimeline = ({
           : ''
       } ${mobileHidden ? 'hidden laptop:flex' : ''}`}
     >
-      <div className="flex flex-col justify-center gap-[16px] py-[32px]">
+      <div className="flex flex-col tablet:gap-[8px] gap-[8px] justify-center h-full">
         {Object.keys(timeline).map((time, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col justify-between gap-[8px] items-center relative"
+              className="flex flex-col relative justify-center items-center"
             >
-              <div className="flex justify-between gap-[11px] items-center ">
+              <div className="flex justify-between gap-[11px] items-center">
                 <div className="flex flex-col opacity-80">
                   <div className="text-[8px] leading-[12px]">
                     {timeline[time].month}
@@ -78,9 +78,13 @@ const WorkTimeline = ({
                   </span>
                 </div>
               </div>
-              {index !== Object.keys(timeline).length - 1 && (
-                <div className="border-l h-[16px] absolute w-full bottom-[-16px] left-[31.5%] border-white border-opacity-10" />
-              )}
+              <div
+                className={`${
+                  index !== Object.keys(timeline).length - 1
+                    ? 'border-l'
+                    : 'hidden'
+                } w-[64px] pl-[32px] tablet:h-[16px] h-[16px] border-white border-opacity-10 `}
+              ></div>
             </div>
           );
         })}
