@@ -22,7 +22,7 @@ const Intro = () => {
             height={192}
             className="object-fill tablet:w-[192px] tablet:h-[192px] h-[64px] w-[64px]"
           />
-          <div className="text-start tablet:leading-[24px] tablet:text-[16px] text-[14px] leading-[16px] font-normal tracking-[0.12em]">
+          <div className="text-start tablet:leading-[24px] tablet:text-[16px] text-[14px] leading-[21px] font-normal tracking-[0.12em]">
             Hello, <br /> I am a full-stack software engineer with extensive
             experience in developing front-end applications. My passion for
             building high-quality products comes from my love of challenging
