@@ -27,7 +27,7 @@ const Card = ({
     projects: 'row-span-1 laptop:col-span-2 tablet:col-span-1 col-span-2',
     timeline: 'row-span-2 laptop:col-span-1 col-span-2',
     description:
-      'laptop:row-span-4 laptop:col-span-4 relative tablet:col-span-4 tablet:row-span-4 row-span-4 col-span-8  tablet:py-[32px] pt-[8px] pb-[0px] tablet:pl-[88px] tablet:pr-[32px] pr-[8px] pl-[64px] relative',
+      'laptop:row-span-4 laptop:col-span-4 tablet:col-span-4 tablet:row-span-4 row-span-4 col-span-8 tablet:py-[16px] py-[8px] px-[32px] tablet:px-[64px] relative',
   };
 
   return (

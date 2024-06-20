@@ -69,25 +69,24 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ children }) => {
   }, [isDragging, startY, startTop]);
 
   return (
-    <div className={''}>
-      <Link
-        href={'/'}
-        className="h-10 w-10 absolute top-0 tablet:right-[16px] right-[8px]"
-      >
-        <Image src={'/etc/close.svg'} alt={'close'} width={40} height={40} />
-      </Link>
-      <div
-        className={
-          'customScrollbar flex flex-col tablet:gap-[16px] gap-[8px] items-center absolute top-[48px] tablet:right-[16px] right-[8px]'
-        }
-      >
-        <div
-          ref={thumbRef}
-          className={
-            'customScrollbarThumb bg-white bg-opacity-60 max-h-[150px] scroll-smooth'
-          }
-          onMouseDown={handleMouseDown}
-        ></div>
+    <div
+      className={
+        'flex scroll-smooth relative flex-row h-full w-full justify-center gap-[16px] px-[16px]'
+      }
+    >
+      <div className="absolute w-[40px] top-0 tablet:right-[0px] right-[0px] h-full flex flex-col gap-[8px] items-center">
+        <Link href={'/'} className="h-10 w-10">
+          <Image src={'/etc/close.svg'} alt={'close'} width={40} height={40} />
+        </Link>
+        <div className={'customScrollbar flex justify-center h-full'}>
+          <div
+            ref={thumbRef}
+            className={
+              'customScrollbarThumb bg-white max-h-[150px] scroll-smooth'
+            }
+            onMouseDown={handleMouseDown}
+          ></div>
+        </div>
       </div>
 
       <div ref={contentRef} className={'content'}>

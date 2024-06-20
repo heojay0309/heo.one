@@ -21,22 +21,22 @@ const WorkTimeline = ({
     Preps: {
       month: 'Dec.',
       year: '2023',
-      title: 'Software Engineer',
+      title: 'Lead Developer',
     },
     Giverr: {
       month: 'Aug.',
       year: '2023',
-      title: 'Frontend Engineer',
+      title: 'Frontend Developer',
     },
     Mustadd: {
       month: 'Aug.',
       year: '2022',
-      title: 'Frontend Engineer',
+      title: 'Frontend Developer',
     },
     Reactrix: {
       month: 'Jan.',
       year: '2022',
-      title: 'Software Engineer',
+      title: 'Software Developer',
     },
   };
   return (
@@ -51,14 +51,14 @@ const WorkTimeline = ({
           : ''
       } ${mobileHidden ? 'hidden laptop:flex' : ''}`}
     >
-      <div className="flex flex-col tablet:gap-[8px] gap-[8px] justify-center h-full">
+      <div className="flex flex-col  gap-[32px] laptop:p-[32px] p-[8px] justify-center h-full">
         {Object.keys(timeline).map((time, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col relative justify-center items-center"
+              className="flex w-full flex-col relative justify-center items-start p-[4px]"
             >
-              <div className="flex justify-between gap-[11px] items-center">
+              <div className="flex justify-between gap-[16px] items-center">
                 <div className="flex flex-col opacity-80">
                   <div className="text-[8px] leading-[12px]">
                     {timeline[time].month}
@@ -68,23 +68,27 @@ const WorkTimeline = ({
                     {timeline[time].year}
                   </div>
                 </div>
-                <div className="w-[16px] h-[16px] rounded-full border-white border flex  relative items-center justify-center">
-                  <div className="w-[12px] h-[12px] rounded-full bg-white opacity-40"></div>
+                <div className="p-[1px] relative">
+                  <div className="w-[16px] h-[16px] rounded-full border-white border flex items-center justify-center">
+                    <div className="w-[12px] h-[12px] rounded-full bg-white opacity-40"></div>
+                    <div
+                      className={`${
+                        index !== Object.keys(timeline).length - 1
+                          ? ''
+                          : 'hidden'
+                      } h-[32px] flex items-center justify-center absolute top-[32px]`}
+                    >
+                      <div className="h-[16px] border-white border-l border-opacity-10" />
+                    </div>
+                  </div>
                 </div>
-                <div className="text-[12px] leading-[16px]">
-                  {time} <br />
-                  <span className=" whitespace-nowrap text-[8px] leading-[12px]">
+                <div className="flex flex-col flex-wrap p-1">
+                  <div className="text-[12px] leading-[16px]">{time}</div>
+                  <span className=" text-wrap text-[8px] leading-[12px]">
                     {timeline[time].title}
                   </span>
                 </div>
               </div>
-              <div
-                className={`${
-                  index !== Object.keys(timeline).length - 1
-                    ? 'border-l'
-                    : 'hidden'
-                } w-[64px] pl-[32px] tablet:h-[16px] h-[16px] border-white border-opacity-10 `}
-              ></div>
             </div>
           );
         })}

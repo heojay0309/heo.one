@@ -29,7 +29,7 @@ const ProjectWrapper = ({
       onClick={() => router.push(`/${label}`)}
       className={`${
         start
-          ? `laptop:row-start-${start}  laptop:col-start-1 col-start-${start}`
+          ? `laptop:row-start-${start} laptop:col-start-1 col-start-${start}`
           : 'laptop:col-start-5'
       } tablet:gap-[32px] gap-[8px] tablet:flex-col laptop:flex-row flex laptop:col-span-2 laptop:grid-flow-col tablet:col-span-1 col-span-2 row-span-1`}
     >
