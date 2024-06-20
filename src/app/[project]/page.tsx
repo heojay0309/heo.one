@@ -1,7 +1,3 @@
-import { projectData } from '@/constants/projects';
-import Image from 'next/image';
-import ProjectDetails from '@/components/ProjectInfo/ProjectDetails';
-import Card from '@/components/wrapper/Card';
 import ProjectWrapper from '@/components/wrapper/ProjectWrapper';
 import ProjectCard from '@/components/wrapper/ProjectCard';
 

@@ -76,7 +76,13 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ children }) => {
     >
       <div className="absolute w-[40px] top-0 tablet:right-[0px] right-[0px] h-full flex flex-col gap-[8px] items-center">
         <Link href={'/'} className="h-10 w-10">
-          <Image src={'/etc/close.svg'} alt={'close'} width={40} height={40} />
+          <Image
+            src={'/etc/close.svg'}
+            alt={'close'}
+            width={40}
+            height={40}
+            className="hover:opacity-80 active:opacity-60"
+          />
         </Link>
         <div className={'customScrollbar flex justify-center h-full'}>
           <div
