@@ -1,7 +1,14 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRef, useEffect, useState } from 'react';
+import {
+  useRef,
+  useEffect,
+  useState,
+  useCallback,
+  MouseEventHandler,
+} from 'react';
+import Card from './Card';
 
 interface CustomScrollbarProps {
   children: React.ReactNode;
@@ -26,8 +33,8 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ children }) => {
       const scrollRatio = containerHeight / contentHeight;
       const thumbHeight = Math.max(scrollRatio * containerHeight, 20);
       const thumbTop = (content.scrollTop / contentHeight) * containerHeight;
-      thumb.style.height = `${thumbHeight}px`;
-      thumb.style.top = `${thumbTop}px`;
+      thumb.style.height = `${thumbHeight - 48}px`;
+      thumb.style.top = `${thumbTop + 48}px`;
     };
 
     const handleScroll = () => updateScrollbarThumb();
@@ -69,34 +76,30 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ children }) => {
   }, [isDragging, startY, startTop]);
 
   return (
-    <div
-      className={
-        'flex scroll-smooth relative flex-row h-full w-full justify-center gap-[16px] px-[16px]'
-      }
-    >
-      <div className="absolute w-[40px] top-0 tablet:right-[0px] right-[0px] h-full flex flex-col gap-[8px] items-center">
-        <Link href={'/'} className="h-10 w-10">
-          <Image
-            src={'/etc/close.svg'}
-            alt={'close'}
-            width={40}
-            height={40}
-            className="hover:opacity-80 active:opacity-60"
-          />
-        </Link>
-        <div className={'customScrollbar flex justify-center h-full'}>
+    <div className="h-full relative">
+      <div ref={contentRef} className="content h-full px-[16px] overflow-auto">
+        {children}
+
+        <div
+          className={
+            'top-[0px] absolute right-[-8px] tablet:right-[-16px] h-full'
+          }
+        >
           <div
             ref={thumbRef}
-            className={
-              'customScrollbarThumb bg-white max-h-[150px] scroll-smooth'
-            }
+            className={'customScrollbarThumb top-[48px] bg-white'}
             onMouseDown={handleMouseDown}
           ></div>
+          <Link href={'/'} className="h-10 w-10 absolute top-0 right-[-20px]">
+            <Image
+              src={'/etc/close.svg'}
+              alt={'close'}
+              width={40}
+              height={40}
+              className="hover:opacity-80 active:opacity-60"
+            />
+          </Link>
         </div>
-      </div>
-
-      <div ref={contentRef} className={'content'}>
-        {children}
       </div>
     </div>
   );
