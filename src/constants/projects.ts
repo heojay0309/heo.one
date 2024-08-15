@@ -156,14 +156,9 @@ export const projectData: IProjectData = {
       'Mustadd is a unique mobile application dedicated to managing decentralized identification and assets. It simplifies the process of securing and sharing personal documents and decentralized assets, providing users with full control over their digital identities.',
     features: [
       {
-        title: 'Barcode Scanner Integration',
+        title: 'QR Code (Generation / Scanner) Integration',
         description:
-          'Features a barcode scanner that asynchronously requests camera access, with a custom UI that darkens the background to focus on the barcode for efficient scanning.',
-      },
-      {
-        title: 'QR Code Generation',
-        description:
-          'Automatically generates QR codes based on unique string IDs for each user, enabling secure and straightforward sharing of information.',
+          'Generates QR codes based on unique string IDs for each user, enabling secure and straightforward sharing of information. Features a barcode scanner that asynchronously requests camera access, with a custom UI that darkens the background to focus on the barcode for efficient scanning.',
       },
       {
         title: 'Splash Screen Initialization',
