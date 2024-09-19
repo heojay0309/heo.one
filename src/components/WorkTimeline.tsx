@@ -53,8 +53,8 @@ const WorkTimeline = ({
               key={index}
               className="flex w-full flex-col relative justify-center items-start h-full"
             >
-              <div className="flex justify-evenly w-full gap-[8px] p-[8px] items-center h-full ">
-                <div className="flex flex-col opacity-80 justify-center ">
+              <div className="flex justify-evenly w-full gap-[16px] p-[8px] items-center h-full ">
+                <div className="flex flex-col opacity-80 justify-center h-[50%]">
                   <div className="text-[8px] leading-[12px]">
                     {timeline[time].month}
                   </div>
@@ -63,27 +63,23 @@ const WorkTimeline = ({
                     {timeline[time].year}
                   </div>
                 </div>
-                <div className="p-[1px] relative flex flex-col items-center justify-center ">
-                  <div className="w-[16px] h-[16px] rounded-full border-white border flex items-center justify-center flex-shrink-0">
+                <div className="p-[1px] flex flex-col items-center justify-center h-[50%]">
+                  <div className="w-[16px] h-[16px]  rounded-full border-white border flex items-center justify-center flex-shrink-0">
                     <div className="w-[12px] h-[12px] rounded-full bg-white opacity-40 "></div>
-                  </div>
-                  <div
-                    className={`${
-                      index !== Object.keys(timeline).length - 1
-                        ? 'visible'
-                        : 'invisible'
-                    } flex items-center absolute justify-center laptop:h-[64px] tablet:h-[48px] tablet:top-[32px] top-[40px] h-[64px] flex-1`}
-                  >
-                    <div className={`w-full absolute h-full flex-1 `}>
-                      <div className="border-white border-l border-opacity-10 h-full" />
+                    <div
+                      className={`${
+                        index !== Object.keys(timeline).length - 1
+                          ? 'visible'
+                          : 'invisible'
+                      }  absolute h-full tablet:top-[44px] laptop:top-[64px] laptop:py-[34px] py-[32px] tablet:py-[24px] top-[64px]`}
+                    >
+                      <div className="border-white border-l border-opacity-10 h-full " />
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col justify-betewen flex-wrap items-start w-full gap-[4px]">
-                  <div className="flex flex-wrap h-full">
-                    <div className="text-[12px] leading-[16px] text-wrap">
-                      {time}
-                    </div>
+                <div className="flex flex-col justify-center flex-wrap items-start w-full gap-[4px] h-[50%]">
+                  <div className="text-[12px] leading-[16px] text-wrap">
+                    {time}
                   </div>
                   <span className=" text-wrap text-[8px] leading-[12px]">
                     {timeline[time].title}

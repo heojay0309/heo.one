@@ -37,16 +37,6 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
         mobileSrc="/projectSlides/shineResumes.png"
         hideArrow
       />
-      {/* <ProjectWrapper
-        label={'Mellow'}
-        order={2}
-        orderMobile={19}
-        orderTablet={4}
-        start={2}
-        src="/projectIcons/project_mellow.svg"
-        mobileSrc="/projectSlides/mellow.png"
-        hideArrow
-      /> */}
       <ProjectWrapper
         label={'Mustadd'}
         order={3}
@@ -67,7 +57,6 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
         mobileSrc="/projectSlides/giverr.png"
         hideArrow
       />
-
       <ProjectCard name={currentProject} />
     </div>
   );

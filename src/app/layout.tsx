@@ -21,10 +21,7 @@ export default function RootLayout({
         className={`${inter.className} text-white relative pb-[64px] min-h-[100svh] min-w-[100wh] h-[100svh] bg-black`}
       >
         <Navbar />
-        {/* <div className="flex-1 h-full w-full flex justify-center tablet:p-[64px] tablet:pt-[32px] p-[32px] pt-[16px] laptop:max-w-[1440px] mx-auto"> */}
         <div className="flex-1 h-full w-full laptop:p-[64px] laptop:pt-[32px] tablet:p-[32px] p-[16px]">
-          {/* <div className="laptop:px-[64px] tablet:px-[32px] px-[16px] tablet:py-[32px] py-[16px]"> */}
-          {/* laptop:px-[64px] tablet:px-[32px] px-[16px] tablet:py-[32px] py-[16px] */}
           {children}
         </div>
       </body>
