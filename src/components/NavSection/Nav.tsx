@@ -96,7 +96,7 @@ const Navbar = () => {
             menuToggle || hoveringDropdown
               ? 'opacity-100 visible'
               : 'opacity-0 collapse'
-          } absolute top-[56px] right-[20px]  opacity-0 delay-150  duration-500 transition-all ease-in-out`}
+          } absolute top-[56px] right-[20px] backdrop-blur opacity-0 delay-300 duration-500 transition-all ease-in-out`}
         >
           <NavDrop handleMouseEnter={handleMouseEnter} />
         </div>
