@@ -18,25 +18,20 @@ const WorkTimeline = ({
   mobileHidden?: boolean;
 }) => {
   const timeline: Timeline = {
+    ShineResumes: {
+      month: 'Jul.',
+      year: '2024',
+      title: 'Software Developer',
+    },
     Preps: {
       month: 'Dec.',
       year: '2023',
       title: 'Lead Developer',
     },
-    Giverr: {
-      month: 'Aug.',
-      year: '2023',
-      title: 'Frontend Developer',
-    },
     Mustadd: {
       month: 'Aug.',
       year: '2022',
       title: 'Frontend Developer',
-    },
-    Reactrix: {
-      month: 'Jan.',
-      year: '2022',
-      title: 'Software Developer',
     },
   };
   return (

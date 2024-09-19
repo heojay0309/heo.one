@@ -18,14 +18,19 @@ export type ProjectDataType = {
 };
 
 export type IProjectData = {
-  [key in 'preps' | 'giverr' | 'mustadd' | 'mellow']: ProjectDataType;
+  [key in
+    | 'preps'
+    | 'giverr'
+    | 'mustadd'
+    // | 'mellow'
+    | 'shineresumes']: ProjectDataType;
 };
 
 export const projectData: IProjectData = {
   preps: {
     projectName: 'Preps',
     position: 'Co-Founder & Lead Frontend Developer',
-    yearsWorked: '2023 - Present',
+    yearsWorked: 'Nov 2023 - Jun 2024',
     location: 'Los Angeles, CA',
     introduction:
       'Preps is an innovative platform designed to revolutionize the way software engineers prepare for job interviews. Born out of personal challenges and a series of rejections faced in technical interviews, Preps aims to bridge the gap between solitary practice and real interview performance by simulating realistic interview scenarios using artificial intelligence.',
@@ -89,7 +94,7 @@ export const projectData: IProjectData = {
   giverr: {
     projectName: 'Giverr',
     position: 'Frontend Developer',
-    yearsWorked: 'Aug 2023 - Present',
+    yearsWorked: 'Aug 2023 - Sep 2023',
     location: 'Los Angeles, CA',
     introduction:
       'Giverr is a side project developed to enhance mobile app security through a more secure sign-up process. Leveraging modern technologies and frameworks, this app introduces a robust SMS verification system for user authentication, aimed at preventing unauthorized access and improving overall user trust.',
@@ -147,6 +152,7 @@ export const projectData: IProjectData = {
     ],
     url: '',
   },
+
   mustadd: {
     projectName: 'Mustadd',
     position: 'Frontend Developer',
@@ -197,60 +203,112 @@ export const projectData: IProjectData = {
     ],
     url: '',
   },
-  mellow: {
-    projectName: 'Mellow',
-    position: 'Frontend Developer',
-    yearsWorked: 'Aug 2023',
-    location: 'Los Angeles, CA',
+  shineresumes: {
+    projectName: 'ShineResumes',
+    position: 'Full-Stack Developer',
+    yearsWorked: 'Jul 2024 - Present',
+    location: 'Tustin, CA',
     introduction:
-      'This landing page serves as the front face of the latest product, designed to showcase key features through an innovative, user-friendly interface. Collaborating closely with a company designer using Figma, the page highlights the product’s capabilities with a dynamic display of infinite moving cards, ensuring that visitors instantly grasp what the product has to offer without needing guidance.',
+      'ShineResumes is a platform that streamlines resume creation for professionals by offering AI-driven tools for crafting personalized, job-targeted resumes. It empowers users to generate high-quality resumes that align with industry standards and showcase their strengths, helping them stand out in competitive job markets.',
     features: [
       {
-        title: 'Innovative Feature Display',
+        title: 'AI-Assisted Resume Writing',
         description:
-          'Implements infinite moving cards on the homepage to continuously present key features to visitors, enhancing user engagement and providing a seamless experience.',
+          'ShineResumes uses artificial intelligence to guide users through resume creation, providing smart suggestions for content, formatting, and structure to ensure the best possible representation of their skills and experience.',
       },
       {
-        title: 'Optimized Bundle Size',
+        title: 'Job-Specific Customization',
         description:
-          'Efficiently manages resource loading with an optimized bundle size, ensuring swift load times and enhanced performance. The main route loads at 139 kB with core shared JavaScript chunking to minimize initial load time.',
+          'Users can tailor their resumes to specific job roles by analyzing job descriptions and highlighting relevant skills and accomplishments that align with employer expectations.',
       },
       {
-        title: 'Video Content Management',
+        title: 'Real-Time Formatting & Feedback',
         description:
-          'Utilizes Git Large File Storage (LFS) to manage and deploy high-quality video content without burdening the repository. This approach improves handling of large assets and streamlines the deployment process.',
+          'As users create their resumes, ShineResumes offers real-time formatting options and feedback, ensuring that the resume looks professional and polished before submission.',
       },
       {
-        title: 'Search Engine Optimization',
+        title: 'Integrated File Export & Management',
         description:
-          'Built with Next.js to leverage its superior SEO capabilities, ensuring that the landing page ranks well on search engines and reaches a broad audience.',
+          'ShineResumes allows users to export their resumes as PDF or Word documents, providing flexibility in file formats. Additionally, users can manage multiple versions of their resumes and update them as their careers progress.',
       },
     ],
-    tech: 'Developed with Next.js to enhance SEO and ensure cross-platform compatibility. The design process was supported by Figma to create a visually compelling interface. Git LFS was employed to manage large media files efficiently, maintaining high performance without sacrificing quality.',
+    tech: 'ShineResumes is built with Next.js for fast, SEO-friendly performance, and uses Tailwind CSS for an intuitive and responsive user interface. Zustand is used for state management, ensuring smooth interactions across the platform. Document creation is handled by the docx library for Word file generation, and the platform leverages AI through OpenAI APIs for intelligent suggestions.',
     description: [
-      'Built a responsive web designed single page application landing page by working closely with the UI/UX design team using Figma',
-      'Utilized the Git Large File Storage (LFS) feature for managing large files when pushing to the GitHub repository as they will remain accessible when pulling the repository back to the local machine',
-      'Improved the transition of each components by using customized tailwind CSS for better user experience as well as smoother user interface',
-      'Managed variables such as feature informations and colors from the outside of the components for easier changes or updates',
+      'ShineResumes is an AI-powered resume generation platform for professionals looking to create job-specific, high-quality resumes.',
+      'Led the design and development of a platform that integrates AI to provide content suggestions and formatting assistance for resume creation.',
+      'Utilized Next.js’s server-side rendering for optimized performance, ensuring a smooth user experience even under high traffic conditions.',
+      'Integrated OpenAI APIs to enhance resume generation with intelligent recommendations for content, layout, and job-specific focus areas.',
     ],
     images: [
-      '/projects/mellow/mellow1.png',
-      '/projects/mellow/mellow2.png',
-      '/projects/mellow/mellow3.png',
-      '/projects/mellow/mellow4.png',
-      '/projects/mellow/mellow5.png',
-      '/projects/mellow/mellow6.png',
+      '/projects/shine/shine1.png',
+      '/projects/shine/shine2.png',
+      '/projects/shine/shine3.png',
+      '/projects/shine/shine4.png',
+      '/projects/shine/shine5.png',
     ],
     blurHash: [
-      'LBPQEOV@00%L~qV@WXt700oz-;Rj',
-      'LBO|nZxZ00Nx~qayogjs00Nex]xC',
-      'LCPGpos:00X6~qayWXoL00W.%2n+',
-      'LBO|nZxZ00Nx~qayogjs00Nex]xC',
-      'LBO|nZxZ00Nx~qayogjs00Nex]xC',
-      'LNI5iBj[.SoL4nay-;fQ~qj[9Faz',
+      'LCPs-Ts:00of~qayWYju00az%May',
+      'LBPs*Lt700s:~qayozj[00a#?bay',
+      'LCPZx}s:00jZ~qf6kCfR00ay-:j]',
+      'LAIrNkoK00fk%ga#RjjY00ay~qj]',
+      'LDPQEOj@00t7~qayWWjt00f6%May',
     ],
-    url: 'https://mellow-eta.vercel.app/',
+    url: 'https://www.shine-resumes.com',
   },
+  // mellow: {
+  //   projectName: 'Mellow',
+  //   position: 'Frontend Developer',
+  //   yearsWorked: 'Aug 2023',
+  //   location: 'Los Angeles, CA',
+  //   introduction:
+  //     'This landing page serves as the front face of the latest product, designed to showcase key features through an innovative, user-friendly interface. Collaborating closely with a company designer using Figma, the page highlights the product’s capabilities with a dynamic display of infinite moving cards, ensuring that visitors instantly grasp what the product has to offer without needing guidance.',
+  //   features: [
+  //     {
+  //       title: 'Innovative Feature Display',
+  //       description:
+  //         'Implements infinite moving cards on the homepage to continuously present key features to visitors, enhancing user engagement and providing a seamless experience.',
+  //     },
+  //     {
+  //       title: 'Optimized Bundle Size',
+  //       description:
+  //         'Efficiently manages resource loading with an optimized bundle size, ensuring swift load times and enhanced performance. The main route loads at 139 kB with core shared JavaScript chunking to minimize initial load time.',
+  //     },
+  //     {
+  //       title: 'Video Content Management',
+  //       description:
+  //         'Utilizes Git Large File Storage (LFS) to manage and deploy high-quality video content without burdening the repository. This approach improves handling of large assets and streamlines the deployment process.',
+  //     },
+  //     {
+  //       title: 'Search Engine Optimization',
+  //       description:
+  //         'Built with Next.js to leverage its superior SEO capabilities, ensuring that the landing page ranks well on search engines and reaches a broad audience.',
+  //     },
+  //   ],
+  //   tech: 'Developed with Next.js to enhance SEO and ensure cross-platform compatibility. The design process was supported by Figma to create a visually compelling interface. Git LFS was employed to manage large media files efficiently, maintaining high performance without sacrificing quality.',
+  //   description: [
+  //     'Built a responsive web designed single page application landing page by working closely with the UI/UX design team using Figma',
+  //     'Utilized the Git Large File Storage (LFS) feature for managing large files when pushing to the GitHub repository as they will remain accessible when pulling the repository back to the local machine',
+  //     'Improved the transition of each components by using customized tailwind CSS for better user experience as well as smoother user interface',
+  //     'Managed variables such as feature informations and colors from the outside of the components for easier changes or updates',
+  //   ],
+  //   images: [
+  //     '/projects/mellow/mellow1.png',
+  //     '/projects/mellow/mellow2.png',
+  //     '/projects/mellow/mellow3.png',
+  //     '/projects/mellow/mellow4.png',
+  //     '/projects/mellow/mellow5.png',
+  //     '/projects/mellow/mellow6.png',
+  //   ],
+  //   blurHash: [
+  //     'LBPQEOV@00%L~qV@WXt700oz-;Rj',
+  //     'LBO|nZxZ00Nx~qayogjs00Nex]xC',
+  //     'LCPGpos:00X6~qayWXoL00W.%2n+',
+  //     'LBO|nZxZ00Nx~qayogjs00Nex]xC',
+  //     'LBO|nZxZ00Nx~qayogjs00Nex]xC',
+  //     'LNI5iBj[.SoL4nay-;fQ~qj[9Faz',
+  //   ],
+  //   url: 'https://mellow-eta.vercel.app/',
+  // },
 };
 
 export const projectImages = [
@@ -266,11 +324,17 @@ export const projectImages = [
     src: '/projectSlides/mustadd.png',
     href: '/projects/Mustadd',
   },
+  // {
+  //   title: 'Mellow',
+  //   description: 'Landing page for Mellow, prayer app',
+  //   src: '/projectSlides/mellow.png',
+  //   href: '/projects/Mellow',
+  // },
   {
-    title: 'Mellow',
-    description: 'Landing page for Mellow, prayer app',
-    src: '/projectSlides/mellow.png',
-    href: '/projects/Mellow',
+    title: 'ShineResumes',
+    description: 'Create tailored resumes for desired job in seconds',
+    src: '/projectSlides/shineResumes.png',
+    href: '/projects/ShineResumes',
   },
   {
     title: 'Giverr',
@@ -289,5 +353,5 @@ export interface Navigations {
 export const navigations: Navigations = {
   RESUME: [],
   PROFILES: ['LINKEDIN', 'GITHUB'],
-  PROJECTS: ['MELLOW', 'PREPS', 'MUSTADD', 'GIVERR'],
+  PROJECTS: ['PREPS', 'MUSTADD', 'GIVERR', 'SHINERESUMES'],
 };

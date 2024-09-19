@@ -2,10 +2,10 @@ import ProjectWrapper from '@/components/wrapper/ProjectWrapper';
 import ProjectCard from '@/components/wrapper/ProjectCard';
 
 type ParamsType = {
-  project: 'Preps' | 'Giverr' | 'Mustadd' | 'Mellow';
+  project: 'Preps' | 'Giverr' | 'Mustadd' | 'ShineResumes';
 };
 
-type CurrentProjectType = 'preps' | 'giverr' | 'mustadd' | 'mellow';
+type CurrentProjectType = 'preps' | 'giverr' | 'mustadd' | 'shineresumes';
 
 interface IProjectPageProps {
   params: ParamsType;
@@ -28,6 +28,16 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
         hideArrow
       />
       <ProjectWrapper
+        label={'ShineResumes'}
+        order={2}
+        orderMobile={19}
+        orderTablet={4}
+        start={2}
+        src="/projectIcons/project_shine.svg"
+        mobileSrc="/projectSlides/shineResumes.png"
+        hideArrow
+      />
+      {/* <ProjectWrapper
         label={'Mellow'}
         order={2}
         orderMobile={19}
@@ -36,7 +46,7 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
         src="/projectIcons/project_mellow.svg"
         mobileSrc="/projectSlides/mellow.png"
         hideArrow
-      />
+      /> */}
       <ProjectWrapper
         label={'Mustadd'}
         order={3}
@@ -57,6 +67,7 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
         mobileSrc="/projectSlides/giverr.png"
         hideArrow
       />
+
       <ProjectCard name={currentProject} />
     </div>
   );

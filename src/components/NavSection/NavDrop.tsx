@@ -30,6 +30,8 @@ const NavDrop = ({ handleMouseEnter }: { handleMouseEnter: () => void }) => {
       router.push('/Mustadd');
     } else if (option === 'GIVERR') {
       router.push('/Giverr');
+    } else if (option === 'SHINERESUMES') {
+      router.push('/ShineResumes');
     }
   };
 

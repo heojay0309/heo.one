@@ -17,7 +17,9 @@ const ProjectCard = ({ name }: { name: keyof IProjectData }) => {
             className="object-contain tablet:w-[420px] tablet:h-[304px] w-[240px] h-[169px]"
           />
           <span className="text-center text-white h3 font-bold tablet:leading-10 tablet:text-[32px] leading-8 text-[24px] text-opacity-80 tracking-[.12em]">
-            {name.charAt(0).toUpperCase() + name.slice(1)}
+            {name === 'shineresumes'
+              ? 'ShineResumes'
+              : name.charAt(0).toUpperCase() + name.slice(1)}
           </span>
         </div>
         <div className="flex flex-col gap-[32px] py-[16px]">

@@ -83,12 +83,12 @@ export default function Home() {
         mobileSrc="/projectSlides/preps.png"
       />
       <ProjectWrapper
-        label={'Mellow'}
+        label={'ShineResumes'}
         order={2}
         orderMobile={19}
         orderTablet={4}
-        src="/projectIcons/project_mellow.svg"
-        mobileSrc="/projectSlides/mellow.png"
+        src="/projectIcons/project_shine.svg"
+        mobileSrc="/projectSlides/shineResumes.png"
       />
       <ProjectWrapper
         label={'Mustadd'}

@@ -31,7 +31,7 @@ const ProjectMenu = () => {
         />
         <span className="opacity-80">Mustadd</span>
       </Link>
-      <Link
+      {/* <Link
         href={'/projects/Mellow'}
         className="flex gap-[8px] px-[8px] py-[16px] bg-[#F0F0F0] border-black border-opacity-50 hover:bg-black hover:bg-opacity-10 "
       >
@@ -42,6 +42,18 @@ const ProjectMenu = () => {
           alt={'mellow'}
         />
         <span className="opacity-80">Mellow</span>
+      </Link> */}
+      <Link
+        href={'/projects/ShineResumes'}
+        className="flex gap-[8px] px-[8px] py-[16px] bg-[#F0F0F0] border-black border-opacity-50 hover:bg-black hover:bg-opacity-10 "
+      >
+        <Image
+          src={'/projectIcons/project_shine.svg'}
+          width={24}
+          height={24}
+          alt={'ShineResumes'}
+        />
+        <span className="opacity-80">ShineResumes</span>
       </Link>
       <Link
         href={'/projects/Giverr'}

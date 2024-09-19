@@ -27,7 +27,7 @@ const NavProjectBox = () => {
         />
         <span>Mustadd</span>
       </Link>
-      <Link
+      {/* <Link
         href={'/projects/Mellow'}
         className="flex gap-[8px] px-[8px] py-[8px] border-black border-opacity-50 hover:bg-black hover:bg-opacity-10 rounded-t-[4px] "
       >
@@ -38,6 +38,18 @@ const NavProjectBox = () => {
           alt={'mellow'}
         />
         <span>Mellow</span>
+      </Link> */}
+      <Link
+        href={'/projects/ShineResumes'}
+        className="flex gap-[8px] px-[8px] py-[8px] border-black border-opacity-50 hover:bg-black hover:bg-opacity-10 rounded-t-[4px] "
+      >
+        <Image
+          src={'/projectIcons/project_shine.svg'}
+          width={24}
+          height={24}
+          alt={'shineResumes'}
+        />
+        <span>ShineResumes</span>
       </Link>
       <Link
         href={'/projects/Giverr'}
