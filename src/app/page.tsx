@@ -88,7 +88,7 @@ export default function Home() {
         orderMobile={19}
         orderTablet={4}
         src="/projectIcons/project_shine.svg"
-        mobileSrc="/projectSlides/shineResumes.png"
+        mobileSrc="/projectSlides/shineresumes.png"
       />
       <ProjectWrapper
         label={'Mustadd'}

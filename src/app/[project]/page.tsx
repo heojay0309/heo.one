@@ -34,7 +34,7 @@ const ProjectPage = ({ params }: IProjectPageProps) => {
         orderTablet={4}
         start={2}
         src="/projectIcons/project_shine.svg"
-        mobileSrc="/projectSlides/shineResumes.png"
+        mobileSrc="/projectSlides/shineresumes.png"
         hideArrow
       />
       <ProjectWrapper

@@ -255,60 +255,6 @@ export const projectData: IProjectData = {
     ],
     url: 'https://www.shine-resumes.com',
   },
-  // mellow: {
-  //   projectName: 'Mellow',
-  //   position: 'Frontend Developer',
-  //   yearsWorked: 'Aug 2023',
-  //   location: 'Los Angeles, CA',
-  //   introduction:
-  //     'This landing page serves as the front face of the latest product, designed to showcase key features through an innovative, user-friendly interface. Collaborating closely with a company designer using Figma, the page highlights the product’s capabilities with a dynamic display of infinite moving cards, ensuring that visitors instantly grasp what the product has to offer without needing guidance.',
-  //   features: [
-  //     {
-  //       title: 'Innovative Feature Display',
-  //       description:
-  //         'Implements infinite moving cards on the homepage to continuously present key features to visitors, enhancing user engagement and providing a seamless experience.',
-  //     },
-  //     {
-  //       title: 'Optimized Bundle Size',
-  //       description:
-  //         'Efficiently manages resource loading with an optimized bundle size, ensuring swift load times and enhanced performance. The main route loads at 139 kB with core shared JavaScript chunking to minimize initial load time.',
-  //     },
-  //     {
-  //       title: 'Video Content Management',
-  //       description:
-  //         'Utilizes Git Large File Storage (LFS) to manage and deploy high-quality video content without burdening the repository. This approach improves handling of large assets and streamlines the deployment process.',
-  //     },
-  //     {
-  //       title: 'Search Engine Optimization',
-  //       description:
-  //         'Built with Next.js to leverage its superior SEO capabilities, ensuring that the landing page ranks well on search engines and reaches a broad audience.',
-  //     },
-  //   ],
-  //   tech: 'Developed with Next.js to enhance SEO and ensure cross-platform compatibility. The design process was supported by Figma to create a visually compelling interface. Git LFS was employed to manage large media files efficiently, maintaining high performance without sacrificing quality.',
-  //   description: [
-  //     'Built a responsive web designed single page application landing page by working closely with the UI/UX design team using Figma',
-  //     'Utilized the Git Large File Storage (LFS) feature for managing large files when pushing to the GitHub repository as they will remain accessible when pulling the repository back to the local machine',
-  //     'Improved the transition of each components by using customized tailwind CSS for better user experience as well as smoother user interface',
-  //     'Managed variables such as feature informations and colors from the outside of the components for easier changes or updates',
-  //   ],
-  //   images: [
-  //     '/projects/mellow/mellow1.png',
-  //     '/projects/mellow/mellow2.png',
-  //     '/projects/mellow/mellow3.png',
-  //     '/projects/mellow/mellow4.png',
-  //     '/projects/mellow/mellow5.png',
-  //     '/projects/mellow/mellow6.png',
-  //   ],
-  //   blurHash: [
-  //     'LBPQEOV@00%L~qV@WXt700oz-;Rj',
-  //     'LBO|nZxZ00Nx~qayogjs00Nex]xC',
-  //     'LCPGpos:00X6~qayWXoL00W.%2n+',
-  //     'LBO|nZxZ00Nx~qayogjs00Nex]xC',
-  //     'LBO|nZxZ00Nx~qayogjs00Nex]xC',
-  //     'LNI5iBj[.SoL4nay-;fQ~qj[9Faz',
-  //   ],
-  //   url: 'https://mellow-eta.vercel.app/',
-  // },
 };
 
 export const projectImages = [
@@ -324,16 +270,10 @@ export const projectImages = [
     src: '/projectSlides/mustadd.png',
     href: '/projects/Mustadd',
   },
-  // {
-  //   title: 'Mellow',
-  //   description: 'Landing page for Mellow, prayer app',
-  //   src: '/projectSlides/mellow.png',
-  //   href: '/projects/Mellow',
-  // },
   {
     title: 'ShineResumes',
     description: 'Create tailored resumes for desired job in seconds',
-    src: '/projectSlides/shineResumes.png',
+    src: '/projectSlides/shineresumes.png',
     href: '/projects/ShineResumes',
   },
   {
