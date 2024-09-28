@@ -77,7 +77,7 @@ const WorkTimeline = ({
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col justify-center flex-wrap items-start w-full gap-[4px] h-[50%]">
+                <div className="flex flex-col justify-center items-start w-full gap-[4px] h-[50%]">
                   <div className="text-[12px] leading-[16px] text-wrap">
                     {time}
                   </div>
