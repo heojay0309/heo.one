@@ -88,18 +88,19 @@ const Intro = () => {
         >
           <div className="flex h-full items-center justify-center gap-[16px] p-[16px] tablet:gap-[32px] tablet:p-[32px]">
             <Image
-              src={"/selfie.png"}
+              src={"/selfie_1.svg"}
               alt="profile"
               priority={true}
               width={192}
               height={192}
-              className="h-[64px] w-[64px] object-fill tablet:h-[192px] tablet:w-[192px]"
+              className="rounded-full object-fill tablet:h-[192px] tablet:w-[192px]"
             />
-            <div className="text-start text-[14px] font-normal leading-[21px] tracking-[0.12em] text-white text-opacity-80 tablet:text-[16px] tablet:leading-[24px]">
+            <div className="text-start text-[14px] font-normal leading-[21px] tracking-[0.12em] text-white text-opacity-80 tablet:text-[16px] tablet:leading-[28px]">
               Hello, <br /> I am a full-stack software engineer with extensive
               experience in developing front-end applications. My passion for
               building high-quality products comes from my love of challenging
               difficult problems and discovering robust solutions.
+              <br />I also love Costco food!
             </div>
           </div>
         </Card>
