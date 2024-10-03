@@ -1,7 +1,7 @@
-'use client';
-import Image from 'next/image';
-import Card from './Card';
-import Link from 'next/link';
+"use client";
+import Image from "next/image";
+import Card from "./Card";
+import Link from "next/link";
 const Profile = ({
   name,
   order,
@@ -22,10 +22,10 @@ const Profile = ({
   return (
     <Link
       href={link}
-      className={` ${hidden ? 'tablet:hidden row-start-1' : ''} ${
+      className={` ${hidden ? "row-start-1 tablet:hidden" : ""} ${
         mobileHidden
           ? `hidden tablet:flex laptop:row-start-4 tablet:col-start-${order}`
-          : ''
+          : ""
       }`}
     >
       <Card
@@ -35,16 +35,16 @@ const Profile = ({
         className="h-full w-full hover:bg-opacity-20 active:bg-opacity-40"
       >
         <div
-          className={`flex flex-col gap-[16px] tracking-[0.12em] items-center p-[16px]`}
+          className={`flex flex-col items-center gap-[16px] p-[16px] tracking-[0.12em]`}
         >
           <Image
             src={`/profileIcons/${name}.svg`}
             height={48}
             width={48}
             alt={name}
-            className="object-fill laptop:h-[48px] laptop:w-[48px] tablet:h-[40px] tablet:w-[40px] h-[32px] w-[32px]"
+            className="h-[32px] w-[32px] object-fill tablet:h-[40px] tablet:w-[40px] laptop:h-[48px] laptop:w-[48px]"
           />
-          <span className="font-bold laptop:text-[16px] text-[14px] leading-[21px] laptop:leading-[24px]">
+          <span className="text-[14px] font-bold leading-[21px] laptop:text-[16px] laptop:leading-[24px]">
             {name}
           </span>
         </div>
