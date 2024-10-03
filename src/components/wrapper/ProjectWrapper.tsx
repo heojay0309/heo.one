@@ -1,7 +1,7 @@
-'use client';
-import Image from 'next/image';
-import Card from './Card';
-import { useRouter } from 'next/navigation';
+"use client";
+import Image from "next/image";
+import Card from "./Card";
+import { useRouter } from "next/navigation";
 
 const ProjectWrapper = ({
   label,
@@ -30,48 +30,51 @@ const ProjectWrapper = ({
       className={`${
         start
           ? `laptop:row-start-${start} laptop:col-start-1 col-start-${start}`
-          : 'laptop:col-start-5'
-      } tablet:gap-[32px] gap-[8px] tablet:flex-col laptop:flex-row flex laptop:col-span-2 laptop:grid-flow-col tablet:col-span-1 col-span-2 row-span-1`}
+          : "laptop:col-start-5"
+      } col-span-2 row-span-1 flex gap-[8px] tablet:col-span-1 tablet:flex-col tablet:gap-[32px] laptop:col-span-2 laptop:grid-flow-col laptop:flex-row`}
     >
       <Card
         order={order}
         orderMobile={orderMobile}
         orderTablet={orderTablet}
         type="projects"
-        className="w-full h-full hover:bg-opacity-20 active:bg-opacity-40"
+        className="h-full w-full hover:bg-opacity-20 active:bg-opacity-40"
       >
         <div
-          className={`w-full h-full  flex ${
-            start ? 'flex-col' : 'flex-row'
-          } laptop:flex-row tablet:flex-col justify-center laptop:gap-[16px] gap-[8px] items-center p-[16px]  relative`}
+          className={`flex h-full w-full ${
+            start ? "flex-col" : "flex-row"
+          } relative items-center justify-center gap-[8px] p-[16px] tablet:flex-col laptop:flex-row laptop:gap-[16px]`}
         >
           <Image
             src={mobileSrc}
             alt={label}
             height={128}
             width={128}
-            className="object-contain tablet:p-[8px] laptop:h-[128px] tablet:h-[96px] w-[128px] tablet:flex hidden"
+            className="hidden w-[128px] object-contain tablet:flex tablet:h-[96px] tablet:p-[8px] laptop:h-[128px]"
           />
           <Image
             src={src}
             alt={label}
             height={40}
             width={40}
-            className="tablet:hidden object-contain"
+            className="object-contain tablet:hidden"
           />
           <div
             className={`${
-              hideArrow ? '' : 'flex-1'
-            } tablet:flex-auto tablet:w-full self-center font-bold laptop:text-[16px] tracking-[0em] tablet:text-[14px] laptop:leading-[24px] leading-[16px] flex laptop:gap-[16px] gap-[8px] justify-between  text-white text-opacity-80 laptop:px-[32px] px-[16px] `}
+              hideArrow ? "" : "flex-1"
+            } flex justify-between gap-[8px] self-center font-bold leading-[16px] tracking-[0em] text-white text-opacity-80 tablet:w-full tablet:flex-auto tablet:px-[16px] tablet:text-[14px] laptop:gap-[16px] laptop:px-[32px] laptop:text-[16px] laptop:leading-[24px]`}
           >
-            {label}
+            <span className="block tablet:hidden">
+              {label === "ShineResumes" ? "Shine" : label}
+            </span>
+            <span className="hidden tablet:block">{label}</span>
             <Image
-              src={'/etc/rightArrow.svg'}
+              src={"/etc/rightArrow.svg"}
               alt="arrow"
               height={16}
               width={8}
               className={`${
-                hideArrow ? 'hidden tablet:block' : 'block'
+                hideArrow ? "hidden tablet:block" : "block"
               } self-center`}
             />
           </div>

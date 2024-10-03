@@ -86,7 +86,7 @@ const Intro = () => {
           orderTablet={5}
           className="h-full"
         >
-          <div className="flex h-full items-center justify-center gap-[16px] p-[16px] tablet:gap-[32px] tablet:p-[32px]">
+          <div className="flex h-full flex-col items-center justify-center gap-[16px] p-[16px] tablet:flex-row tablet:gap-[32px] tablet:p-[32px]">
             <Image
               src={"/selfie_1.svg"}
               alt="profile"
