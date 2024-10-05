@@ -31,7 +31,7 @@ const ProjectWrapper = ({
         start
           ? `laptop:row-start-${start} laptop:col-start-1 col-start-${start}`
           : "laptop:col-start-5"
-      } col-span-2 row-span-1 flex gap-[8px] tablet:col-span-1 tablet:flex-col tablet:gap-[32px] laptop:col-span-2 laptop:grid-flow-col laptop:flex-row`}
+      } col-span-2 row-span-1 flex w-full gap-[8px] tablet:col-span-1 tablet:flex-col tablet:gap-[32px] laptop:col-span-2 laptop:grid-flow-col laptop:flex-row`}
     >
       <Card
         order={order}
@@ -41,7 +41,7 @@ const ProjectWrapper = ({
         className="h-full w-full hover:bg-opacity-20 active:bg-opacity-40"
       >
         <div
-          className={`flex h-full w-full ${
+          className={`w- flex h-full ${
             start ? "flex-col" : "flex-row"
           } relative items-center justify-center gap-[8px] p-[16px] tablet:flex-col laptop:flex-row laptop:gap-[16px]`}
         >
@@ -62,7 +62,7 @@ const ProjectWrapper = ({
           <div
             className={`${
               hideArrow ? "" : "flex-1"
-            } flex justify-between gap-[8px] self-center font-bold leading-[16px] tracking-[0em] text-white text-opacity-80 tablet:w-full tablet:flex-auto tablet:px-[16px] tablet:text-[14px] laptop:gap-[16px] laptop:px-[32px] laptop:text-[16px] laptop:leading-[24px]`}
+            } flex gap-[8px] self-center font-bold leading-[16px] tracking-[0em] text-white text-opacity-80 tablet:flex-auto tablet:px-[16px] tablet:text-[14px] laptop:gap-[8px] laptop:px-[0px] laptop:text-[16px] laptop:leading-[24px]`}
           >
             <span className="block tablet:hidden">
               {label === "ShineResumes" ? "Shine" : label}

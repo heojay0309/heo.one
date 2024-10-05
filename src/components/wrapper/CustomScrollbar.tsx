@@ -1,14 +1,14 @@
-'use client';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
+import Link from "next/link";
+import Image from "next/image";
 import {
   useRef,
   useEffect,
   useState,
   useCallback,
   MouseEventHandler,
-} from 'react';
-import Card from './Card';
+} from "react";
+import Card from "./Card";
 
 interface CustomScrollbarProps {
   children: React.ReactNode;
@@ -38,10 +38,10 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ children }) => {
     };
 
     const handleScroll = () => updateScrollbarThumb();
-    content?.addEventListener('scroll', handleScroll);
+    content?.addEventListener("scroll", handleScroll);
     updateScrollbarThumb();
 
-    return () => content?.removeEventListener('scroll', handleScroll);
+    return () => content?.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -56,7 +56,7 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ children }) => {
         const deltaY = e.clientY - startY;
         const newTop = Math.min(
           Math.max(startTop + deltaY, 0),
-          contentRef.current!.clientHeight - thumbRef.current!.clientHeight
+          contentRef.current!.clientHeight - thumbRef.current!.clientHeight,
         );
         contentRef.current!.scrollTop =
           (newTop / contentRef.current!.clientHeight) *
@@ -66,34 +66,34 @@ const CustomScrollbar: React.FC<CustomScrollbarProps> = ({ children }) => {
 
     const handleMouseUp = () => setIsDragging(false);
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
     };
   }, [isDragging, startY, startTop]);
 
   return (
-    <div className="h-full relative">
-      <div ref={contentRef} className="content h-full px-[16px] overflow-auto">
+    <div className="relative h-full">
+      <div ref={contentRef} className="content h-full overflow-auto px-[16px]">
         {children}
 
         <div
           className={
-            'top-[0px] absolute right-[-8px] tablet:right-[-16px] h-full'
+            "absolute right-[-8px] top-[0px] h-full tablet:right-[-16px]"
           }
         >
           <div
             ref={thumbRef}
-            className={'customScrollbarThumb top-[48px] bg-white'}
+            className={"customScrollbarThumb top-[48px] bg-white"}
             onMouseDown={handleMouseDown}
           ></div>
-          <Link href={'/'} className="h-10 w-10 absolute top-0 right-[-20px]">
+          <Link href={"/"} className="absolute right-[-20px] top-0 h-10 w-10">
             <Image
-              src={'/etc/close.svg'}
-              alt={'close'}
+              src={"/etc/close.svg"}
+              alt={"close"}
               width={40}
               height={40}
               className="hover:opacity-80 active:opacity-60"

@@ -4,8 +4,186 @@ import Profile from "@/components/wrapper/Profile";
 import ProjectWrapper from "@/components/wrapper/ProjectWrapper";
 import WorkTimeline from "@/components/WorkTimeline";
 export default function Home() {
+  const twObj = {
+    laptop: {
+      vote: {
+        /* row X col */
+        span: [1, 1],
+        position: [1, 1],
+      },
+      timeline: {
+        /* row X col */
+        span: [1, 2],
+        position: [2, 1],
+      },
+      linkedin: {
+        /* row X col */
+        span: [1, 1],
+        position: [4, 1],
+      },
+      github: {
+        /* row X col */
+        span: [1, 1],
+        position: [4, 2],
+      },
+      resume: {
+        /* row X col */
+        span: [1, 1],
+        position: [4, 3],
+      },
+      email: {
+        /* row X col */
+        span: [1, 1],
+        position: [4, 4],
+      },
+      preps: {
+        /* row X col */
+        span: [1, 2],
+        position: [1, 5],
+      },
+      mellow: {
+        /* row X col */
+        span: [1, 2],
+        position: [2, 5],
+      },
+      mustadd: {
+        /* row X col */
+        span: [1, 2],
+        position: [3, 5],
+      },
+      giverr: {
+        /* row X col */
+        span: [1, 2],
+        position: [4, 5],
+      },
+      sites: {
+        /* row X col */
+        span: [1, 3],
+        position: [1, 2],
+      },
+      intro: {
+        /* row X col */
+        span: [2, 3],
+        position: [2, 2],
+      },
+    },
+    tablet: {
+      timeline: {
+        /* row 5 X col 4 */
+        span: [2, 2],
+        position: [4, 1],
+      },
+      linkedin: {
+        /* row X col */
+        span: [1, 1],
+        position: [1, 1],
+      },
+      github: {
+        /* row X col */
+        span: [1, 1],
+        position: [1, 2],
+      },
+      resume: {
+        /* row X col */
+        span: [1, 1],
+        position: [1, 3],
+      },
+      email: {
+        /* row X col */
+        span: [1, 1],
+        position: [1, 4],
+      },
+      preps: {
+        /* row X col */
+        span: [1, 1],
+        position: [4, 3],
+      },
+      mellow: {
+        /* row X col */
+        span: [1, 1],
+        position: [5, 3],
+      },
+      mustadd: {
+        /* row X col */
+        span: [1, 1],
+        position: [4, 4],
+      },
+      giverr: {
+        /* row X col */
+        span: [1, 1],
+        position: [5, 4],
+      },
+      sites: {
+        /* row X col */
+        span: [2, 2],
+        position: [2, 1],
+      },
+      intro: {
+        /* row X col */
+        span: [2, 2],
+        position: [2, 3],
+      },
+    },
+    mobile: {
+      timeline: {
+        /* row 5 X col 4 */
+        span: [4, 2],
+        position: [4, 1],
+      },
+      linkedin: {
+        /* row X col */
+        span: [1, 1],
+        position: [1, 1],
+      },
+      github: {
+        /* row X col */
+        span: [1, 1],
+        position: [1, 2],
+      },
+      resume: {
+        /* row X col */
+        span: [1, 1],
+        position: [1, 3],
+      },
+      email: {
+        /* row X col */
+        span: [1, 1],
+        position: [1, 4],
+      },
+      preps: {
+        /* row X col */
+        span: [1, 1],
+        position: [4, 3],
+      },
+      mellow: {
+        /* row X col */
+        span: [1, 1],
+        position: [5, 3],
+      },
+      mustadd: {
+        /* row X col */
+        span: [1, 1],
+        position: [4, 4],
+      },
+      giverr: {
+        /* row X col */
+        span: [1, 1],
+        position: [5, 4],
+      },
+      sites: {
+        /* row X col */
+        span: [2, 2],
+        position: [2, 1],
+      },
+      intro: {
+        /* row X col */
+        span: [2, 2],
+        position: [2, 3],
+      },
+    },
+  };
   return (
-    <div className="grid h-full grid-flow-row grid-cols-4 gap-[16px] tablet:grid-cols-4 tablet:grid-rows-5 tablet:gap-[32px] laptop:grid-flow-col laptop:grid-cols-6 laptop:grid-rows-4">
+    <div className="grid h-full grid-flow-row grid-cols-4 grid-rows-7 gap-[16px] px-[32px] pb-[16px] tablet:grid-cols-4 tablet:grid-rows-5 tablet:gap-[32px] tablet:px-[32px] laptop:grid-flow-row laptop:grid-cols-6 laptop:grid-rows-4 laptop:px-[32px] laptop:pt-[32px]">
       <Vote />
       <WorkTimeline mobileHidden />
       <Profile

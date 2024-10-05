@@ -42,9 +42,9 @@ const WorkTimeline = ({
       type="timeline"
       className={`${
         hidden
-          ? "row-span-4 flex tablet:row-span-2 laptop:row-span-4 laptop:hidden"
+          ? "col-span-2 row-span-4 flex tablet:row-span-2 laptop:col-span-1 laptop:row-span-2 laptop:hidden"
           : ""
-      } ${mobileHidden ? "hidden laptop:flex" : ""}`}
+      } ${mobileHidden ? "hidden laptop:col-span-1 laptop:row-span-2 laptop:row-start-2 laptop:flex" : ""}`}
     >
       <div className="flex h-full flex-col justify-center p-[16px] laptop:p-[32px]">
         {Object.keys(timeline).map((time, index) => {
