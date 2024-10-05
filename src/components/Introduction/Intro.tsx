@@ -86,7 +86,7 @@ const Intro = () => {
           orderTablet={5}
           className=""
         >
-          <div className="flex h-full w-full flex-row flex-wrap items-center justify-center gap-[16px] overflow-hidden p-[16px] p-[8px] tablet:flex-row tablet:p-[16px]">
+          <div className="flex h-full w-full flex-row flex-wrap items-center justify-center gap-[16px] overflow-hidden p-[16px] tablet:flex-row tablet:p-[16px]">
             <Image
               src={"/selfie_1.svg"}
               alt="profile"
