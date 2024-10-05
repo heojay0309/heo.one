@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const Intro = () => {
   return (
-    <div className="col-span-4 row-span-2 flex grid-flow-row grid-rows-subgrid gap-[16px] tablet:col-span-4 tablet:row-span-2 tablet:grid-flow-row tablet:grid-cols-2 tablet:grid-rows-1 tablet:gap-[32px] laptop:col-span-3 laptop:col-start-2 laptop:row-span-3 laptop:row-start-1 laptop:grid-flow-col laptop:grid-cols-1 laptop:grid-rows-4">
-      <div className="col-span-2 col-start-2 row-span-2 row-start-2 flex h-full w-full flex-col items-start justify-between gap-[16px] tablet:col-span-1 tablet:col-start-1 tablet:row-span-1 tablet:gap-[32px] laptop:col-span-1 laptop:row-span-1 laptop:flex-row laptop:flex-col">
+    <div className="col-span-4 row-span-2 flex grid-flow-row grid-rows-subgrid gap-[16px] tablet:col-span-4 tablet:row-span-2 tablet:grid-flow-row tablet:grid-cols-2 tablet:grid-rows-1 tablet:gap-[32px] laptop:col-span-3 laptop:col-start-2 laptop:row-span-3 laptop:row-start-1 laptop:grid laptop:grid-flow-col laptop:grid-cols-1 laptop:grid-rows-3">
+      <div className="col-span-2 col-start-2 row-span-1 row-start-2 flex h-full w-full flex-col items-start justify-between gap-[16px] tablet:col-span-1 tablet:col-start-1 tablet:row-span-1 tablet:gap-[32px] laptop:col-span-1 laptop:row-span-1 laptop:flex-row">
         <Card
           col={2}
           row={2}
@@ -76,7 +76,7 @@ const Intro = () => {
         </Card>
       </div>
 
-      <div className="flex h-full w-full laptop:col-span-1 laptop:row-span-1 laptop:row-start-2">
+      <div className="flex h-full w-full laptop:col-span-1 laptop:row-span-2 laptop:row-start-2">
         <Card
           col={2}
           row={2}
@@ -86,7 +86,7 @@ const Intro = () => {
           orderTablet={5}
           className=""
         >
-          <div className="flex h-full w-full flex-row flex-wrap items-center justify-center gap-[16px] overflow-hidden p-[16px] tablet:flex-row">
+          <div className="flex h-full w-full flex-row flex-wrap items-center justify-center gap-[16px] overflow-hidden p-[16px] p-[8px] tablet:flex-row tablet:p-[16px]">
             <Image
               src={"/selfie_1.svg"}
               alt="profile"
