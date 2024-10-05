@@ -1,9 +1,9 @@
-import Resume from '@/components/resume/Resume';
+import ResumeComponent from "@/components/resume/Resume";
 
 const ResumePage = () => {
   return (
-    <div className=" h-screen">
-      <Resume />
+    <div className="h-full">
+      <ResumeComponent />
     </div>
   );
 };
