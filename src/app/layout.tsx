@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/NavSection/Nav";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,8 @@ export default function RootLayout({
         className={`${inter.className} relative h-[100svh] min-h-[100svh] min-w-[100vw] bg-black text-white`}
       >
         <Navbar />
+        <Analytics />
+
         <div className="h-full w-full pb-[64px]">{children}</div>
       </body>
     </html>

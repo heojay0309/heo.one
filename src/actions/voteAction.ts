@@ -4,7 +4,6 @@ import { prisma } from '@/utils/prisma';
 
 export const voteAction = async (votedType: string) => {
   const voteType = votedType;
-  console.log('voteType', voteType);
   const voteId = '1';
   const results = await prisma.vote.upsert({
     where: { id: voteId as string },
