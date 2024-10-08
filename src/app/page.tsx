@@ -5,7 +5,7 @@ import ProjectWrapper from "@/components/wrapper/ProjectWrapper";
 import WorkTimeline from "@/components/WorkTimeline";
 export default function Home() {
   return (
-    <div className="grid h-full grid-flow-row grid-cols-4 grid-rows-7 gap-[16px] px-[16px] tablet:grid-cols-4 tablet:grid-rows-5 tablet:gap-[32px] tablet:px-[32px] laptop:grid-flow-row laptop:grid-cols-6 laptop:grid-rows-4 laptop:px-[32px]">
+    <div className="grid h-full grid-flow-row grid-cols-4 grid-rows-7 gap-[16px] px-[32px] tablet:grid-cols-4 tablet:grid-rows-5 tablet:gap-[32px] tablet:px-[32px] laptop:grid-flow-row laptop:grid-cols-6 laptop:grid-rows-4 laptop:px-[32px]">
       <Vote />
       <WorkTimeline mobileHidden />
       <Profile

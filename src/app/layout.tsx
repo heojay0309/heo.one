@@ -19,12 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} relative h-[100svh] min-h-[100svh] min-w-[100vw] bg-black text-white`}
+        className={`${inter.className} relative h-[100svh] min-w-[100vw] bg-black pb-[48px] text-white tablet:pb-[64px]`}
       >
         <Navbar />
+        <div className="h-full w-full pb-[48px] tablet:pb-[32px]">
+          {children}
+        </div>
         <Analytics />
-
-        <div className="h-full w-full pb-[64px]">{children}</div>
       </body>
     </html>
   );

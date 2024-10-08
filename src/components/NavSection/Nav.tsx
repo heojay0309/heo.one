@@ -50,10 +50,10 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky z-10 flex h-[64px] w-full items-center justify-center px-[16px] tablet:px-[32px]">
+    <div className="sticky z-10 h-[48px] w-full px-[16px] py-[8px] tablet:h-[64px] tablet:px-[32px] tablet:py-[16px]">
       <Link
         href={"/"}
-        className="flex text-center text-[16px] font-black leading-[24px] tracking-[0.12em] text-white text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
+        className="flex h-full w-full items-center justify-center self-center text-center text-[16px] font-black leading-[24px] tracking-[0.12em] text-white text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
       >
         JAY HEO
       </Link>

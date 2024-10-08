@@ -86,19 +86,18 @@ const Intro = () => {
           orderTablet={5}
           className=""
         >
-          <div className="flex h-full w-full flex-row flex-wrap items-center justify-center gap-[16px] overflow-hidden p-[16px] tablet:flex-row tablet:p-[16px]">
+          <div className="flex h-full w-full flex-row flex-wrap items-center justify-center gap-[16px] p-[16px] tablet:flex-row tablet:p-[16px]">
             <Image
               src={"/selfie_1.svg"}
               alt="profile"
               priority={true}
-              width={128}
-              height={128}
-              className="h-[64px] w-[64px] rounded-full object-fill tablet:h-[128px] tablet:w-[128px] laptop:h-[172px] laptop:w-[172px]"
+              width={96}
+              height={96}
+              className="h-[80px] w-[80px] rounded-full object-fill tablet:h-[96px] tablet:w-[96px] laptop:h-[172px] laptop:w-[172px]"
             />
-            <div className="block text-center text-[14px] font-normal leading-[21px] tracking-[0.12em] text-white text-opacity-80 tablet:hidden laptop:text-[16px] laptop:leading-[28px]">
+            <div className="block text-center text-[12px] font-normal leading-[18px] tracking-[0.12em] text-white text-opacity-80 tablet:hidden laptop:text-[16px] laptop:leading-[28px]">
               Hello, <br /> I am a full-stack software engineer with extensive
               experience in developing front-end applications.
-              {/* <br />I also love Costco food! 🌭 */}
             </div>
             <div className="hidden text-[14px] font-normal leading-[21px] tracking-[0.12em] text-white text-opacity-80 tablet:block tablet:text-center laptop:text-[16px] laptop:leading-[28px]">
               Hello, <br /> I am a full-stack software engineer with extensive
