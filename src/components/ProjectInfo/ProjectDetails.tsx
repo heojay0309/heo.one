@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ProjectDataType } from '@/constants/projects';
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ProjectDataType } from "@/constants/projects";
 
 const ProjectDetails = ({
   currentProject,
@@ -22,7 +22,6 @@ const ProjectDetails = ({
       for (let i = 0; i < counter; i++) {
         script.push(i);
       }
-      // setDots(script);
     };
     if (currentProject.images) {
       pageCounter(currentProject.images.length);
@@ -30,58 +29,58 @@ const ProjectDetails = ({
   }, [currentProject.images]);
 
   return (
-    <div className="flex fixed h-full flex-col-reverse laptop:flex-row gap-[64px] laptop:gap-[32px] w-full max-h-[100vh] laptop:max-h-none laptop:max-w-[1440px] tablet:max-w-[768px] laptop:mx-auto laptop:px-[64px] px-[16px] laptop:overflow-y-auto overflow-x-auto overflow-y-clip pb-[128px] laptop:py-[0px]">
-      <div className="flex sticky top-[380px] h-full min-h-[210px] laptop:min-h-[290px] laptop:max-h-[290px] flex-col gap-[32px] items-center laptop:items-start self-center laptop:self-auto justify-start laptop:justify-between w-full tablet:w-full max-h-[210px]">
+    <div className="fixed flex h-full max-h-[100vh] w-full flex-col-reverse gap-[64px] overflow-x-auto overflow-y-clip px-[16px] pb-[128px] tablet:max-w-[768px] laptop:mx-auto laptop:max-h-none laptop:max-w-[1440px] laptop:flex-row laptop:gap-[32px] laptop:overflow-y-auto laptop:px-[64px] laptop:py-[0px]">
+      <div className="sticky top-[380px] flex h-full max-h-[210px] min-h-[210px] w-full flex-col items-center justify-start gap-[32px] self-center tablet:w-full laptop:max-h-[290px] laptop:min-h-[290px] laptop:items-start laptop:justify-between laptop:self-auto">
         <div className="flex flex-col gap-[8px] text-center laptop:text-start">
           <div className="h4">{currentProject.projectName}</div>
           <div className="p2">{currentProject.yearsWorked}</div>
         </div>
-        <div className="h6 flex-1 laptop:text-start text-center w-1/2 tablet:w-1/2 laptop:w-2/3 min-h-[80px] laptop:h-[210px]">
+        <div className="h6 min-h-[80px] w-1/2 flex-1 text-center tablet:w-1/2 laptop:h-[210px] laptop:w-2/3 laptop:text-start">
           {currentProject.description[currentIndex]}
         </div>
         <Link
-          className="bg-black text-white px-[8px] py-[8px] w-1/2 tablet:w-1/2 laptop:w-1/3 text-center rounded-[4px] h6"
+          className="h6 w-1/2 rounded-[4px] bg-black px-[8px] py-[8px] text-center text-white tablet:w-1/2 laptop:w-1/3"
           href={currentProject?.url}
         >
           View Prototype
         </Link>
-        <div className="flex max-h-[248px] laptop:hidden w-1/3 pt-[32px] justify-between gap-[32px] items-center h-full">
+        <div className="flex h-full max-h-[248px] w-1/3 items-center justify-between gap-[32px] pt-[32px] laptop:hidden">
           {dots.map((dot, index) => {
             return (
               <button
                 onClick={() => setCurrentIndex(index)}
                 key={index}
-                className={`rounded-full h-[10px] w-[10px] bg-black ${
-                  index === currentXIndex ? 'bg-opacity-80' : 'bg-opacity-30'
+                className={`h-[10px] w-[10px] rounded-full bg-black ${
+                  index === currentXIndex ? "bg-opacity-80" : "bg-opacity-30"
                 }`}
               ></button>
             );
           })}
         </div>
       </div>
-      <div className="sticky max-h-[320px] top-[100px] laptop:left-1/2 laptop:w-full laptop:top-[340px] flex laptop:flex-row flex-col justify-center tablet:justify-center laptop:gap-[128px] items-center ">
+      <div className="sticky top-[100px] flex max-h-[320px] flex-col items-center justify-center tablet:justify-center laptop:left-1/2 laptop:top-[340px] laptop:w-full laptop:flex-row laptop:gap-[128px]">
         <Image
           src={currentProject.images[currentIndex]}
           width={400}
           height={320}
           alt={currentProject.projectName}
-          className="select-none laptop:flex hidden"
+          className="hidden select-none laptop:flex"
         />
         <Image
           src={currentProject.images[currentXIndex]}
           width={400}
           height={320}
           alt={currentProject.projectName}
-          className="select-none flex laptop:hidden"
+          className="flex select-none laptop:hidden"
         />
-        <div className="hidden flex-col max-h-[248px] laptop:flex justify-between gap-[32px] items-center h-full">
+        <div className="hidden h-full max-h-[248px] flex-col items-center justify-between gap-[32px] laptop:flex">
           {dots.map((dot, index) => {
             return (
               <button
                 onClick={() => setCurrentIndex(index)}
                 key={index}
-                className={`rounded-full h-[10px] w-[10px] bg-black ${
-                  index === currentIndex ? 'bg-opacity-80' : 'bg-opacity-30'
+                className={`h-[10px] w-[10px] rounded-full bg-black ${
+                  index === currentIndex ? "bg-opacity-80" : "bg-opacity-30"
                 }`}
               ></button>
             );

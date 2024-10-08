@@ -29,7 +29,7 @@ export type IProjectData = {
 export const projectData: IProjectData = {
   preps: {
     projectName: 'Preps',
-    position: 'Co-Founder & Lead Frontend Developer',
+    position: 'Frontend Developer',
     yearsWorked: 'Nov 2023 - Jun 2024',
     location: 'Los Angeles, CA',
     introduction:

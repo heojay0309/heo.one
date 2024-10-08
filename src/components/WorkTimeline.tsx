@@ -26,7 +26,7 @@ const WorkTimeline = ({
     Preps: {
       month: "Dec.",
       year: "2023",
-      title: "Lead Developer",
+      title: "Frontend Developer",
     },
     Mustadd: {
       month: "Aug.",
