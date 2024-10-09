@@ -22,7 +22,7 @@ export default function RootLayout({
         className={`${inter.className} relative h-[100svh] min-w-[100vw] bg-black pb-[48px] text-white tablet:pb-[64px]`}
       >
         <Navbar />
-        <div className="h-full w-full pb-[48px] tablet:pb-[32px]">
+        <div className="h-full w-full pb-[24px] tablet:pb-[32px]">
           {children}
         </div>
         <Analytics />

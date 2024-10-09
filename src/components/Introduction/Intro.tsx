@@ -19,16 +19,17 @@ const Intro = () => {
             href={"https://www.shine-resumes.com"}
             className="flex w-full items-center justify-center gap-[16px] p-[16px] tablet:gap-[32px] laptop:p-[64px]"
           >
-            <div className="flex h-full w-full flex-col gap-[16px] text-start text-[14px] font-normal leading-[21px] tracking-[0.12em] text-white text-opacity-80 tablet:text-[16px] tablet:leading-[24px]">
-              <div className="flex h-full w-full flex-nowrap items-center justify-center gap-[8px] text-[16px] font-[400] text-white text-opacity-80">
+            <div className="h-full gap-[16px] text-start text-[14px] font-normal leading-[21px] tracking-[0.12em] text-white text-opacity-80 tablet:text-[16px] tablet:leading-[24px]">
+              <div className="flex h-full w-full items-center justify-center gap-[8px] text-[16px] font-[400] text-white text-opacity-80">
                 <Image
                   src={"/projectIcons/project_shine.svg"}
                   alt={"shine"}
                   height={32}
                   width={32}
+                  className="hidden tablet:block"
                 />
-                <span className="flex gap-[8px] font-[600] text-white text-opacity-100">
-                  ShineResumes{" "}
+                <span className="flex font-[600] text-white text-opacity-100 tablet:w-auto">
+                  Shine
                 </span>
                 <Image
                   src={"/projectIcons/project_shine.svg"}
@@ -53,16 +54,17 @@ const Intro = () => {
             href={"https://preps-ai.com"}
             className="flex w-full items-center justify-center gap-[16px] p-[16px] tablet:gap-[32px] laptop:p-[64px]"
           >
-            <div className="flex h-full w-full flex-col gap-[16px] text-start text-[14px] font-normal leading-[21px] tracking-[0.12em] text-white text-opacity-80 tablet:text-[16px] tablet:leading-[24px]">
-              <div className="flex h-full items-center justify-center gap-[8px] text-[16px] font-[400] text-white text-opacity-80">
+            <div className="h-full gap-[16px] text-start text-[14px] font-normal leading-[21px] tracking-[0.12em] text-white text-opacity-80 tablet:text-[16px] tablet:leading-[24px]">
+              <div className="flex h-full w-full items-center justify-center gap-[8px] text-[16px] font-[400] text-white text-opacity-80">
                 <Image
                   src={"/projectIcons/project_preps.svg"}
                   alt={"preps"}
                   height={50}
                   width={50}
+                  className="hidden tablet:block"
                 />
-                <span className="flex gap-[8px] text-nowrap font-[600] text-white text-opacity-100">
-                  Preps AI{" "}
+                <span className="flex text-nowrap font-[600] text-white text-opacity-100 tablet:w-auto">
+                  Preps
                 </span>
                 <Image
                   src={"/projectIcons/project_preps.svg"}
@@ -86,7 +88,7 @@ const Intro = () => {
           orderTablet={5}
           className=""
         >
-          <div className="flex h-full w-full flex-row flex-wrap items-center justify-center gap-[16px] p-[16px] tablet:flex-row tablet:p-[16px]">
+          <div className="flex h-full w-full flex-row flex-wrap items-center justify-center gap-[8px] overflow-scroll p-[16px] tablet:flex-row tablet:p-[16px]">
             <Image
               src={"/selfie_1.svg"}
               alt="profile"
