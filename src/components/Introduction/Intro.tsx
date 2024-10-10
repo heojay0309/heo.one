@@ -89,7 +89,7 @@ const Intro = () => {
         >
           <div className="flex h-full w-full flex-row flex-wrap items-center justify-center gap-[8px] overflow-scroll p-[16px] tablet:flex-row tablet:p-[16px]">
             <Image
-              src={"/selfie_1.svg"}
+              src={"/selfie.svg"}
               alt="profile"
               priority={true}
               width={96}
