@@ -16,7 +16,7 @@ const Intro = () => {
           className="h-full w-full hover:bg-opacity-20 active:bg-opacity-40"
         >
           <Link
-            href={"https://www.shine-resumes.com"}
+            href={"https://www.shine-resumes.com/login"}
             className="flex w-full items-center justify-center gap-[16px] p-[16px] tablet:gap-[32px] laptop:p-[64px]"
           >
             <div className="h-full gap-[16px] text-start text-[14px] font-normal leading-[21px] tracking-[0.12em] text-white text-opacity-80 tablet:text-[16px] tablet:leading-[24px]">
@@ -77,7 +77,6 @@ const Intro = () => {
           </Link>
         </Card>
       </div>
-
       <div className="flex h-full w-full laptop:col-span-1 laptop:row-span-2 laptop:row-start-2">
         <Card
           col={2}
