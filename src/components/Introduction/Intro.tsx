@@ -97,14 +97,19 @@ const Intro = () => {
               className="h-[80px] w-[80px] rounded-full object-fill tablet:h-[96px] tablet:w-[96px] laptop:h-[172px] laptop:w-[172px]"
             />
             <div className="block text-center text-[12px] font-normal leading-[18px] tracking-[0.12em] text-white text-opacity-80 tablet:hidden laptop:text-[16px] laptop:leading-[28px]">
-              Hello, <br /> I am a full-stack software engineer with extensive
-              experience in developing front-end applications.
+              Hello, <br /> my name is Jay Heo, a detail-oriented Full-Stack
+              Engineer with a strong passion for building robust, scalable, and
+              innovative web applications. With a specialty in Next.js and
+              TypeScript, I enjoy tackling complex development challenges and
+              pushing the boundaries of what’s possible with modern technology.
             </div>
             <div className="hidden text-[14px] font-normal leading-[21px] tracking-[0.12em] text-white text-opacity-80 tablet:block tablet:text-center laptop:text-[16px] laptop:leading-[28px]">
-              Hello, <br /> I am a full-stack software engineer with extensive
-              experience in developing front-end applications. My passion for
-              building high-quality products comes from my love of challenging
-              difficult problems and discovering robust solutions.
+              Hello,
+              <br /> my name is Jay Heo, a detail-oriented Full-Stack Engineer
+              with a strong passion for building robust, scalable, and
+              innovative web applications. With a specialty in Next.js and
+              TypeScript, I enjoy tackling complex development challenges and
+              pushing the boundaries of what’s possible with modern technology.
               {/* <br />I also love Costco food! 🌭 */}
             </div>
           </div>
