@@ -17,7 +17,7 @@ interface IWork {
 }
 const Container = ({ work }: IWork) => {
   return (
-    <div className="flex flex-col gap-[64px] py-[64px]">
+    <div className="flex flex-col gap-[32px]">
       <div className="flex w-full flex-col gap-[8px]">
         <div className="flex flex-row gap-[10px] text-[32px] font-semibold leading-[48px]">
           <Image src={work.logo} alt={work.title} height={40} width={40} />
@@ -35,7 +35,6 @@ const Container = ({ work }: IWork) => {
           {work.description}
         </div>
       </div>
-
       {work.features.map((feature, index) => {
         return (
           <div

@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${urbanist.className} relative h-[100svh] min-w-[100vw]`}
+        className={`${urbanist.className} relative h-[100svh] min-w-[100vw] scroll-smooth`}
       >
-        <div className="mx-auto w-full max-w-[1440px]">
+        <div className="mx-auto w-full max-w-[1440px] ">
           <Navbar />
           {children}
           <Navbar />

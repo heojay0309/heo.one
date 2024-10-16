@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Intro = () => {
   return (
-    <div className="text-align flex h-full w-full flex-col items-center justify-center gap-[64px] pb-[64px] pt-[32px]">
+    <div className="text-align flex h-full w-full snap-start flex-col items-center justify-center gap-[64px] py-[64px]">
       <Image src={"/selfie-1.svg"} alt={"me"} height={320} width={320} />
       <div className="flex max-h-[400px] max-w-[800px] flex-col gap-[32px] text-start">
         <span className="text-[20px] font-[500] leading-[32px]">
