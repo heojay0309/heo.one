@@ -22,7 +22,7 @@ const experienceObj: IExperience[] = [
     stacks:
       "TypeScript, Next.js, Tailwind, GraphQL, Express.js, Prisma, AWS, Docker",
     description:
-      "ShineResumes is an app that generates tailored resumes to its user’s target job descriptions in seconds.",
+      "ShineResumes is an app that generates tailored resumes to the job descriptions in seconds.",
     features: [
       {
         title: "Sign in with Google",
@@ -162,23 +162,46 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-[32px] px-[64px]">
       <Intro />
-      <div className="flex flex-col gap-[32px] py-[64px]">
-        <div className="self-center py-[16px]">
+      <div className="flex flex-col gap-[32px] py-[32px]">
+        <div className="flex flex-col gap-[32px] self-center py-[32px]">
           <h1
-            className="text-[54px] font-bold leading-[81px]"
+            className="text-[40px] font-bold leading-[60px]"
             id={"experiences"}
           >
             Experiences
           </h1>
           {experienceObj.map((exp, index) => {
-            return <Container work={exp} key={index} />;
+            return (
+              <div className="flex flex-col gap-[64px]" key={index}>
+                <Container work={exp} />
+              </div>
+            );
           })}
         </div>
-        <div className="self-center py-[16px]">
-          <h1 className="text-[54px] font-bold leading-[81px]">Projects</h1>
+        <div className="flex flex-col gap-[32px] self-center py-[32px]">
+          <h1 className="text-[40px] font-bold leading-[60px]" id={"projects"}>
+            Projects
+          </h1>
           {projectObj.map((proj, index) => {
-            return <Container work={proj} key={index} />;
+            return (
+              <div className="flex flex-col gap-[64px]" key={index}>
+                <Container work={proj} />
+              </div>
+            );
           })}
+        </div>
+      </div>
+      <div className="flex h-full min-h-[560px] flex-col items-center justify-center gap-[64px] pb-[64px] pt-[32px]">
+        <div className="flex h-full flex-col items-center justify-center gap-[64px]">
+          <div className="text-[40px] leading-[60px] tracking-wider">
+            Thank You for your time!
+          </div>
+          <a
+            href="mailto:heojay0309@gmail.com"
+            className="flex items-center justify-center rounded-2xl border-2 border-black border-opacity-40 px-[24px] py-[16px] text-[16px] font-semibold leading-[24px] text-black text-opacity-40 shadow-md transition-all duration-200 hover:scale-105 hover:text-opacity-50 hover:shadow-2xl active:text-opacity-70"
+          >
+            Contact Me
+          </a>
         </div>
       </div>
     </div>

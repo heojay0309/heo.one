@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const Intro = () => {
   return (
-    <div className="text-align flex w-full flex-col items-center justify-center gap-[32px] py-[64px]">
-      <Image src={"/selfie.svg"} alt={"me"} height={400} width={400} />
-      <div className="flex max-h-[400px] max-w-[880px] flex-col gap-[20px] text-start">
-        <span className="text-[24px] font-[500] leading-[36px]">
+    <div className="text-align flex h-full w-full flex-col items-center justify-center gap-[64px] pb-[64px] pt-[32px]">
+      <Image src={"/selfie-1.svg"} alt={"me"} height={320} width={320} />
+      <div className="flex max-h-[400px] max-w-[800px] flex-col gap-[32px] text-start">
+        <span className="text-[20px] font-[500] leading-[32px]">
           I am <strong>Jay Heo</strong>, a detail-oriented{" "}
           <strong>Full-Stack Engineer</strong> with a strong passion for
           building robust, scalable, and innovative web applications. With a
@@ -16,7 +16,7 @@ const Intro = () => {
           challenges and pushing the boundaries of what’s possible with modern
           technology.
         </span>
-        <span className="text-[24px] font-[500] leading-[36px]">
+        <span className="text-[20px] font-[500] leading-[32px]">
           In recent years, I’ve had the opportunity to work on{" "}
           <strong>Preps AI</strong>, an AI-powered platform designed to enhance
           technical interview preparation, and <strong>ShineResumes</strong>, a

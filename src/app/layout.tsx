@@ -26,6 +26,7 @@ export default function RootLayout({
         <div className="mx-auto w-full max-w-[1440px]">
           <Navbar />
           {children}
+          <Navbar />
         </div>
         <Analytics />
       </body>

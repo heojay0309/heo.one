@@ -50,7 +50,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky z-10 flex h-[72px] w-full justify-between px-[16px] py-[8px] tablet:h-[72px] tablet:px-[64px] tablet:py-[20px]">
+    <div className="sticky z-10 flex h-[60px] w-full justify-between px-[64px] py-[16px]">
       <Link
         href={"/"}
         className="text-center text-[16px] font-semibold leading-[24px] tracking-[0.12em] text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
@@ -58,10 +58,30 @@ const Navbar = () => {
         heo.one
       </Link>
       <div className="flex justify-between gap-[32px]">
-        <Link href={"#experiences"}>Projects</Link>
-        <Link href={"https://www.github.com/heojay0309"}>GitHub</Link>
-        <Link href={"https://www.linkedin.com/in/heo"}>LinkedIn</Link>
-        <Link href={"/resume"}>Resume</Link>
+        <Link
+          href={"#experiences"}
+          className="text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
+        >
+          Work
+        </Link>
+        <Link
+          href={"https://www.github.com/heojay0309"}
+          className="text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
+        >
+          GitHub
+        </Link>
+        <Link
+          href={"https://www.linkedin.com/in/heo"}
+          className="text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
+        >
+          LinkedIn
+        </Link>
+        <Link
+          href={"/resume"}
+          className="text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
+        >
+          Resume
+        </Link>
       </div>
     </div>
   );

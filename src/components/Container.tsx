@@ -12,13 +12,16 @@ interface IExperience {
   description: string;
   features: FeaturesType[];
 }
-const Container = ({ work }: IExperience) => {
+interface IWork {
+  work: IExperience;
+}
+const Container = ({ work }: IWork) => {
   return (
-    <div className="flex flex-col gap-[32px]">
-      <div className="flex flex-col gap-[8px] py-[16px]">
-        <div className="flex gap-[16px] text-[36px] font-semibold leading-[64px]">
-          {work.title}
+    <div className="flex flex-col gap-[64px] py-[64px]">
+      <div className="flex w-full flex-col gap-[8px]">
+        <div className="flex flex-row gap-[10px] text-[32px] font-semibold leading-[48px]">
           <Image src={work.logo} alt={work.title} height={40} width={40} />
+          <span>{work.title}</span>
         </div>
         {work.date && (
           <div className="text-[20px] font-light italic leading-[24px]">
@@ -28,16 +31,18 @@ const Container = ({ work }: IExperience) => {
         <span className="text-[20px] font-semibold leading-[24px]">
           {work.stacks}
         </span>
-        <div className="text-[20px] leading-[24px]">{work.description}</div>
+        <div className="mt-[8px] align-baseline text-[20px] font-medium leading-[24px]">
+          {work.description}
+        </div>
       </div>
 
       {work.features.map((feature, index) => {
         return (
           <div
             key={index}
-            className={`flex w-full gap-[64px] py-[64px] ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+            className={`flex w-full gap-[64px] py-[32px] ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
           >
-            <div className="flex flex-col justify-center gap-[32px]">
+            <div className="flex flex-col justify-center gap-[16px]">
               <h1 className="text-[32px] font-bold leading-[48px]">
                 {feature.title}
               </h1>
