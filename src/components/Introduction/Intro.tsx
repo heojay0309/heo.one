@@ -4,116 +4,26 @@ import Link from "next/link";
 
 const Intro = () => {
   return (
-    <div className="col-span-4 row-span-2 flex grid-flow-row grid-rows-subgrid gap-[16px] tablet:col-span-4 tablet:row-span-2 tablet:grid-flow-row tablet:grid-cols-2 tablet:grid-rows-1 tablet:gap-[32px] laptop:col-span-3 laptop:col-start-2 laptop:row-span-3 laptop:row-start-1 laptop:grid laptop:grid-flow-col laptop:grid-cols-1 laptop:grid-rows-3">
-      <div className="col-span-2 col-start-2 row-span-1 row-start-2 flex h-full w-full flex-col items-start justify-between gap-[16px] tablet:col-span-1 tablet:col-start-1 tablet:row-span-1 tablet:gap-[32px] laptop:col-span-1 laptop:row-span-1 laptop:flex-row">
-        <Card
-          col={2}
-          row={2}
-          type={"one"}
-          order={5}
-          orderMobile={5}
-          orderTablet={5}
-          className="h-full w-full hover:bg-opacity-20 active:bg-opacity-40"
-        >
-          <Link
-            href={"https://www.shine-resumes.com/login"}
-            className="flex w-full items-center justify-center gap-[16px] p-[16px] tablet:gap-[32px] laptop:p-[64px]"
-          >
-            <div className="h-full gap-[16px] text-start text-[14px] font-normal leading-[21px] tracking-[0.12em] text-white text-opacity-80 tablet:text-[16px] tablet:leading-[24px]">
-              <div className="flex h-full w-full items-center justify-center gap-[8px] text-[16px] font-[400] text-white text-opacity-80">
-                <Image
-                  src={"/projectIcons/project_shine.svg"}
-                  alt={"shine"}
-                  height={32}
-                  width={32}
-                  className="hidden tablet:block"
-                />
-                <span className="flex font-[600] text-white text-opacity-100 tablet:w-auto">
-                  Shine
-                </span>
-                <Image
-                  src={"/projectIcons/project_shine.svg"}
-                  alt={"shine"}
-                  height={32}
-                  width={32}
-                />
-              </div>
-            </div>
-          </Link>
-        </Card>
-        <Card
-          col={2}
-          row={2}
-          type={"one"}
-          order={5}
-          orderMobile={5}
-          orderTablet={5}
-          className="h-full w-full hover:bg-opacity-20 active:bg-opacity-40"
-        >
-          <Link
-            href={"https://preps-ai.com"}
-            className="flex w-full items-center justify-center gap-[16px] p-[16px] tablet:gap-[32px] laptop:p-[64px]"
-          >
-            <div className="h-full gap-[16px] text-start text-[14px] font-normal leading-[21px] tracking-[0.12em] text-white text-opacity-80 tablet:text-[16px] tablet:leading-[24px]">
-              <div className="flex h-full w-full items-center justify-center gap-[8px] text-[16px] font-[400] text-white text-opacity-80">
-                <Image
-                  src={"/projectIcons/project_preps.svg"}
-                  alt={"preps"}
-                  height={50}
-                  width={50}
-                  className="hidden tablet:block"
-                />
-                <span className="flex text-nowrap font-[600] text-white text-opacity-100 tablet:w-auto">
-                  Preps
-                </span>
-                <Image
-                  src={"/projectIcons/project_preps.svg"}
-                  alt={"preps"}
-                  height={50}
-                  width={50}
-                />
-              </div>
-            </div>
-          </Link>
-        </Card>
-      </div>
-      <div className="flex h-full w-full laptop:col-span-1 laptop:row-span-2 laptop:row-start-2">
-        <Card
-          col={2}
-          row={2}
-          type="main"
-          order={5}
-          orderMobile={5}
-          orderTablet={5}
-          className=""
-        >
-          <div className="flex h-full w-full flex-row flex-wrap items-center justify-center gap-[8px] overflow-scroll p-[16px] tablet:flex-row tablet:p-[16px]">
-            <Image
-              src={"/selfie.svg"}
-              alt="profile"
-              priority={true}
-              width={96}
-              height={96}
-              className="h-[80px] w-[80px] rounded-full object-fill tablet:h-[96px] tablet:w-[96px] laptop:h-[172px] laptop:w-[172px]"
-            />
-            <div className="block text-center text-[12px] font-normal leading-[18px] tracking-[0.12em] text-white text-opacity-80 tablet:hidden laptop:text-[16px] laptop:leading-[28px]">
-              Hello, <br /> my name is Jay Heo, a detail-oriented Full-Stack
-              Engineer with a strong passion for building robust, scalable, and
-              innovative web applications. With a specialty in Next.js and
-              TypeScript, I enjoy tackling complex development challenges and
-              pushing the boundaries of what’s possible with modern technology.
-            </div>
-            <div className="hidden text-[14px] font-normal leading-[21px] tracking-[0.12em] text-white text-opacity-80 tablet:block tablet:text-center laptop:text-[16px] laptop:leading-[28px]">
-              Hello,
-              <br /> my name is Jay Heo, a detail-oriented Full-Stack Engineer
-              with a strong passion for building robust, scalable, and
-              innovative web applications. With a specialty in Next.js and
-              TypeScript, I enjoy tackling complex development challenges and
-              pushing the boundaries of what’s possible with modern technology.
-              {/* <br />I also love Costco food! 🌭 */}
-            </div>
-          </div>
-        </Card>
+    <div className="text-align flex w-full flex-col items-center justify-center gap-[32px] py-[64px]">
+      <Image src={"/selfie.svg"} alt={"me"} height={400} width={400} />
+      <div className="flex max-h-[400px] max-w-[880px] flex-col gap-[20px] text-start">
+        <span className="text-[24px] font-[500] leading-[36px]">
+          I am <strong>Jay Heo</strong>, a detail-oriented{" "}
+          <strong>Full-Stack Engineer</strong> with a strong passion for
+          building robust, scalable, and innovative web applications. With a
+          specialty in <strong>Next.js</strong>, <strong>Node.js</strong>, and{" "}
+          <strong>TypeScript</strong>, I enjoy tackling complex development
+          challenges and pushing the boundaries of what’s possible with modern
+          technology.
+        </span>
+        <span className="text-[24px] font-[500] leading-[36px]">
+          In recent years, I’ve had the opportunity to work on{" "}
+          <strong>Preps AI</strong>, an AI-powered platform designed to enhance
+          technical interview preparation, and <strong>ShineResumes</strong>, a
+          dynamic online resume builder tailored for tech professionals. These
+          experiences have not only honed my technical skills but have also
+          fueled my drive to create impactful digital solutions.
+        </span>
       </div>
     </div>
   );

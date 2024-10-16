@@ -50,13 +50,19 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky z-10 h-[48px] w-full px-[16px] py-[8px] tablet:h-[64px] tablet:px-[32px] tablet:py-[16px]">
+    <div className="sticky z-10 flex h-[72px] w-full justify-between px-[16px] py-[8px] tablet:h-[72px] tablet:px-[64px] tablet:py-[20px]">
       <Link
         href={"/"}
-        className="flex h-full w-full items-center justify-center self-center text-center text-[16px] font-black leading-[24px] tracking-[0.12em] text-white text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
+        className="text-center text-[16px] font-semibold leading-[24px] tracking-[0.12em] text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
       >
-        JAY HEO
+        heo.one
       </Link>
+      <div className="flex justify-between gap-[32px]">
+        <Link href={"#experiences"}>Projects</Link>
+        <Link href={"https://www.github.com/heojay0309"}>GitHub</Link>
+        <Link href={"https://www.linkedin.com/in/heo"}>LinkedIn</Link>
+        <Link href={"/resume"}>Resume</Link>
+      </div>
     </div>
   );
 };
