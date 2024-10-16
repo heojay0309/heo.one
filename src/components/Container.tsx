@@ -39,7 +39,7 @@ const Container = ({ work }: IWork) => {
         return (
           <div
             key={index}
-            className={`flex w-full gap-[64px] py-[32px] ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+            className={`flex w-full flex-col gap-[64px] py-[32px] tablet:flex-row ${index % 2 === 0 ? "tablet:flex-row" : "tablet:flex-row-reverse"}`}
           >
             <div className="flex flex-col justify-center gap-[16px]">
               <h1 className="text-[32px] font-bold leading-[48px]">

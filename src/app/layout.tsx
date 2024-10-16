@@ -23,10 +23,10 @@ export default function RootLayout({
       <body
         className={`${urbanist.className} relative h-[100svh] min-w-[100vw] scroll-smooth`}
       >
-        <div className="mx-auto w-full max-w-[1440px] ">
-          <Navbar />
+        <div className="relative mx-auto w-full max-w-[1440px]">
+          {/* <Navbar /> */}
           {children}
-          <Navbar />
+          {/* <Navbar /> */}
         </div>
         <Analytics />
       </body>

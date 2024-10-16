@@ -6,6 +6,7 @@ import Container from "@/components/Container";
 import SideMenu from "@/components/NavSection/SideMenu";
 import { projectObj, experienceObj } from "@/constants/projectObj";
 import { useRouter } from "next/navigation";
+import Navbar from "@/components/NavSection/Nav";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState(null);
@@ -17,11 +18,18 @@ export default function Home() {
       (entries) => {
         entries.forEach((entry: any) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+            const sectionId = entry.target.id || "intro"; // Default to "intro" for the top section
+            setActiveSection(sectionId);
+            // If the section id is not "intro", update the URL
+            if (sectionId !== "intro") {
+              window.history.replaceState(null, "", `#${sectionId}`);
+            } else {
+              window.history.replaceState(null, "", " "); // Clears the hash
+            }
           }
         });
       },
-      { threshold: 0.6 },
+      { threshold: 0.1 },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -32,8 +40,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative flex h-screen snap-y snap-mandatory flex-col gap-[32px] overflow-y-scroll scroll-smooth px-[64px]">
-      <section id={"nav"}>
+    <div className="relative flex flex-col gap-[16px] scroll-smooth px-[64px] tablet:h-screen tablet:snap-y tablet:snap-mandatory tablet:gap-[32px] tablet:overflow-y-scroll">
+      <Navbar />
+      <div className="">
+        <SideMenu activeSection={activeSection} />
+      </div>
+      <section id={activeSection !== "intro" ? "intro" : "top"}>
         <Intro />
       </section>
       <div className="flex flex-col gap-[32px] py-[32px]">
@@ -46,8 +58,8 @@ export default function Home() {
             return (
               <section
                 className="flex snap-start snap-always flex-col gap-[64px] py-[32px]"
-                key={exp.tag}
                 id={exp.tag}
+                key={index}
               >
                 <Container work={exp} />
               </section>
@@ -63,7 +75,7 @@ export default function Home() {
               return (
                 <section
                   className="flex snap-start snap-always flex-col gap-[64px] py-[32px]"
-                  key={proj.tag}
+                  key={index}
                   id={proj.tag}
                 >
                   <Container work={proj} />
@@ -72,24 +84,26 @@ export default function Home() {
             })}
           </div>
         </div>
-        <section
-          id={"footer"}
-          className="flex h-full min-h-[560px] snap-start flex-col items-center justify-center gap-[64px] pb-[64px] pt-[32px]"
-        >
-          <div className="flex h-full flex-col items-center justify-center gap-[64px]">
-            <div className="text-[40px] leading-[60px] tracking-wider">
-              Thank You for your time!
+        <div className="flex items-center justify-center py-[32px]">
+          <section
+            id={"contact"}
+            className="flex h-full min-h-[560px] snap-start flex-col items-center justify-center gap-[64px]"
+          >
+            <div className="flex h-full flex-col items-center justify-center gap-[64px]">
+              <div className="text-[40px] leading-[60px] tracking-wider">
+                Thank You for your time!
+              </div>
+              <a
+                href="mailto:heojay0309@gmail.com"
+                className="flex items-center justify-center rounded-2xl border-2 border-black border-opacity-40 px-[24px] py-[16px] text-[16px] font-semibold leading-[24px] text-black text-opacity-40 shadow-md transition-all duration-200 hover:scale-105 hover:text-opacity-50 hover:shadow-2xl active:text-opacity-70"
+              >
+                Contact Me
+              </a>
             </div>
-            <a
-              href="mailto:heojay0309@gmail.com"
-              className="flex items-center justify-center rounded-2xl border-2 border-black border-opacity-40 px-[24px] py-[16px] text-[16px] font-semibold leading-[24px] text-black text-opacity-40 shadow-md transition-all duration-200 hover:scale-105 hover:text-opacity-50 hover:shadow-2xl active:text-opacity-70"
-            >
-              Contact Me
-            </a>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
-      <SideMenu activeSection={activeSection} />
+      <Navbar />
     </div>
   );
 }

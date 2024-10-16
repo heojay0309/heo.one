@@ -50,14 +50,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky z-10 flex h-[60px] w-full snap-start justify-between px-[64px] py-[16px]">
+    <div className="sticky z-10 flex h-[60px] w-full snap-start justify-between py-[16px]">
       <Link
         href={"/"}
         className="text-center text-[16px] font-semibold leading-[24px] tracking-[0.12em] text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
       >
         heo.one
       </Link>
-      <div className="flex justify-between gap-[32px]">
+      <div className="flex justify-between gap-[16px] tablet:gap-[32px]">
         <Link
           href={"#experiences"}
           className="text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
