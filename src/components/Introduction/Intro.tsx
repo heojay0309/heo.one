@@ -4,14 +4,14 @@ import Link from "next/link";
 
 const Intro = () => {
   return (
-    <div className="text-align flex h-full min-h-[800px] w-full snap-start flex-col items-center justify-center gap-[64px] overflow-x-clip tablet:min-h-[960px] tablet:flex-row">
-      <div className="relative h-[640px] w-[592px] overflow-hidden rounded-bl-[16px] rounded-br-[412px] rounded-tl-[16px] rounded-tr-[16px] tablet:h-[704px]">
+    <div className="text-align -z-10 flex h-full min-h-[720px] w-full snap-start flex-col items-center justify-center gap-[64px] overflow-x-clip tablet:min-h-[960px] tablet:flex-row">
+      <div className="relative h-[400px] w-[560px] overflow-hidden rounded-bl-[16px] rounded-br-[412px] rounded-tl-[16px] rounded-tr-[16px] tablet:h-[704px] tablet:w-[592px]">
         <Image
           src={"/selfie.svg"}
           alt={"me"}
           height={696}
           width={696}
-          className="absolute left-[0px] top-[-28px] h-[640px] w-[640px] tablet:h-[696px] tablet:w-[696px]"
+          className="absolute left-[36px] h-[400px] w-[400px] tablet:left-[0px] tablet:top-[-28px] tablet:h-[696px] tablet:w-[696px]"
         />
       </div>
       <div className="flex h-full max-h-[184px] max-w-[592px] flex-col justify-center gap-[16px]">

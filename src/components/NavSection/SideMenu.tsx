@@ -43,9 +43,9 @@ const SideMenu = ({
   }, [activeSection]);
 
   return (
-    <div className="fixed right-[40px] top-[60px] h-full gap-[64px] px-[8px] tablet:right-[40px] laptop:right-[56px]">
+    <div className="fixed right-[8px] top-[60px] h-full gap-[64px] tablet:right-[40px] tablet:px-[8px] laptop:right-[56px]">
       <div
-        className={`flex flex-col items-center justify-center gap-[32px] transition-transform duration-500 ease-in-out translate-y-[${offsetY}px]`}
+        className={`flex flex-col items-center justify-center gap-[16px] transition-transform duration-500 ease-in-out tablet:gap-[32px] translate-y-[${offsetY}px]`}
         style={{ transform: `translateY(${offsetY})` }}
       >
         <Link

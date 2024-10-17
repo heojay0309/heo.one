@@ -55,7 +55,7 @@ const Container = ({ work }: IWork) => {
     <div className="flex flex-col gap-[32px]">
       <div className="flex w-full flex-col gap-[32px] rounded-[24px] bg-black bg-opacity-[3%] p-[16px] tablet:p-[32px]">
         <div className="flex flex-col gap-[16px]">
-          <div className="flex w-full flex-row justify-between gap-[8px]">
+          <div className="flex w-full flex-col justify-between gap-[8px] tablet:flex-row">
             <div className="flex gap-[8px]">
               <Image src={work.logo} alt={work.title} height={40} width={40} />
               <span className="text-[32px] font-semibold leading-[48px]">
