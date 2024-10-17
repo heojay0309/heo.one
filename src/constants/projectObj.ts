@@ -59,7 +59,7 @@ export const experienceObj: IExperience[] = [
     logo: "/new/icons/project_preps.svg",
     date: "Dec 2023 - Jun 2024",
     stacks:
-      "TypeScript, Next.js, Tailwind, WebSocket, OAuth, Zustand, Speech Web API",
+      "TypeScript, Next.js, Tailwind, Zustand, Web Speech API, WebSocket, OAuth",
     description:
       "Preps AI is a real-time mock interview app for software engineers.",
     features: [
@@ -88,7 +88,7 @@ export const experienceObj: IExperience[] = [
     title: "Mustadd",
     logo: "/new/icons/project_mustadd.svg",
     date: "Aug 2022 - Aug 2023",
-    stacks: "TypeScript, React Native Expo, Figma, Fetch API, Test Flight",
+    stacks: "TypeScript, React Native Expo, Fetch API, Figma, Test Flight",
     description: "Mustadd’s Web 3.0 Storage Vault Social App.",
     features: [
       {

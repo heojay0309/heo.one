@@ -43,7 +43,7 @@ const SideMenu = ({
   }, [activeSection]);
 
   return (
-    <div className="fixed right-[0px] top-[60px] h-full gap-[64px] px-[16px] py-[64px] tablet:px-[64px]">
+    <div className="fixed right-[128px] top-[60px] h-full gap-[64px]">
       <div
         className={`flex flex-col items-center justify-center gap-[32px] transition-transform duration-500 ease-in-out translate-y-[${offsetY}px]`}
         style={{ transform: `translateY(${offsetY})` }}

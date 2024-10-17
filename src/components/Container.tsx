@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
 type FeaturesType = {
   title: string;
   description: string;
@@ -14,47 +15,104 @@ interface IExperience {
   features: FeaturesType[];
   url?: string;
 }
+
 interface IWork {
   work: IExperience;
 }
+
+const technicalBadges: any = {
+  "Express.js": "blue",
+  GraphQL: "blue",
+  TypeScript: "green",
+  "Next.js": "green",
+  Tailwind: "green",
+  Docker: "red",
+  WebSocket: "blue",
+  OAuth: "blue",
+  Zustand: "green",
+  "Web Speech API": "green",
+  "React Native Expo": "green",
+  Figma: "red",
+  "Fetch API": "green",
+  "Test Flight": "red",
+  Lottie: "green",
+  Firebase: "red",
+  FireStore: "red",
+  AWS: "red",
+  "Tailwind Animation": "green",
+  "Git LFS": "red",
+  Prisma: "red",
+};
+
+const backgroundBadgeColors: any = {
+  blue: "bg-[#3E74FF]",
+  green: "bg-[#09AF00]",
+  red: "bg-[#FF4646]",
+};
+
 const Container = ({ work }: IWork) => {
   return (
     <div className="flex flex-col gap-[32px]">
-      <div className="flex w-full flex-col gap-[8px]">
-        <div className="flex w-full flex-row justify-between gap-[8px] text-[32px] font-semibold leading-[48px]">
-          <div className="flex gap-[8px]">
-            <Image src={work.logo} alt={work.title} height={40} width={40} />
-            <span>{work.title}</span>
+      <div className="flex w-full flex-col gap-[32px] rounded-[24px] bg-black bg-opacity-[3%] p-[32px]">
+        <div className="flex flex-col gap-[16px]">
+          <div className="flex w-full flex-row justify-between gap-[8px]">
+            <div className="flex gap-[8px]">
+              <Image src={work.logo} alt={work.title} height={40} width={40} />
+              <span className="text-[32px] font-semibold leading-[48px]">
+                {work.title}
+              </span>
+            </div>
+            {work.url && (
+              <Link
+                href={work.url}
+                className="h-[40px] w-full max-w-[145px] rounded-[20px] bg-black text-white"
+              >
+                <div className="flex h-[40px] w-full items-center justify-center gap-[8px] self-center">
+                  <span className="text-[16px] font-[800] leading-[24px]">
+                    View Site
+                  </span>
+                  <Image
+                    src={"/arrow.svg"}
+                    alt={"arrow"}
+                    height={10}
+                    width={12}
+                  />
+                </div>
+              </Link>
+            )}
           </div>
-          {work.url && (
-            <Link
-              href={work.url}
-              className="h-[40px] w-full max-w-[145px] rounded-[20px] bg-black text-white"
-            >
-              <div className="flex h-[40px] w-full items-center justify-center gap-[8px] self-center">
-                <span className="text-[16px] font-bold leading-[24px]">
-                  View Site
-                </span>
-                <Image
-                  src={"/arrow.svg"}
-                  alt={"arrow"}
-                  height={10}
-                  width={12}
-                />
+          <div className="flex w-full justify-between">
+            <div className="max-w-1/2 w-full align-baseline text-[16px] font-normal leading-[24px]">
+              {work.description}
+            </div>
+            {work.date && (
+              <div className="max-w-1/2 w-full text-end text-[16px] font-normal italic leading-[24px]">
+                {work.date}
               </div>
-            </Link>
-          )}
-        </div>
-        {work.date && (
-          <div className="text-[20px] font-light italic leading-[24px]">
-            {work.date}
+            )}
           </div>
-        )}
-        <span className="text-[20px] font-semibold leading-[24px]">
-          {work.stacks}
-        </span>
-        <div className="mt-[8px] align-baseline text-[20px] font-medium leading-[24px]">
-          {work.description}
+        </div>
+
+        <div className="flex flex-col gap-[16px]">
+          <div className="flex w-full items-center gap-[8px]">
+            <h2 className="text-[16px] font-[700] leading-[24px]">
+              Technical Skills
+            </h2>
+          </div>
+          <div className="flex gap-[16px]">
+            {work.stacks.split(", ").map((skill: string, index) => {
+              return (
+                <div
+                  className={`flex items-center justify-center rounded-[20px] px-[16px] py-[2px] ${technicalBadges[skill as string] ? backgroundBadgeColors[technicalBadges[skill as string]] : "bg-black opacity-10"} text-white`}
+                  key={index}
+                >
+                  <span className="text-[16px] font-[700] leading-[24px]">
+                    {skill}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
       {work.features.map((feature, index) => {
