@@ -10,6 +10,7 @@ export interface IExperience {
   date?: string;
   stacks: string;
   description: string;
+  url?: string;
   features: FeaturesType[];
 }
 
@@ -19,6 +20,7 @@ export const experienceObj: IExperience[] = [
     title: "ShineResumes",
     logo: "/new/icons/project_shine.svg",
     date: "Jul 2024 - Present",
+    url: "https://www.shine-resumes.com/login",
     stacks:
       "TypeScript, Next.js, Tailwind, GraphQL, Express.js, Prisma, AWS, Docker",
     description:
@@ -53,6 +55,7 @@ export const experienceObj: IExperience[] = [
   {
     tag: "Preps",
     title: "Preps AI",
+    url: "https://www.preps-ai.com",
     logo: "/new/icons/project_preps.svg",
     date: "Dec 2023 - Jun 2024",
     stacks:

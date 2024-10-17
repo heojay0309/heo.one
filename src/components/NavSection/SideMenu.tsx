@@ -30,13 +30,6 @@ const SideMenu = ({
       Giverr: "60%",
       Mellow: "75%",
       contact: "75%",
-      // nav: 0,
-      // ShineResumes: 64,
-      // Preps: 128, // Adjust these values based on gap or position
-      // Mustadd: 192,
-      // Giverr: 220,
-      // Mellow: 256,
-      // contact: 256,
     };
 
     if (activeSection && sectionOffsets[activeSection] !== undefined) {
@@ -50,65 +43,89 @@ const SideMenu = ({
   }, [activeSection]);
 
   return (
-    <div className="fixed right-[0px] top-[60px] h-full gap-[64px] px-[16px] tablet:px-[64px]">
+    <div className="fixed right-[0px] top-[60px] h-full gap-[64px] px-[16px] py-[64px] tablet:px-[64px]">
       <div
-        className={`flex flex-col items-center justify-center gap-[64px] transition-transform duration-500 ease-in-out translate-y-[${offsetY}px]`}
+        className={`flex flex-col items-center justify-center gap-[32px] transition-transform duration-500 ease-in-out translate-y-[${offsetY}px]`}
         style={{ transform: `translateY(${offsetY})` }}
       >
-        <Link href={"#ShineResumes"}>
+        <Link
+          href={"#intro"}
+          className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
+        >
+          <Image
+            src={"/new/icons/home.svg"}
+            alt={"ShineResumes"}
+            height={24}
+            width={24}
+            className="select-none"
+          />
+        </Link>
+        <div className="w-[40px] border border-black border-opacity-10"></div>
+        <Link
+          href={"#ShineResumes"}
+          className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
+        >
           <Image
             src={"/new/icons/project_shine.svg"}
             alt={"ShineResumes"}
-            height={32}
-            width={32}
+            height={24}
+            width={24}
             className="select-none"
           />
         </Link>
-        <Link href={"#Preps"}>
+        <div className="w-[40px] border border-black border-opacity-10"></div>
+
+        <Link
+          href={"#Preps"}
+          className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
+        >
           <Image
             src={"/new/icons/project_preps.svg"}
             alt={"Preps AI"}
-            height={32}
-            width={32}
+            height={24}
+            width={24}
             className="select-none"
           />
         </Link>
-        <Link href={"#Mustadd"}>
+        <div className="w-[40px] border border-black border-opacity-10"></div>
+
+        <Link
+          href={"#Mustadd"}
+          className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
+        >
           <Image
             src={"/new/icons/project_mustadd.svg"}
             alt={"Mustadd"}
-            height={32}
-            width={32}
+            height={24}
+            width={24}
             className="select-none"
           />
         </Link>
-        <Link href={"#Giverr"}>
+        <div className="w-[40px] border border-black border-opacity-10"></div>
+
+        <Link
+          href={"#Giverr"}
+          className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
+        >
           <Image
             src={"/new/icons/project_giverr.svg"}
             alt={"Giverr"}
-            height={32}
-            width={32}
+            height={24}
+            width={24}
             className="select-none"
           />
         </Link>
-        <Link href={"#Mellow"}>
+        <div className="w-[40px] border border-black border-opacity-10"></div>
+
+        <Link
+          href={"#Mellow"}
+          className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
+        >
           <Image
             src={"/new/icons/project_mellow.svg"}
             alt={"Mellow"}
-            height={32}
-            width={32}
-            className="select-none"
-          />
-        </Link>
-        <Link
-          href={"#intro"}
-          className={`${activeSection === "contact" ? "opacity-100" : "opacity-0"} transition-all duration-500 ${isVisible ? "block" : "hidden"}`}
-        >
-          <Image
-            src={"/new/icons/arrow.svg"}
-            alt={"scroll to top"}
-            height={32}
-            width={32}
+            height={24}
+            width={24}
             className="select-none"
           />
         </Link>
