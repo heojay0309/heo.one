@@ -9,6 +9,7 @@ const Intro = () => {
         <Image
           src={"/selfie.svg"}
           alt={"me"}
+          priority
           fill
           className="absolute left-[36px] h-[400px] w-[400px] tablet:left-[0px] tablet:top-[-28px] tablet:h-[696px] tablet:w-[696px]"
         />
