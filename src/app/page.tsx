@@ -104,7 +104,7 @@ export default function Home() {
               </div> */}
               <div className="flex h-full w-full max-w-[640px] flex-col justify-center gap-[32px]">
                 <div className="text-[32px] font-[600] leading-[48px] tracking-wider opacity-80">
-                  Let's Get in Touch!
+                  Let&apos;s Get in Touch!
                 </div>
                 <form
                   action={contactAction}

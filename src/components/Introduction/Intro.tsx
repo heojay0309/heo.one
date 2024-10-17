@@ -17,13 +17,13 @@ const Intro = () => {
       <div className="flex h-full max-h-[184px] max-w-[592px] flex-col justify-center gap-[16px]">
         <h1 className="text-[48px] font-[600] leading-[64px]">Hello!</h1>
         <span className="text-[16px] font-[500] leading-[24px] tablet:text-[20px] tablet:leading-[32px]">
-          My name is <strong>Jay Heo</strong>, I'm a detail-oriented{" "}
+          My name is <strong>Jay Heo</strong>, I&apos;m a detail-oriented{" "}
           <strong>Full-Stack Engineer</strong> with a strong passion for
           building robust, scalable, and innovative web applications. With a
           specialty in <strong>Next.js</strong>, <strong>Node.js</strong>, and{" "}
           <strong>TypeScript</strong>, I enjoy tackling complex development
-          challenges and pushing the boundaries of what’s possible with modern
-          technology.
+          challenges and pushing the boundaries of what&apos;s possible with
+          modern technology.
         </span>
       </div>
       {/* <div className="flex max-h-[400px] w-full max-w-[400px] flex-col gap-[32px] bg-red-300 text-start">
