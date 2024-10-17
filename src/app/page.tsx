@@ -1,32 +1,27 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Intro from "@/components/Introduction/Intro";
 import Container from "@/components/Container";
 import SideMenu from "@/components/NavSection/SideMenu";
 import { projectObj, experienceObj } from "@/constants/projectObj";
 import Navbar from "@/components/NavSection/Nav";
-import { contactAction } from "@/actions/contactAction";
-import FormResult from "@/components/FormResult";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState(null);
-  const [message, setMessage] = useState("");
-  const [email, setEmail] = useState("");
-  const [didSend, setDidSend] = useState<boolean | null>(null);
+
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry: any) => {
           if (entry.isIntersecting) {
-            const sectionId = entry.target.id || "intro"; // Default to "intro" for the top section
+            const sectionId = entry.target.id || "intro";
             setActiveSection(sectionId);
-            // If the section id is not "intro", update the URL
             if (sectionId !== "intro") {
               window.history.replaceState(null, "", `#${sectionId}`);
             } else {
-              window.history.replaceState(null, "", " "); // Clears the hash
+              window.history.replaceState(null, "", " ");
             }
           }
         });
@@ -41,15 +36,6 @@ export default function Home() {
     };
   }, []);
 
-  const sendEmailAction = async (formData: FormData) => {
-    const res = await contactAction(formData);
-    if (res.data.id) {
-      setDidSend(true);
-    } else {
-      setDidSend(false);
-    }
-  };
-
   return (
     <div className="relative flex flex-col scroll-smooth pl-[32px] pr-[46px] tablet:h-screen tablet:snap-y tablet:snap-mandatory tablet:overflow-y-scroll tablet:pl-[64px] tablet:pr-[94px]">
       <Navbar />
@@ -58,105 +44,56 @@ export default function Home() {
         <section className="" id={activeSection !== "intro" ? "intro" : "top"}>
           <Intro />
         </section>
-        <div className="flex flex-col gap-[32px] py-[32px]">
-          <h1 className="text-[40px] font-bold leading-[60px]">Experiences</h1>
-          <div
-            id={"experiences"}
-            className="flex flex-col gap-[64px] self-center"
-          >
-            {experienceObj.map((exp, index) => {
-              return (
-                <section
-                  className="flex snap-start snap-always flex-col gap-[64px] py-[32px]"
-                  id={exp.tag}
-                  key={index}
-                >
-                  <Container work={exp} />
-                </section>
-              );
-            })}
-          </div>
-          <div className="flex flex-col gap-[32px] py-[64px]">
-            <h1 className="scroll-smooth text-[40px] font-bold leading-[60px]">
-              Projects
+        <div className="flex flex-col gap-[32px] scroll-smooth py-[32px]">
+          <div className="flex flex-col gap-[32px]">
+            <h1 className="text-[40px] font-bold leading-[60px]">
+              Experiences
             </h1>
             <div
-              id={"projects"}
+              id={"experiences"}
               className="flex flex-col gap-[64px] self-center"
             >
-              {projectObj.map((proj, index) => {
+              {experienceObj.map((exp, index) => {
                 return (
                   <section
                     className="flex snap-start snap-always flex-col gap-[64px] py-[32px]"
+                    id={exp.tag}
                     key={index}
-                    id={proj.tag}
                   >
-                    <Container work={proj} />
+                    <Container work={exp} />
                   </section>
                 );
               })}
             </div>
           </div>
-          <div className="flex items-center justify-center py-[32px]">
-            <section
-              id={"contact"}
-              className="flex h-full min-h-[560px] snap-start flex-col items-center justify-center gap-[64px]"
-            >
-              {didSend === null ? (
-                <div className="flex h-full w-full max-w-[640px] flex-col justify-center gap-[32px]">
-                  <div className="text-[32px] font-[600] leading-[48px] tracking-wider opacity-80">
-                    Let&apos;s Get in Touch!
-                  </div>
-                  <form
-                    action={sendEmailAction}
-                    className="flex w-full flex-col gap-[32px] tablet:min-w-[640px]"
-                  >
-                    <div className="flex flex-col justify-center gap-[8px] border-b pb-[8px]">
-                      <label>Email</label>
-                      <input
-                        name="email"
-                        value={email}
-                        placeholder="Example@email.com"
-                        className="text-[16px] font-[400] leading-[24px] outline-none ring-0 placeholder:opacity-60"
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </div>
-                    <div className="flex flex-col justify-center gap-[8px] border-b pb-[8px]">
-                      <label className="text-[12px] font-[400] leading-[16px]">
-                        Message
-                      </label>
-                      <input
-                        name="message"
-                        value={message}
-                        placeholder="Lorem"
-                        className="text-[16px] font-[400] leading-[24px] outline-none ring-0 placeholder:opacity-60"
-                        onChange={(e) => setMessage(e.target.value)}
-                      />
-                    </div>
-                    <button
-                      role="submit"
-                      className="flex h-[40px] w-full items-center justify-center gap-[8px] rounded-[20px] bg-black hover:bg-opacity-90 active:bg-opacity-80"
+          <div className="flex flex-col gap-[32px]">
+            <div className="flex flex-col gap-[32px] py-[64px]">
+              <h1 className="scroll-smooth text-[40px] font-bold leading-[60px]">
+                Projects
+              </h1>
+              <div
+                id={"projects"}
+                className="flex flex-col gap-[64px] self-center"
+              >
+                {projectObj.map((proj, index) => {
+                  return (
+                    <section
+                      className="flex snap-start snap-always flex-col gap-[64px] py-[32px]"
+                      key={index}
+                      id={proj.tag}
                     >
-                      <span className="text-[16px] font-[800] leading-[24px] text-white">
-                        Send
-                      </span>
-                      <Image
-                        src={"/arrow.svg"}
-                        alt={"arrow"}
-                        height={10}
-                        width={12}
-                      />
-                    </button>
-                  </form>
-                </div>
-              ) : (
-                <FormResult didSend={didSend} setDidSend={setDidSend} />
-              )}
-            </section>
+                      <Container work={proj} />
+                    </section>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-center py-[32px]">
+            <Contact />
           </div>
         </div>
       </div>
-
       <Navbar />
     </div>
   );

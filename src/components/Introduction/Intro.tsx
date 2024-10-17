@@ -9,8 +9,7 @@ const Intro = () => {
         <Image
           src={"/selfie.svg"}
           alt={"me"}
-          height={696}
-          width={696}
+          fill
           className="absolute left-[36px] h-[400px] w-[400px] tablet:left-[0px] tablet:top-[-28px] tablet:h-[696px] tablet:w-[696px]"
         />
       </div>
@@ -26,25 +25,6 @@ const Intro = () => {
           modern technology.
         </span>
       </div>
-      {/* <div className="flex max-h-[400px] w-full max-w-[400px] flex-col gap-[32px] bg-red-300 text-start">
-        <span className="text-[16px] font-[500] leading-[24px] tablet:text-[20px] tablet:leading-[32px]">
-          I am <strong>Jay Heo</strong>, a detail-oriented{" "}
-          <strong>Full-Stack Engineer</strong> with a strong passion for
-          building robust, scalable, and innovative web applications. With a
-          specialty in <strong>Next.js</strong>, <strong>Node.js</strong>, and{" "}
-          <strong>TypeScript</strong>, I enjoy tackling complex development
-          challenges and pushing the boundaries of what’s possible with modern
-          technology.
-        </span>
-        <span className="text-[16px] font-[500] leading-[24px] tablet:text-[20px] tablet:leading-[32px]">
-          In recent years, I’ve had the opportunity to work on{" "}
-          <strong>Preps AI</strong>, an AI-powered platform designed to enhance
-          technical interview preparation, and <strong>ShineResumes</strong>, a
-          dynamic online resume builder tailored for tech professionals. These
-          experiences have not only honed my technical skills but have also
-          fueled my drive to create impactful digital solutions.
-        </span>
-      </div> */}
     </div>
   );
 };

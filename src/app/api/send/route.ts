@@ -1,5 +1,4 @@
-import { NextApiRequest } from "next";
-import { Contact } from "../../../components/Contact";
+import { EmailTemplate } from "../../../components/EmailTemplate";
 import { Resend } from "resend";
 import { NextRequest } from "next/server";
 
@@ -13,7 +12,7 @@ export async function POST(req: NextRequest) {
       from: "no-reply@heo.one",
       to: ["heojay0309@gmail.com"],
       subject: `Contact from Jay's portfolio`,
-      react: Contact({ message: message, email: email }),
+      react: EmailTemplate({ message: message, email: email }),
     });
     if (error) {
       return Response.json({ error }, { status: 500 });

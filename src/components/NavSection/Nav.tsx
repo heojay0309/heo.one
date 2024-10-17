@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import NavDrop from "./NavDrop";
 
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState<boolean>(false);
@@ -75,6 +74,12 @@ const Navbar = () => {
           className="h-[40px] text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
         >
           Resume
+        </Link>
+        <Link
+          href={"#contact"}
+          className="h-[40px] text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
+        >
+          Contact
         </Link>
       </div>
     </div>
