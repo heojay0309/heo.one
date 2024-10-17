@@ -53,7 +53,7 @@ const backgroundBadgeColors: any = {
 const Container = ({ work }: IWork) => {
   return (
     <div className="flex flex-col gap-[32px]">
-      <div className="flex w-full flex-col gap-[32px] rounded-[24px] bg-black bg-opacity-[3%] p-[32px]">
+      <div className="flex w-full flex-col gap-[32px] rounded-[24px] bg-black bg-opacity-[3%] p-[16px] tablet:p-[32px]">
         <div className="flex flex-col gap-[16px]">
           <div className="flex w-full flex-row justify-between gap-[8px]">
             <div className="flex gap-[8px]">
@@ -99,7 +99,7 @@ const Container = ({ work }: IWork) => {
               Technical Skills
             </h2>
           </div>
-          <div className="flex gap-[16px]">
+          <div className="flex flex-wrap gap-[16px] tablet:flex-auto">
             {work.stacks.split(", ").map((skill: string, index) => {
               return (
                 <div

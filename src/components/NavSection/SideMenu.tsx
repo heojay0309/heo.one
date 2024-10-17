@@ -25,11 +25,11 @@ const SideMenu = ({
     const sectionOffsets = {
       nav: "0%",
       ShineResumes: "10%",
-      Preps: "30%", // Adjust these values based on desired gap or position
-      Mustadd: "45%",
-      Giverr: "60%",
-      Mellow: "75%",
-      contact: "75%",
+      Preps: "20%", // Adjust these values based on desired gap or position
+      Mustadd: "30%",
+      Giverr: "40%",
+      Mellow: "45%",
+      contact: "45%",
     };
 
     if (activeSection && sectionOffsets[activeSection] !== undefined) {
@@ -43,7 +43,7 @@ const SideMenu = ({
   }, [activeSection]);
 
   return (
-    <div className="fixed right-[128px] top-[60px] h-full gap-[64px]">
+    <div className="fixed right-[40px] top-[60px] h-full gap-[64px] px-[8px] tablet:right-[40px] laptop:right-[56px]">
       <div
         className={`flex flex-col items-center justify-center gap-[32px] transition-transform duration-500 ease-in-out translate-y-[${offsetY}px]`}
         style={{ transform: `translateY(${offsetY})` }}
