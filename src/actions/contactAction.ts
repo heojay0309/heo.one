@@ -1,7 +1,5 @@
 "use server";
 
-import { prisma } from "@/utils/prisma";
-
 export const contactAction = async (formData: FormData) => {
   const { message, email } = Object.fromEntries(formData);
   const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/send`, {
@@ -12,7 +10,6 @@ export const contactAction = async (formData: FormData) => {
     }),
   });
   const data = await response.json();
-
   return {
     data,
   };
