@@ -43,9 +43,9 @@ const SideMenu = ({
   }, [activeSection]);
 
   return (
-    <div className="fixed right-[8px] top-[60px] h-full gap-[64px] tablet:right-[40px] tablet:px-[8px] laptop:right-[56px]">
+    <div className="fixed right-[8px] top-[60px] h-full tablet:right-[24px] tablet:gap-[64px] laptop:right-[64px]">
       <div
-        className={`flex flex-col items-center justify-center gap-[16px] transition-transform duration-500 ease-in-out tablet:gap-[32px] translate-y-[${offsetY}px]`}
+        className={`flex flex-col items-center gap-[16px] transition-transform duration-500 ease-in-out tablet:gap-[32px] translate-y-[${offsetY}px]`}
         style={{ transform: `translateY(${offsetY})` }}
       >
         <Link
@@ -60,7 +60,7 @@ const SideMenu = ({
             className="select-none"
           />
         </Link>
-        <div className="w-[40px] border border-black border-opacity-10"></div>
+        <div className="w-[32px] border border-black border-opacity-10 tablet:w-[40px]"></div>
         <Link
           href={"#ShineResumes"}
           className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
@@ -68,12 +68,12 @@ const SideMenu = ({
           <Image
             src={"/new/icons/project_shine.svg"}
             alt={"ShineResumes"}
-            height={24}
-            width={24}
+            height={32}
+            width={32}
             className="select-none"
           />
         </Link>
-        <div className="w-[40px] border border-black border-opacity-10"></div>
+        <div className="w-[32px] border border-black border-opacity-10 tablet:w-[40px]"></div>
 
         <Link
           href={"#Preps"}
@@ -82,12 +82,12 @@ const SideMenu = ({
           <Image
             src={"/new/icons/project_preps.svg"}
             alt={"Preps AI"}
-            height={24}
-            width={24}
+            height={32}
+            width={32}
             className="select-none"
           />
         </Link>
-        <div className="w-[40px] border border-black border-opacity-10"></div>
+        <div className="w-[32px] border border-black border-opacity-10 tablet:w-[40px]"></div>
 
         <Link
           href={"#Mustadd"}
@@ -96,12 +96,12 @@ const SideMenu = ({
           <Image
             src={"/new/icons/project_mustadd.svg"}
             alt={"Mustadd"}
-            height={24}
-            width={24}
+            height={40}
+            width={40}
             className="select-none"
           />
         </Link>
-        <div className="w-[40px] border border-black border-opacity-10"></div>
+        <div className="w-[32px] border border-black border-opacity-10 tablet:w-[40px]"></div>
 
         <Link
           href={"#Giverr"}
@@ -110,12 +110,12 @@ const SideMenu = ({
           <Image
             src={"/new/icons/project_giverr.svg"}
             alt={"Giverr"}
-            height={24}
-            width={24}
+            height={32}
+            width={32}
             className="select-none"
           />
         </Link>
-        <div className="w-[40px] border border-black border-opacity-10"></div>
+        <div className="w-[32px] border border-black border-opacity-10 tablet:w-[40px]"></div>
 
         <Link
           href={"#Mellow"}
@@ -125,7 +125,7 @@ const SideMenu = ({
             src={"/new/icons/project_mellow.svg"}
             alt={"Mellow"}
             height={24}
-            width={24}
+            width={32}
             className="select-none"
           />
         </Link>

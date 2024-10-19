@@ -4,27 +4,29 @@ import Link from "next/link";
 
 const Intro = () => {
   return (
-    <div className="text-align -z-10 flex h-full min-h-[720px] w-full snap-start flex-col items-center justify-center gap-[64px] overflow-x-clip tablet:min-h-[960px] tablet:flex-row">
-      <div className="relative h-[400px] w-[560px] overflow-hidden rounded-bl-[16px] rounded-br-[412px] rounded-tl-[16px] rounded-tr-[16px] tablet:h-[704px] tablet:w-[592px]">
+    <div className="text-align -z-10 flex h-full min-h-[640px] w-full snap-start flex-col items-center justify-around gap-[32px] overflow-x-clip tablet:min-h-[864px] tablet:flex-row tablet:gap-[32px] laptop:gap-[64px]">
+      <div className="relative h-[270px] w-[300px] overflow-clip rounded-bl-[16px] rounded-br-[200px] rounded-tl-[16px] rounded-tr-[16px] tablet:h-[480px] tablet:w-[400px] tablet:min-w-[400px] tablet:rounded-br-[307px]">
         <Image
-          src={"/selfie.svg"}
+          src={"/selfie.png"}
           alt={"me"}
           priority
           fill
-          className="absolute left-[36px] h-[400px] w-[400px] tablet:left-[0px] tablet:top-[-28px] tablet:h-[696px] tablet:w-[696px]"
+          className="absolute object-cover"
         />
       </div>
-      <div className="flex h-full max-h-[184px] max-w-[592px] flex-col justify-center gap-[16px]">
-        <h1 className="text-[48px] font-[600] leading-[64px]">Hello!</h1>
-        <span className="text-[16px] font-[500] leading-[24px] tablet:text-[20px] tablet:leading-[32px]">
-          My name is <strong>Jay Heo</strong>, I&apos;m a detail-oriented{" "}
-          <strong>Full-Stack Engineer</strong> with a strong passion for
-          building robust, scalable, and innovative web applications. With a
-          specialty in <strong>Next.js</strong>, <strong>Node.js</strong>, and{" "}
-          <strong>TypeScript</strong>, I enjoy tackling complex development
-          challenges and pushing the boundaries of what&apos;s possible with
-          modern technology.
-        </span>
+      <div className="flex h-full flex-col gap-[16px] tablet:max-h-[400px] tablet:max-w-[568px] tablet:justify-start">
+        <div className="h-full w-full tablet:max-h-[240px]">
+          <h1 className="text-[48px] font-[600] leading-[64px]">Hello!</h1>
+          <span className="text-[16px] font-[500] leading-[24px] tablet:text-[20px] tablet:leading-[32px]">
+            My name is <strong>Jay Heo</strong>, I&apos;m a detail-oriented{" "}
+            <strong>Full-Stack Engineer</strong> with a strong passion for
+            building robust, scalable, and innovative web applications. With a
+            specialty in <strong>Next.js</strong>, <strong>Node.js</strong>, and{" "}
+            <strong>TypeScript</strong>, I enjoy tackling complex development
+            challenges and pushing the boundaries of what&apos;s possible with
+            modern technology.
+          </span>
+        </div>
       </div>
     </div>
   );
