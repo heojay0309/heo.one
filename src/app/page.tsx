@@ -37,7 +37,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative flex flex-col scroll-smooth pl-[32px] pr-[48px] tablet:h-screen tablet:snap-y tablet:snap-mandatory tablet:overflow-y-scroll tablet:pl-[64px] tablet:pr-[94px]">
+    <div className="relative flex flex-col gap-[32px] scroll-smooth pl-[32px] pr-[48px] tablet:h-screen tablet:snap-y tablet:snap-mandatory tablet:gap-[0px] tablet:overflow-y-scroll tablet:pl-[64px] tablet:pr-[94px]">
       <Navbar />
       <div className="relative flex flex-col gap-[16px] tablet:gap-[32px]">
         <SideMenu activeSection={activeSection} />

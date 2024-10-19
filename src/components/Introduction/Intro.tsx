@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Intro = () => {
   return (
-    <div className="text-align -z-10 flex h-full min-h-[640px] w-full snap-start flex-col items-center justify-around gap-[32px] overflow-x-clip tablet:min-h-[864px] tablet:flex-row tablet:gap-[32px] laptop:gap-[64px]">
+    <div className="text-align -z-10 flex h-full min-h-[640px] w-full snap-start flex-col items-center gap-[32px] overflow-x-clip tablet:min-h-[864px] tablet:flex-row tablet:justify-around laptop:gap-[64px]">
       <div className="relative h-[270px] w-[300px] overflow-clip rounded-bl-[16px] rounded-br-[200px] rounded-tl-[16px] rounded-tr-[16px] tablet:h-[480px] tablet:w-[400px] tablet:min-w-[400px] tablet:rounded-br-[307px]">
         <Image
           src={"/selfie.png"}
