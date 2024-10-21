@@ -14,6 +14,30 @@
   height: 150px;
 }
 
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes circle {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+.border-gradient {
+  height: auto;
+  /* width: 400px; */
+  padding: 2px;
+  border-radius: 20px;
+  border-width: 1px;
+  background-image: conic-gradient(from var(--angle), red, blue, red);
+  animation: 5s circle linear infinite;
+}
+
 ::-webkit-scrollbar-track {
   background: transparent; /* Color of the track */
   border-radius: 1px; /* Roundness of the track */
