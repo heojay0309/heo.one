@@ -1,69 +1,92 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="fixed bottom-0 left-0 z-10 mx-auto flex h-[48px] w-full items-center justify-center bg-transparent text-black tablet:h-[64px]">
-      <div className="flex h-full items-center justify-between gap-[32px] rounded-3xl bg-white bg-opacity-50 px-[16px] py-[8px] hover:bg-opacity-70 tablet:w-1/2 tablet:gap-[0px] tablet:px-[32px] tablet:py-[16px]">
+    <div className="fixed bottom-[16px] left-[0px] flex w-full items-center justify-center px-[16px] tablet:hidden">
+      <div
+        className={`flex w-full items-center justify-between rounded-3xl bg-white bg-opacity-70 px-[8px] py-[4px]`}
+      >
         <Link
-          href={"/"}
-          className="flex border-spacing-96 items-center gap-[16px] rounded-full border border-white text-center text-[16px] font-bold leading-[24px] tracking-[0.12em] text-opacity-60 opacity-80 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
+          href={"#intro"}
+          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
         >
           <Image
-            src={"/me2.svg"}
-            alt={"me"}
-            width={56}
-            height={56}
-            className="h-[32px] w-[32px] tablet:h-[40px] tablet:w-[40px]"
+            src={"/new/icons/home.svg"}
+            alt={"home"}
+            height={24}
+            width={24}
+            className="h-[22px] w-[22px] select-none tablet:h-[24px] tablet:w-[24px]"
           />
         </Link>
-        <div className="flex h-full items-center justify-between gap-[32px] text-[16px] leading-[24px] tablet:text-[16px] tablet:leading-[24px]">
-          <Link
-            href={"https://www.github.com/heojay0309"}
-            className="text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
-          >
-            <Image
-              src={"/new/icons/icon-github.svg"}
-              alt={"github"}
-              width={24}
-              height={24}
-            />
-          </Link>
-          <Link
-            href={"https://www.linkedin.com/in/heo"}
-            className="text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
-          >
-            <Image
-              src={"/new/icons/icon-linkedin.svg"}
-              alt={"linkedin"}
-              width={24}
-              height={24}
-            />
-          </Link>
-          <Link
-            href={"/resume"}
-            className="text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
-          >
-            <Image
-              src={"/new/icons/icon-resume.svg"}
-              alt={"resume"}
-              width={24}
-              height={24}
-            />
-          </Link>
-          <Link
-            href={"#contact"}
-            className="text-opacity-60 transition-all duration-200 hover:scale-105 hover:text-opacity-80 active:text-opacity-100"
-          >
-            <Image
-              src={"/new/icons/icon-contact.svg"}
-              alt={"contact"}
-              width={24}
-              height={24}
-            />
-          </Link>
-        </div>
+        <div className="w-[24px] rotate-90 border border-black border-opacity-10 tablet:w-[40px]"></div>
+        <Link
+          href={"#ShineResumes"}
+          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
+        >
+          <Image
+            src={"/new/icons/project_shine.svg"}
+            alt={"ShineResumes"}
+            height={32}
+            width={32}
+            className="h-[22px] w-[22px] select-none tablet:h-[24px] tablet:w-[24px]"
+          />
+        </Link>
+        <div className="w-[24px] rotate-90 border border-black border-opacity-10 tablet:w-[40px]"></div>
+        <Link
+          href={"#Preps"}
+          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
+        >
+          <Image
+            src={"/new/icons/project_preps.svg"}
+            alt={"Preps AI"}
+            height={32}
+            width={32}
+            className="h-[24px] w-[24px] select-none tablet:h-[24px] tablet:w-[32px]"
+          />
+        </Link>
+        <div className="w-[24px] rotate-90 border border-black border-opacity-10 tablet:w-[40px]"></div>
+
+        <Link
+          href={"#Mustadd"}
+          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
+        >
+          <Image
+            src={"/new/icons/project_mustadd.svg"}
+            alt={"Mustadd"}
+            height={40}
+            width={40}
+            className="h-[28px] w-[28px] select-none tablet:h-[36px] tablet:w-[36px]"
+          />
+        </Link>
+        <div className="w-[24px] rotate-90 border border-black border-opacity-10 tablet:w-[40px]"></div>
+
+        <Link
+          href={"#Giverr"}
+          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
+        >
+          <Image
+            src={"/new/icons/project_giverr.svg"}
+            alt={"Giverr"}
+            height={32}
+            width={32}
+            className="h-[22px] w-[22px] select-none tablet:h-[26px] tablet:w-[26px]"
+          />
+        </Link>
+        <div className="w-[24px] rotate-90 border border-black border-opacity-10 tablet:w-[40px]"></div>
+
+        <Link
+          href={"#Mellow"}
+          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
+        >
+          <Image
+            src={"/new/icons/project_mellow.svg"}
+            alt={"Mellow"}
+            height={24}
+            width={32}
+            className="h-[24px] w-[24px] select-none tablet:h-[26px] tablet:w-[32px]"
+          />
+        </Link>
       </div>
     </div>
   );

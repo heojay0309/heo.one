@@ -1,56 +1,15 @@
-"use client";
-import { useState, useEffect } from "react";
-
 import Image from "next/image";
 import Link from "next/link";
 
-const SideMenu = ({
-  activeSection,
-}: {
-  activeSection?:
-    | "nav"
-    | "ShineResumes"
-    | "Preps"
-    | "Mustadd"
-    | "Giverr"
-    | "Mellow"
-    | "contact"
-    | null;
-}) => {
-  const [offsetY, setOffsetY] = useState("0%");
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Map section ids to their respective vertical offset values for positioning
-    const sectionOffsets = {
-      nav: "0%",
-      ShineResumes: "10%",
-      Preps: "20%", // Adjust these values based on desired gap or position
-      Mustadd: "30%",
-      Giverr: "40%",
-      Mellow: "45%",
-      contact: "45%",
-    };
-
-    if (activeSection && sectionOffsets[activeSection] !== undefined) {
-      setOffsetY(sectionOffsets[activeSection]);
-    }
-    if (activeSection === "contact") {
-      setTimeout(() => setIsVisible(true), 500); // Adjust to match your transition duration
-    } else {
-      setIsVisible(true);
-    }
-  }, [activeSection]);
-
+const SideMenu = () => {
   return (
-    <div className="fixed right-[0px] top-[120px] h-full tablet:right-[24px] tablet:gap-[64px] laptop:right-[64px]">
+    <div className="fixed top-[120px] hidden h-full tablet:right-[24px] tablet:block tablet:gap-[64px] laptop:right-[32px]">
       <div
-        className={`flex flex-col items-center gap-[16px] rounded-lg bg-white bg-opacity-70 transition-transform duration-500 ease-in-out tablet:gap-[32px] tablet:p-[8px] translate-y-[${offsetY}px]`}
-        style={{ transform: `translateY(${offsetY})` }}
+        className={`flex flex-col items-center gap-[16px] rounded-lg bg-white bg-opacity-100 tablet:gap-[32px] tablet:p-[8px]`}
       >
         <Link
           href={"#intro"}
-          className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
+          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
         >
           <Image
             src={"/new/icons/home.svg"}
@@ -63,7 +22,7 @@ const SideMenu = ({
         <div className="w-[24px] border border-black border-opacity-10 tablet:w-[40px]"></div>
         <Link
           href={"#ShineResumes"}
-          className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
+          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
         >
           <Image
             src={"/new/icons/project_shine.svg"}
@@ -76,7 +35,7 @@ const SideMenu = ({
         <div className="w-[24px] border border-black border-opacity-10 tablet:w-[40px]"></div>
         <Link
           href={"#Preps"}
-          className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
+          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
         >
           <Image
             src={"/new/icons/project_preps.svg"}
@@ -90,7 +49,7 @@ const SideMenu = ({
 
         <Link
           href={"#Mustadd"}
-          className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
+          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
         >
           <Image
             src={"/new/icons/project_mustadd.svg"}
@@ -104,7 +63,7 @@ const SideMenu = ({
 
         <Link
           href={"#Giverr"}
-          className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
+          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
         >
           <Image
             src={"/new/icons/project_giverr.svg"}
@@ -118,7 +77,7 @@ const SideMenu = ({
 
         <Link
           href={"#Mellow"}
-          className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
+          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
         >
           <Image
             src={"/new/icons/project_mellow.svg"}
