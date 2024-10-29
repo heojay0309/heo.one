@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const SideMenu = () => {
   return (
-    <div className="fixed top-[120px] hidden h-full tablet:right-[24px] tablet:block tablet:gap-[64px] laptop:right-[32px]">
+    <div className="fixed top-[152px] hidden h-full tablet:right-[24px] tablet:block tablet:gap-[64px] laptop:right-[32px]">
       <div
-        className={`flex flex-col items-center gap-[16px] rounded-lg bg-white bg-opacity-100 tablet:gap-[32px] tablet:p-[8px]`}
+        className={`flex flex-col items-center gap-[16px] rounded-lg bg-white bg-opacity-80 tablet:gap-[32px] tablet:p-[8px]`}
       >
         <Link
           href={"#intro"}
