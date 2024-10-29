@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="fixed bottom-[16px] left-[0px] flex w-full items-center justify-center px-[16px] tablet:hidden">
+    <div className="fixed bottom-[0px] left-[0px] flex w-full items-center justify-center px-[16px] pb-[16px] tablet:hidden">
       <div
-        className={`flex w-full items-center justify-between rounded-3xl bg-white bg-opacity-70 px-[8px] py-[4px]`}
+        className={`flex w-full items-center justify-between rounded-3xl bg-white bg-opacity-70 px-[16px] py-[8px]`}
       >
         <Link
           href={"#intro"}
