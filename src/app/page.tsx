@@ -2,10 +2,9 @@
 import { useState, useEffect } from "react";
 import Intro from "@/components/Introduction/Intro";
 import Container from "@/components/Container";
-import SideMenu from "@/components/NavSection/SideMenu";
 import { projectObj, experienceObj } from "@/constants/projectObj";
-import Navbar from "@/components/NavSection/Nav";
 import Contact from "@/components/Contact";
+import WaterRipple from "@/components/wrapper/WaterRipple";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState(null);
@@ -37,10 +36,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative flex flex-col gap-[32px] scroll-smooth pl-[32px] pr-[48px] tablet:h-screen tablet:snap-y tablet:snap-mandatory tablet:gap-[0px] tablet:overflow-y-scroll tablet:pl-[64px] tablet:pr-[94px]">
-      <Navbar />
+    <div className="flex flex-col gap-[32px] scroll-smooth tablet:h-screen tablet:snap-y tablet:snap-mandatory tablet:gap-[0px] tablet:overflow-y-scroll">
+      <div id="ripple-container">
+        <canvas id="rippleCanvas"></canvas>
+      </div>
+      <WaterRipple />
       <div className="relative flex flex-col gap-[16px] tablet:gap-[32px]">
-        <SideMenu activeSection={activeSection} />
         <section className="" id={activeSection !== "intro" ? "intro" : "top"}>
           <Intro />
         </section>
@@ -89,12 +90,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center py-[32px]">
-            <Contact />
-          </div>
+          <Contact />
         </div>
       </div>
-      <Navbar />
     </div>
   );
 }

@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/NavSection/Nav";
 import { Analytics } from "@vercel/analytics/next";
 import { Urbanist } from "next/font/google";
+import SideMenu from "@/components/NavSection/SideMenu";
+import Footer from "@/components/NavSection/Footer";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -21,13 +23,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${urbanist.className} relative h-[100svh] min-w-[100vw] scroll-smooth`}
+        className={`${urbanist.className} min-h-[100svh] min-w-[100vw] scroll-smooth text-white`}
       >
-        <div className="relative mx-auto w-full max-w-[1440px]">
-          {/* <Navbar /> */}
+        <div className="relative mx-auto h-full w-full max-w-[1440px] py-[16px] pl-[16px] pr-[32px] tablet:pl-[96px] tablet:pr-[64px]">
+          <Navbar />
+          <SideMenu />
           {children}
-          {/* <Navbar /> */}
         </div>
+        <Footer />
         <Analytics />
       </body>
     </html>

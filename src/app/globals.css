@@ -28,16 +28,6 @@
   }
 }
 
-.border-gradient {
-  height: auto;
-  /* width: 400px; */
-  padding: 2px;
-  border-radius: 20px;
-  border-width: 1px;
-  background-image: conic-gradient(from var(--angle), red, blue, red);
-  animation: 5s circle linear infinite;
-}
-
 ::-webkit-scrollbar-track {
   background: transparent; /* Color of the track */
   border-radius: 1px; /* Roundness of the track */
@@ -62,6 +52,17 @@ html {
   height: 100%;
   position: relative;
   background: transparent;
+}
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust values for desired effect */
+}
+
+body {
+  background-image: radial-gradient(
+    circle farthest-corner at 48.4% 47.5%,
+    rgba(122, 183, 255, 1) 0%,
+    rgba(21, 83, 161, 1) 90%
+  );
 }
 
 .customScrollbarThumb {
@@ -124,96 +125,48 @@ html {
   }
 }
 
-.modal-backdrop {
+.ripple {
   position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /* Ensures it's always circular */
+  background: rgba(122, 183, 255, 0.3);
+  animation: ripple-animation 4s infinite ease-out;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(122, 183, 255, 0.4);
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 50px 50px rgba(21, 83, 161, 0.2);
+    transform: scale(5);
+    opacity: 0.4;
+  }
+  100% {
+    box-shadow: 0 0 100px 100px rgba(21, 83, 161, 0);
+    transform: scale(8);
+    opacity: 0;
+  }
+}
+
+/* styles/globals.css */
+#ripple-container {
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   width: 100%;
-  height: 100vh;
-  /* margin-inline: auto; */
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  /* padding: auto; */
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* Ensure ripples don't interfere with UI interactions */
+  z-index: -50; /* Place above other elements */
 }
 
-.modal {
-  width: auto;
-  max-width: 500px;
-  height: auto;
-  max-height: 500px;
-  border: none;
-  border-radius: 12px;
-  background-color: white;
-  /* padding: 20px; */
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 48px;
-  font-weight: 500;
-}
-
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 48px;
-  height: 48px;
-  background-color: transparent;
-  border: none;
-  border-radius: 15px; /* Circular shape */
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
-  font-size: 24px; /* Adjust font size as needed */
-}
-
-.close-button:hover {
-  background-color: #eee;
-}
-
-.close-button:after {
-  content: "x";
-  color: black;
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(3, 200px);
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-  padding: 16px;
-}
-
-.card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  background-color: #eee;
-  border-radius: 8px;
-  text-decoration: none;
-  color: black;
-  font-size: 24px;
-  font-weight: 500;
-  max-width: 200px;
-}
-
-@media (max-width: 600px) {
-  .cards-container {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-
-  .card {
-    width: 80%;
-  }
+#rippleCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
 }

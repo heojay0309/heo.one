@@ -5,7 +5,6 @@ const ResumePage = () => {
   return (
     <div className="h-full px-[64px]">
       <Navbar />
-
       <ResumeComponent />
       <Navbar />
     </div>

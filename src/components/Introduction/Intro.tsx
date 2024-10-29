@@ -1,30 +1,59 @@
 import Image from "next/image";
 import Card from "../wrapper/Card";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Intro = () => {
+  const describeMe = ["Full-Stack", "Passionate", "Scalable", "Innovative"];
+  const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setFade(false); // Start fading out
+
+      // Wait until the fade-out animation is complete before changing the text
+      const fadeTimeout = setTimeout(() => {
+        setIndex((prev) => (prev === describeMe.length - 1 ? 0 : prev + 1));
+        setFade(true); // Start fading in with new text
+      }, 1000); // Duration of fade-out
+
+      return () => clearTimeout(fadeTimeout);
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  }, [index]);
+
   return (
-    <div className="text-align -z-10 flex h-full min-h-[640px] w-full snap-start flex-col items-center gap-[32px] overflow-x-clip tablet:min-h-[864px] tablet:flex-row tablet:justify-around laptop:gap-[64px]">
-      <div className="relative h-[270px] w-[300px] overflow-clip rounded-bl-[16px] rounded-br-[200px] rounded-tl-[16px] rounded-tr-[16px] tablet:h-[480px] tablet:w-[480px] tablet:min-w-[400px] tablet:rounded-br-[307px]">
-        <Image
-          src={"/selfie.png"}
-          alt={"me"}
-          priority
-          fill
-          className="absolute object-cover opacity-90"
-        />
-      </div>
-      <div className="flex h-full flex-col gap-[16px] tablet:max-h-[400px] tablet:max-w-[568px] tablet:justify-start">
-        <div className="h-full w-full bg-white tablet:max-h-[240px]">
-          <h1 className="text-[48px] font-[600] leading-[64px]">Hello!</h1>
-          <span className="text-[16px] font-[500] leading-[24px] tablet:text-[20px] tablet:leading-[32px]">
-            My name is <strong>Jay Heo</strong>, I&apos;m a detail-oriented{" "}
-            <strong>Full-Stack Engineer</strong> with a strong passion for
-            building robust, scalable, and innovative web applications. With a
-            specialty in <strong>Next.js</strong>, <strong>Node.js</strong>, and{" "}
-            <strong>TypeScript</strong>, I enjoy tackling complex development
-            challenges and pushing the boundaries of what&apos;s possible with
-            modern technology.
+    <div className="-z-10 flex h-full min-h-[560px] w-full select-none snap-start flex-col items-center justify-center gap-[32px] overflow-x-clip text-white tablet:min-h-[960px] tablet:flex-row laptop:gap-[64px]">
+      <div className="flex h-full w-full flex-col justify-center gap-[32px] self-center tablet:max-h-[400px] tablet:w-full tablet:items-center tablet:justify-start">
+        <div className="flex flex-col gap-[32px]">
+          <div className="text-shadow text-[36px] font-[600] leading-[48px] drop-shadow-lg tablet:text-[48px] tablet:leading-[64px]">
+            Hello,
+          </div>
+          <div className="text-[36px] font-[500] leading-[48px] drop-shadow-lg tablet:text-nowrap tablet:text-[48px] tablet:leading-[64px]">
+            <span className="text-shadow">My name is </span>
+            <span className="text-shadow font-[600] tracking-wide">
+              Jay Heo
+            </span>
+            .
+          </div>
+          <div className="flex w-full flex-wrap gap-[10px] text-nowrap text-[36px] font-[500] leading-[48px] drop-shadow-lg tablet:flex-nowrap tablet:justify-center tablet:text-[48px] tablet:leading-[64px]">
+            <div className="text-shadow">I am a </div>
+            <div className="relative flex min-w-[160px] items-center justify-center drop-shadow-lg tablet:min-w-[240px]">
+              <div className="absolute bottom-[4px] h-[3px] w-full bg-white"></div>{" "}
+              <span
+                className={`text-center shadow-none transition-opacity duration-500 will-change-contents ${
+                  fade ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                {describeMe[index]}
+              </span>
+            </div>
+            <div className="text-shadow">Developer.</div>
+          </div>
+          <span className="text-shadow text-[14px] font-light leading-[24px] tracking-wider drop-shadow-lg tablet:text-[24px] tablet:leading-[36px]">
+            Driven by complex challenges and innovation.
           </span>
         </div>
       </div>

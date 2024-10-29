@@ -7,7 +7,7 @@ import Link from "next/link";
 const SideMenu = ({
   activeSection,
 }: {
-  activeSection:
+  activeSection?:
     | "nav"
     | "ShineResumes"
     | "Preps"
@@ -43,9 +43,9 @@ const SideMenu = ({
   }, [activeSection]);
 
   return (
-    <div className="fixed right-[4px] top-[60px] h-full tablet:right-[24px] tablet:gap-[64px] laptop:right-[64px]">
+    <div className="fixed right-[0px] top-[120px] h-full tablet:right-[24px] tablet:gap-[64px] laptop:right-[64px]">
       <div
-        className={`flex flex-col items-center gap-[16px] transition-transform duration-500 ease-in-out tablet:gap-[32px] translate-y-[${offsetY}px]`}
+        className={`flex flex-col items-center gap-[16px] rounded-lg bg-white bg-opacity-70 transition-transform duration-500 ease-in-out tablet:gap-[32px] tablet:p-[8px] translate-y-[${offsetY}px]`}
         style={{ transform: `translateY(${offsetY})` }}
       >
         <Link
@@ -54,13 +54,13 @@ const SideMenu = ({
         >
           <Image
             src={"/new/icons/home.svg"}
-            alt={"ShineResumes"}
+            alt={"home"}
             height={24}
             width={24}
-            className="select-none"
+            className="h-[22px] w-[22px] select-none tablet:h-[24px] tablet:w-[24px]"
           />
         </Link>
-        <div className="w-[32px] border border-black border-opacity-10 tablet:w-[40px]"></div>
+        <div className="w-[24px] border border-black border-opacity-10 tablet:w-[40px]"></div>
         <Link
           href={"#ShineResumes"}
           className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
@@ -70,11 +70,10 @@ const SideMenu = ({
             alt={"ShineResumes"}
             height={32}
             width={32}
-            className="select-none"
+            className="h-[22px] w-[22px] select-none tablet:h-[24px] tablet:w-[24px]"
           />
         </Link>
-        <div className="w-[32px] border border-black border-opacity-10 tablet:w-[40px]"></div>
-
+        <div className="w-[24px] border border-black border-opacity-10 tablet:w-[40px]"></div>
         <Link
           href={"#Preps"}
           className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10"
@@ -84,10 +83,10 @@ const SideMenu = ({
             alt={"Preps AI"}
             height={32}
             width={32}
-            className="select-none"
+            className="h-[24px] w-[24px] select-none tablet:h-[24px] tablet:w-[32px]"
           />
         </Link>
-        <div className="w-[32px] border border-black border-opacity-10 tablet:w-[40px]"></div>
+        <div className="w-[24px] border border-black border-opacity-10 tablet:w-[40px]"></div>
 
         <Link
           href={"#Mustadd"}
@@ -98,10 +97,10 @@ const SideMenu = ({
             alt={"Mustadd"}
             height={40}
             width={40}
-            className="select-none"
+            className="h-[28px] w-[28px] select-none tablet:h-[36px] tablet:w-[36px]"
           />
         </Link>
-        <div className="w-[32px] border border-black border-opacity-10 tablet:w-[40px]"></div>
+        <div className="w-[24px] border border-black border-opacity-10 tablet:w-[40px]"></div>
 
         <Link
           href={"#Giverr"}
@@ -112,10 +111,10 @@ const SideMenu = ({
             alt={"Giverr"}
             height={32}
             width={32}
-            className="select-none"
+            className="h-[22px] w-[22px] select-none tablet:h-[26px] tablet:w-[26px]"
           />
         </Link>
-        <div className="w-[32px] border border-black border-opacity-10 tablet:w-[40px]"></div>
+        <div className="w-[24px] border border-black border-opacity-10 tablet:w-[40px]"></div>
 
         <Link
           href={"#Mellow"}
@@ -126,7 +125,7 @@ const SideMenu = ({
             alt={"Mellow"}
             height={24}
             width={32}
-            className="select-none"
+            className="h-[24px] w-[24px] select-none tablet:h-[26px] tablet:w-[32px]"
           />
         </Link>
       </div>
