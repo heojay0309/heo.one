@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" href="/favicon.svg?<generated>" type="image/svg+xml" />
+      <link rel="icon" href="/favicon.ico" type="image/ico" />
       <body
         className={`${urbanist.className} min-h-[100svh] min-w-[100vw] scroll-smooth text-white`}
       >

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { contactAction } from "@/actions/contactAction";
 import FormResult from "@/components/FormResult";
+import Navbar from "./NavSection/Nav";
 const Contact = () => {
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
@@ -25,7 +26,7 @@ const Contact = () => {
       <div className="rounded-3xl bg-white p-[32px] text-black shadow-lg drop-shadow-lg">
         {didSend === null ? (
           <div className="flex h-full w-full max-w-[640px] flex-col justify-center gap-[32px]">
-            <div className="text-[32px] font-[600] leading-[48px] tracking-wider">
+            <div className="text-[32px] font-[600] leading-[48px] tracking-wider text-black text-opacity-80">
               Let&apos;s Get in Touch!
             </div>
             <form
@@ -56,7 +57,7 @@ const Contact = () => {
               </div>
               <button
                 role="submit"
-                className="flex h-[40px] w-full items-center justify-center gap-[8px] rounded-[20px] bg-black hover:bg-opacity-90 active:bg-opacity-80"
+                className="flex h-[40px] w-full items-center justify-center gap-[8px] rounded-[20px] bg-gray-500 hover:bg-opacity-90 active:bg-opacity-80"
               >
                 <span className="text-[16px] font-[800] leading-[24px] text-white">
                   Send

@@ -46,18 +46,18 @@ export default function Home() {
           <Intro />
         </section>
         <div className="flex flex-col gap-[32px] scroll-smooth py-[32px]">
-          <div className="flex flex-col gap-[32px]">
-            <h1 className="text-[40px] font-bold leading-[60px]">
+          <div
+            id={"experiences"}
+            className="flex snap-end snap-always flex-col gap-[32px]"
+          >
+            <h1 className="text-shadow text-[40px] font-bold leading-[60px] drop-shadow-lg">
               Experiences
             </h1>
-            <div
-              id={"experiences"}
-              className="flex flex-col gap-[64px] self-center"
-            >
+            <div className="flex flex-col gap-[64px] self-center">
               {experienceObj.map((exp, index) => {
                 return (
                   <section
-                    className="flex snap-start snap-always flex-col gap-[64px] py-[32px]"
+                    className="text-shadow flex snap-start snap-always flex-col gap-[64px] py-[32px] drop-shadow-lg"
                     id={exp.tag}
                     key={index}
                   >
@@ -69,7 +69,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-[32px]">
             <div className="flex flex-col gap-[32px] py-[64px]">
-              <h1 className="scroll-smooth text-[40px] font-bold leading-[60px]">
+              <h1 className="text-shadow scroll-smooth text-[40px] font-bold leading-[60px] drop-shadow-lg">
                 Projects
               </h1>
               <div
@@ -79,7 +79,7 @@ export default function Home() {
                 {projectObj.map((proj, index) => {
                   return (
                     <section
-                      className="flex snap-start snap-always flex-col gap-[64px] py-[32px]"
+                      className="text-shadow flex snap-start snap-always flex-col gap-[64px] py-[32px] drop-shadow-lg"
                       key={index}
                       id={proj.tag}
                     >
