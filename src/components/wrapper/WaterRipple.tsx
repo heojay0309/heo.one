@@ -18,8 +18,8 @@ const WaterRipple: React.FC = () => {
       [];
 
     const maxRadius = 50;
-    const rippleSpeed = 0.75;
-    const delayBetweenRipples = 100; // milliseconds
+    const rippleSpeed = 0.5;
+    const delayBetweenRipples = 200; // milliseconds
 
     const createRipple = (x: number, y: number) => {
       ripples.push({ x, y, radius: 0, opacity: 1 });

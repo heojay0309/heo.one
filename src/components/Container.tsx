@@ -18,6 +18,7 @@ interface IExperience {
 
 interface IWork {
   work: IExperience;
+  project: boolean;
 }
 
 const technicalBadges: any = {
@@ -50,27 +51,28 @@ const backgroundBadgeColors: any = {
   red: "bg-[#FF4646]",
 };
 
-const Container = ({ work }: IWork) => {
-  useEffect(() => {
-    const hiddenTags = document.querySelectorAll(".hideText");
+const Container = ({ work, project }: IWork) => {
+  // useEffect(() => {
+  //   const hiddenTags = document.querySelectorAll(".hideText");
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        console.log("entry", entry);
-        if (entry.isIntersecting) {
-          entry.target.classList.add("showText");
-        } else {
-          entry.target.classList.remove("showText");
-        }
-      });
-    });
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => {
+  //       console.log("entry", entry);
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add("showText");
+  //       } else {
+  //         entry.target.classList.remove("showText");
+  //       }
+  //     });
+  //   });
 
-    hiddenTags.forEach((section) => observer.observe(section));
+  //   hiddenTags.forEach((section) => observer.observe(section));
 
-    return () => {
-      hiddenTags.forEach((section) => observer.unobserve(section));
-    };
-  }, []);
+  //   return () => {
+  //     hiddenTags.forEach((section) => observer.unobserve(section));
+  //   };
+  // }, []);
+
   return (
     <div className="flex flex-col gap-[32px] overflow-x-clip">
       <div className="flex w-full flex-col gap-[32px] rounded-[24px] bg-black bg-opacity-[3%] p-[16px] tablet:p-[32px]">
@@ -140,7 +142,8 @@ const Container = ({ work }: IWork) => {
         return (
           <div
             key={index}
-            className={`hideText ${isOdd ? "translate-x-[100%]" : "-translate-x-[100%]"} icon flex w-full flex-col gap-[64px] py-[32px] transition-transform tablet:flex-row ${index % 2 === 0 ? "tablet:flex-row" : "tablet:flex-row-reverse"}`}
+            className={`hideText icon flex w-full flex-col gap-[64px] py-[32px] transition-transform tablet:flex-row ${index % 2 === 0 ? "tablet:flex-row" : "tablet:flex-row-reverse"}`}
+            // className={`hideText ${isOdd ? "translate-x-[100%]" : "-translate-x-[100%]"} icon flex w-full flex-col gap-[64px] py-[32px] transition-transform tablet:flex-row ${index % 2 === 0 ? "tablet:flex-row" : "tablet:flex-row-reverse"}`}
           >
             <div className="flex flex-col justify-center gap-[16px]">
               <h1 className="text-[32px] font-semibold leading-[48px]">
@@ -155,7 +158,7 @@ const Container = ({ work }: IWork) => {
               alt={feature.title}
               height={359}
               width={624}
-              className="object-fill"
+              className={`max-h-[359px] max-w-[624px] rounded-[32px] object-contain drop-shadow-xl`}
             />
           </div>
         );

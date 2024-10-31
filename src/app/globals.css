@@ -84,8 +84,8 @@ body {
 }
 
 .hideText {
-  opacity: 0;
-  filter: blur(5px);
+  opacity: 100;
+  /* filter: blur(5px); */
   /* transform: translateX(-100%); */
   transition: all 1s;
 }

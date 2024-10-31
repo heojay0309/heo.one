@@ -36,11 +36,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-[32px] scroll-smooth tablet:h-screen tablet:snap-y tablet:snap-mandatory tablet:gap-[0px] tablet:overflow-y-scroll">
+    <div className="relative flex flex-col gap-[32px] scroll-smooth">
       <div id="ripple-container">
-        <canvas id="rippleCanvas"></canvas>
+        <WaterRipple />
       </div>
-      <WaterRipple />
       <div className="relative flex flex-col gap-[16px] tablet:gap-[32px]">
         <section className="" id={activeSection !== "intro" ? "intro" : "top"}>
           <Intro />
@@ -57,11 +56,11 @@ export default function Home() {
               {experienceObj.map((exp, index) => {
                 return (
                   <section
-                    className="text-shadow flex snap-start snap-always flex-col gap-[64px] py-[32px] drop-shadow-lg"
+                    className="text-shadow flex flex-col gap-[64px] py-[32px] drop-shadow-lg"
                     id={exp.tag}
                     key={index}
                   >
-                    <Container work={exp} />
+                    <Container work={exp} project={true} />
                   </section>
                 );
               })}
@@ -79,11 +78,11 @@ export default function Home() {
                 {projectObj.map((proj, index) => {
                   return (
                     <section
-                      className="text-shadow flex snap-start snap-always flex-col gap-[64px] py-[32px] drop-shadow-lg"
+                      className="text-shadow flex flex-col gap-[64px] py-[32px] drop-shadow-lg"
                       key={index}
                       id={proj.tag}
                     >
-                      <Container work={proj} />
+                      <Container work={proj} project={false} />
                     </section>
                   );
                 })}
