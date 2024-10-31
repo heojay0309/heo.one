@@ -5,11 +5,11 @@ const Footer = () => {
   return (
     <div className="fixed bottom-[0px] left-[0px] flex w-full items-center justify-center px-[16px] pb-[16px] tablet:hidden">
       <div
-        className={`flex w-3/4 items-center justify-between rounded-3xl bg-white bg-opacity-10 px-[8px] py-[8px] backdrop-blur-2xl tablet:w-1/2`}
+        className={`icons w-3/4 rounded-3xl bg-white bg-opacity-10 px-[8px] py-[8px] backdrop-blur-2xl tablet:w-1/2`}
       >
         <Link
           href={"#intro"}
-          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
+          className="icon hiddenText flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
         >
           <Image
             src={"/new/icons/home.svg"}
@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="w-[24px] rotate-90 border border-black border-opacity-10 tablet:w-[40px]"></div>
         <Link
           href={"#ShineResumes"}
-          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
+          className="icon hiddenText flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
         >
           <Image
             src={"/new/icons/project_shine.svg"}
@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="w-[24px] rotate-90 border border-black border-opacity-10 tablet:w-[40px]"></div>
         <Link
           href={"#Preps"}
-          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
+          className="icon hiddenText flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
         >
           <Image
             src={"/new/icons/project_preps.svg"}
@@ -49,7 +49,7 @@ const Footer = () => {
 
         <Link
           href={"#Mustadd"}
-          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
+          className="icon hiddenText flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
         >
           <Image
             src={"/new/icons/project_mustadd.svg"}
@@ -63,7 +63,7 @@ const Footer = () => {
 
         <Link
           href={"#Giverr"}
-          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
+          className="icon hiddenText flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
         >
           <Image
             src={"/new/icons/project_giverr.svg"}
@@ -77,7 +77,7 @@ const Footer = () => {
 
         <Link
           href={"#Mellow"}
-          className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
+          className="icon hiddenText flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
         >
           <Image
             src={"/new/icons/project_mellow.svg"}

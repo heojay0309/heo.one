@@ -15,7 +15,7 @@ const Navbar = () => {
             alt={"me"}
             width={56}
             height={56}
-            className="h-[40px] w-[40px] border-spacing-5 rounded-full border-2 border-yellow-300 tablet:h-[56px] tablet:w-[56px]"
+            className={`h-[40px] w-[40px] border-spacing-5 rounded-full border-2 border-yellow-300 tablet:h-[56px] tablet:w-[56px]`}
           />
           heo.one
         </Link>

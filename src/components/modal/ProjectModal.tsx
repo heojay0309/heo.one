@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ProjectDataType } from '@/constants/projects';
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ProjectDataType } from "@/constants/projects";
 
 const ProjectModal = ({
   currentProject,
@@ -12,7 +12,7 @@ const ProjectModal = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const cardLength = currentProject.images.length;
-  const [dots, setDots] = useState(new Array(cardLength).fill(''));
+  const [dots, setDots] = useState(new Array(cardLength).fill(""));
   useEffect(() => {
     const pageCounter = async (counter: number) => {
       const script = [];
@@ -44,20 +44,20 @@ const ProjectModal = ({
   };
 
   return (
-    <div className="flex flex-col h-full w-full items-center gap-[16px] py-[32px]">
-      <div className="flex flex-col gap-[16px] w-full items-center py-[8px]">
-        <div className="flex items-center w-full">
+    <div className="flex h-full w-full flex-col items-center gap-[16px] py-[32px]">
+      <div className="flex w-full flex-col items-center gap-[16px] py-[8px]">
+        <div className="flex w-full items-center">
           <button
             onClick={handleLeftClick}
             // className="flex items-center z-10 justify-center tablet:w-[40px] tablet:h-[40px] h-full w-full"
-            className="flex items-center justify-center tablet:w-[40px] tablet:h-[40px]"
+            className="flex items-center justify-center tablet:h-[40px] tablet:w-[40px]"
           >
             <Image
-              src={'/etc/leftArrow.png'}
+              src={"/etc/leftArrow.png"}
               width={40}
               height={40}
               alt="left"
-              className="hover:opacity-80 active:opacity-60  h-full w-full"
+              className="h-full w-full hover:opacity-80 active:opacity-60"
             />
           </button>
           <Image
@@ -72,10 +72,10 @@ const ProjectModal = ({
           <button
             onClick={handleRightClick}
             // className="flex items-center justify-center tablet:w-[40px] tablet:h-[40px] h-full w-full"
-            className="flex items-center justify-center tablet:w-[40px] tablet:h-[40px]"
+            className="flex items-center justify-center tablet:h-[40px] tablet:w-[40px]"
           >
             <Image
-              src={'/etc/rightArrow.png'}
+              src={"/etc/rightArrow.png"}
               width={40}
               height={40}
               alt="right"
@@ -83,32 +83,32 @@ const ProjectModal = ({
             />
           </button>
         </div>
-        <div className="flex justify-between items-center gap-[8px] h-full">
+        <div className="flex h-full items-center justify-between gap-[8px]">
           {dots.map((dot, index) => {
             return (
               <button
                 onClick={() => setCurrentIndex(index)}
                 key={index}
-                className={`rounded-full h-[8px] w-[8px] bg-black ${
-                  index === currentIndex ? 'bg-opacity-80' : 'bg-opacity-30'
+                className={`h-[8px] w-[8px] rounded-full bg-black ${
+                  index === currentIndex ? "bg-opacity-80" : "bg-opacity-30"
                 }`}
               ></button>
             );
           })}
         </div>
       </div>
-      <div className="flex flex-col gap-[8px] text-center items-center justify-center self-center">
-        <div className="flex flex-col gap-[8px] justify-center items-center">
-          <div className="h4">{currentProject.projectName}</div>
+      <div className="flex flex-col items-center justify-center gap-[8px] self-center text-center">
+        <div className="flex flex-col items-center justify-center gap-[8px]">
+          <h4 className="">{currentProject.projectName}</h4>
           <div className="p2">{currentProject.yearsWorked}</div>
         </div>
-        <div className="flex flex-col gap-[16px] w-full justify-center items-center ">
-          <div className="p1 text-center ">{currentProject.description[0]}</div>
+        <div className="flex w-full flex-col items-center justify-center gap-[16px]">
+          <div className="p1 text-center">{currentProject.description[0]}</div>
           <Link
-            className="bg-black text-white px-[16px] py-[8px] text-center rounded-[4px] max-h-[40px] h6"
+            className="max-h-[40px] rounded-[4px] bg-black px-[16px] py-[8px] text-center text-white"
             href={currentProject?.url}
           >
-            View More ➔
+            <h6>View More ➔</h6>
           </Link>
         </div>
       </div>

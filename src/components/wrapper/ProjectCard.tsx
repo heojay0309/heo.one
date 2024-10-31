@@ -27,25 +27,25 @@ const ProjectCard = ({ name }: { name: keyof IProjectData }) => {
                 height={304}
                 className="h-[169px] w-[240px] object-contain tablet:h-[304px] tablet:w-[420px]"
               />
-              <span className="h3 tablet:leading-10 leading-8 self-start text-[24px] font-bold tracking-[.12em] text-white text-opacity-80 tablet:self-auto tablet:text-center tablet:text-[32px]">
+              <h3 className="tablet:leading-10 leading-8 self-start text-[24px] font-bold tracking-[.12em] text-white text-opacity-80 tablet:self-auto tablet:text-center tablet:text-[32px]">
                 {name === "shineresumes"
                   ? "ShineResumes"
                   : name.charAt(0).toUpperCase() + name.slice(1)}
-              </span>
+              </h3>
             </div>
             <div className="flex flex-col gap-[32px] py-[16px]">
               <div className="flex flex-col gap-[8px]">
-                <span className="h4 font-[700] tracking-[0.12em] text-white text-opacity-80">
+                <h4 className="font-[700] tracking-[0.12em] text-white text-opacity-80">
                   Introduction
-                </span>
+                </h4>
                 <div className="tablet:text-base tablet:leading-6 leading-4 text-sm h-full w-full font-normal tracking-wider text-white text-opacity-80 tablet:pl-[32px]">
                   {projectData[name].introduction}
                 </div>
               </div>
               <div className="flex flex-col gap-[8px]">
-                <span className="h4 font-[700] tracking-[0.12em] text-white text-opacity-80">
+                <h4 className="font-[700] tracking-[0.12em] text-white text-opacity-80">
                   Features and Functionality
-                </span>
+                </h4>
                 <div className="tablet:text-base tablet:leading-6 leading-4 text-sm flex h-full w-full flex-col gap-[8px] font-normal tracking-wider text-white text-opacity-80 tablet:pl-[32px]">
                   {projectData[name].features.map((feature, index) => {
                     return (
@@ -60,18 +60,18 @@ const ProjectCard = ({ name }: { name: keyof IProjectData }) => {
                 </div>
               </div>
               <div className="flex flex-col gap-[8px]">
-                <span className="h4 font-[700] tracking-[0.12em] text-white text-opacity-80">
+                <h4 className="font-[700] tracking-[0.12em] text-white text-opacity-80">
                   Technologies Used
-                </span>
+                </h4>
                 <div className="tablet:text-base tablet:leading-6 leading-4 text-sm h-full w-full font-normal tracking-wider text-white text-opacity-80 tablet:pl-[32px]">
                   {projectData[name].tech}
                 </div>
               </div>
               {projectData[name].achievements && (
                 <div className="flex flex-col gap-[8px]">
-                  <span className="h4 font-[700] tracking-[0.12em] text-white text-opacity-80">
+                  <h4 className="font-[700] tracking-[0.12em] text-white text-opacity-80">
                     Achievements
-                  </span>
+                  </h4>
                   <div className="tablet:text-base tablet:leading-6 leading-4 text-sm flex h-full w-full flex-col gap-[8px] font-normal tracking-wider text-white text-opacity-80 tablet:pl-[32px]">
                     {projectData[name].achievements?.map(
                       (achievement, index) => {
