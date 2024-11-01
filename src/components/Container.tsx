@@ -74,10 +74,10 @@ const Container = ({ work, project }: IWork) => {
   // }, []);
 
   return (
-    <div className="flex flex-col gap-[32px] overflow-x-clip">
+    <div className="flex w-full flex-col gap-[32px]">
       <div className="flex w-full flex-col gap-[32px] rounded-[24px] bg-black bg-opacity-[3%] p-[16px] tablet:p-[32px]">
         <div className="flex flex-col gap-[16px]">
-          <div className="flex w-full flex-col justify-between gap-[8px] tablet:flex-row">
+          <div className="flex w-full flex-wrap items-center justify-between gap-[8px]">
             <div className="flex gap-[8px]">
               <Image src={work.logo} alt={work.title} height={40} width={40} />
               <span className="text-[32px] font-semibold leading-[48px]">
@@ -98,6 +98,7 @@ const Container = ({ work, project }: IWork) => {
                     alt={"arrow"}
                     height={10}
                     width={12}
+                    className="h-[10px] w-[12px]"
                   />
                 </div>
               </Link>
@@ -145,7 +146,7 @@ const Container = ({ work, project }: IWork) => {
             className={`hideText icon flex w-full flex-col gap-[64px] py-[32px] transition-transform tablet:flex-row ${index % 2 === 0 ? "tablet:flex-row" : "tablet:flex-row-reverse"}`}
             // className={`hideText ${isOdd ? "translate-x-[100%]" : "-translate-x-[100%]"} icon flex w-full flex-col gap-[64px] py-[32px] transition-transform tablet:flex-row ${index % 2 === 0 ? "tablet:flex-row" : "tablet:flex-row-reverse"}`}
           >
-            <div className="flex flex-col items-center justify-center gap-[16px] tablet:items-start">
+            <div className="flex min-w-[240px] flex-col items-center justify-center gap-[16px] tablet:items-start">
               <h1 className="text-[32px] font-semibold leading-[48px]">
                 {feature.title}
               </h1>
@@ -158,7 +159,7 @@ const Container = ({ work, project }: IWork) => {
               alt={feature.title}
               height={359}
               width={624}
-              className={`max-w-[480px] self-center rounded-[32px] object-contain drop-shadow-xl tablet:max-w-[480px] laptop:max-h-[359px] laptop:max-w-[624px]`}
+              className={`w-full max-w-[480px] self-center rounded-[32px] object-contain drop-shadow-xl tablet:max-w-[360px] laptop:max-h-[359px] laptop:max-w-[624px]`}
             />
           </div>
         );
