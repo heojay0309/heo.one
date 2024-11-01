@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 const Footer = () => {
   const path = usePathname();
   return (
-    <div className="fixed bottom-[0px] left-[0px] flex w-full items-center justify-center px-[16px] pb-[16px] tablet:hidden">
+    <div className="fixed bottom-[0px] left-[0px] flex w-full items-center justify-center pb-[16px] tablet:hidden">
       <div
-        className={`icons ${path === "/resume" && "hidden"} w-3/4 rounded-3xl bg-white bg-opacity-10 px-[8px] py-[8px] backdrop-blur-2xl tablet:w-1/2`}
+        className={`flex items-center justify-between ${path === "/resume" && "hidden"} w-3/4 rounded-3xl bg-white bg-opacity-10 px-[8px] py-[8px] backdrop-blur-2xl tablet:w-1/2`}
       >
         <Link
           href={"#intro"}
@@ -22,7 +22,7 @@ const Footer = () => {
             className="h-[22px] w-[22px] select-none tablet:h-[24px] tablet:w-[24px]"
           />
         </Link>
-        <div className="w-[24px] rotate-90 border border-black border-opacity-10 tablet:w-[40px]"></div>
+        <div className="h-[24px] border border-black border-opacity-10"></div>
         <Link
           href={"#ShineResumes"}
           className="icon hiddenText flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
@@ -35,7 +35,7 @@ const Footer = () => {
             className="h-[22px] w-[22px] select-none tablet:h-[24px] tablet:w-[24px]"
           />
         </Link>
-        <div className="w-[24px] rotate-90 border border-black border-opacity-10 tablet:w-[40px]"></div>
+        <div className="h-[24px] border border-black border-opacity-10"></div>
         <Link
           href={"#Preps"}
           className="icon hiddenText flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[40px] tablet:w-[40px]"
@@ -48,7 +48,7 @@ const Footer = () => {
             className="h-[24px] w-[24px] select-none tablet:h-[24px] tablet:w-[32px]"
           />
         </Link>
-        <div className="w-[24px] rotate-90 border border-black border-opacity-10 tablet:w-[40px]"></div>
+        <div className="h-[24px] border border-black border-opacity-10"></div>
 
         <Link
           href={"#Mustadd"}
@@ -62,7 +62,7 @@ const Footer = () => {
             className="h-[28px] w-[28px] select-none tablet:h-[36px] tablet:w-[36px]"
           />
         </Link>
-        <div className="w-[24px] rotate-90 border border-black border-opacity-10 tablet:w-[40px]"></div>
+        <div className="h-[24px] border border-black border-opacity-10"></div>
 
         <Link
           href={"#Giverr"}
@@ -76,7 +76,7 @@ const Footer = () => {
             className="h-[22px] w-[22px] select-none tablet:h-[26px] tablet:w-[26px]"
           />
         </Link>
-        <div className="w-[24px] rotate-90 border border-black border-opacity-10 tablet:w-[40px]"></div>
+        <div className="h-[24px] border border-black border-opacity-10"></div>
 
         <Link
           href={"#Mellow"}
