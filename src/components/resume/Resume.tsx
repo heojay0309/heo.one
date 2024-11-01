@@ -1,14 +1,17 @@
-const ResumeComponent = () => {
+const ResumeComponent = ({ resumeUrl }: { resumeUrl: string | null }) => {
   return (
-    <div className="flex h-screen w-full justify-center gap-[10px] rounded-[4px] bg-[#0000001A]">
-      <iframe
-        src={process.env.RESUME_URL}
-        className="h-full w-full"
-        style={{
-          border: "none",
-        }}
-        title={"Jay Resume Preview"}
-      />
+    <div className="flex h-full w-full flex-1 items-center justify-center pt-[32px] tablet:pt-[0px]">
+      {resumeUrl ? (
+        <iframe
+          src={resumeUrl}
+          className="h-[50vh] w-full border-none tablet:h-[73vh]"
+          title={"Jay Resume Preview"}
+        />
+      ) : (
+        <p className="flex h-full items-center justify-center p-[16px] text-white text-opacity-40 tablet:p-[32px]">
+          Resume preview is unavailable.
+        </p>
+      )}
     </div>
   );
 };

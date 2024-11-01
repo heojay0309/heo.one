@@ -102,10 +102,6 @@ body {
   transform: translateX(0);
 }
 
-.main {
-  height: 900px;
-}
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

@@ -1,11 +1,16 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const SideMenu = () => {
+  const path = usePathname();
   return (
-    <div className="fixed top-[184px] hidden h-full tablet:right-[8px] tablet:block tablet:gap-[64px] laptop:right-[64px]">
+    <div
+      className={`fixed top-[184px] hidden h-full tablet:right-[8px] tablet:block tablet:gap-[64px] laptop:right-[64px]`}
+    >
       <div
-        className={`flex flex-col items-center gap-[16px] rounded-lg bg-white bg-opacity-30 hover:bg-opacity-40 tablet:gap-[16px] tablet:px-[8px] tablet:py-[16px]`}
+        className={`${path === "/resume" && "hidden"} flex flex-col items-center gap-[16px] rounded-lg bg-white bg-opacity-30 hover:bg-opacity-40 tablet:gap-[16px] tablet:px-[8px] tablet:py-[16px]`}
       >
         <Link
           href={"#intro"}
