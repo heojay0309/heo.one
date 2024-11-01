@@ -25,8 +25,8 @@ const Intro = () => {
   }, [index]);
 
   return (
-    <div className="-z-10 flex h-full min-h-[540px] w-full select-none flex-col items-center gap-[32px] overflow-x-clip text-white tablet:min-h-[960px] tablet:flex-row tablet:justify-center laptop:gap-[64px]">
-      <div className="flex h-full w-full flex-col justify-center gap-[32px] self-center tablet:max-h-[400px] tablet:w-full tablet:items-center tablet:justify-start">
+    <div className="-z-10 flex h-full min-h-[540px] w-full select-none flex-col items-center justify-center gap-[32px] overflow-x-clip text-white tablet:min-h-[960px] tablet:flex-row tablet:justify-center laptop:gap-[64px]">
+      <div className="flex h-full w-full flex-col items-center justify-center gap-[32px] self-center tablet:max-h-[400px] tablet:w-full tablet:items-center tablet:justify-start">
         <div className="hideText flex flex-col gap-[16px]">
           <div className="text-shadow text-[32px] font-[600] leading-[48px] text-white drop-shadow-lg">
             Hello,

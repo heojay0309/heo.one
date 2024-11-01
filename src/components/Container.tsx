@@ -145,11 +145,11 @@ const Container = ({ work, project }: IWork) => {
             className={`hideText icon flex w-full flex-col gap-[64px] py-[32px] transition-transform tablet:flex-row ${index % 2 === 0 ? "tablet:flex-row" : "tablet:flex-row-reverse"}`}
             // className={`hideText ${isOdd ? "translate-x-[100%]" : "-translate-x-[100%]"} icon flex w-full flex-col gap-[64px] py-[32px] transition-transform tablet:flex-row ${index % 2 === 0 ? "tablet:flex-row" : "tablet:flex-row-reverse"}`}
           >
-            <div className="flex flex-col justify-center gap-[16px]">
+            <div className="flex flex-col items-center justify-center gap-[16px] tablet:items-start">
               <h1 className="text-[32px] font-semibold leading-[48px]">
                 {feature.title}
               </h1>
-              <p className="text-[16px] font-medium leading-[24px]">
+              <p className="text-center text-[16px] font-medium leading-[24px] tablet:text-start">
                 {feature.description}
               </p>
             </div>
@@ -158,7 +158,7 @@ const Container = ({ work, project }: IWork) => {
               alt={feature.title}
               height={359}
               width={624}
-              className={`max-h-[359px] max-w-[624px] rounded-[32px] object-contain drop-shadow-xl`}
+              className={`max-w-[480px] self-center rounded-[32px] object-contain drop-shadow-xl tablet:max-w-[480px] laptop:max-h-[359px] laptop:max-w-[624px]`}
             />
           </div>
         );
