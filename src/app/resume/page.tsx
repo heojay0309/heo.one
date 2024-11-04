@@ -1,4 +1,3 @@
-import Navbar from "@/components/NavSection/Nav";
 import ResumeComponent from "@/components/resume/Resume";
 
 const ResumePage = () => {
