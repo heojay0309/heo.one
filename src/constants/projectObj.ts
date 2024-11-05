@@ -33,7 +33,7 @@ export const experienceObj: IExperience[] = [
         image: "/new/experience/shine/1.svg",
       },
       {
-        title: "User-Friendly Onboarding Flow",
+        title: "State Management & GraphQL API",
         description:
           "Designed a seamless onboarding process with a focus on simplicity and user experience. Leveraged Next.js form actions for secure, efficient data handling, allowing smooth interactions between the client and server. Integrated Apollo with GraphQL to optimize data flow, enabling real-time queries and mutations that enhance user accessibility. Used Zustand for state management, creating a scalable solution that supports a smooth onboarding journey from start to finish.",
         image: "/new/experience/shine/2.svg",
@@ -64,10 +64,10 @@ export const experienceObj: IExperience[] = [
       "Preps AI is a real-time mock interview app for software engineers.",
     features: [
       {
-        title: "SEO-Optimized Landing Page",
+        title: "Real-Time AI Interview Simulations",
         description:
-          "Developed a sleek, single-page web application for our landing page using Next.js, leveraging its lightweight architecture for fast load times and seamless navigation. Optimized for search engines to maximize visibility, ensuring that our site reaches and engages our target audience effectively.",
-        image: "/new/experience/preps/1.svg",
+          "Built real-time mock interview functionality in Preps using Next.js dynamic routes that seamlessly connect to a WebSocket connection. This architecture supports continuous data flow, ensuring interactive and responsive experiences for users as they engage with the AI during mock interviews.",
+        image: "/new/experience/preps/3.svg",
       },
       {
         title: "Interactive Interviews w/ Dynamic Routing",
@@ -76,10 +76,10 @@ export const experienceObj: IExperience[] = [
         image: "/new/experience/preps/2.svg",
       },
       {
-        title: "Real-Time AI Interview Simulations",
+        title: "SEO-Optimized Landing Page",
         description:
-          "Implemented real-time conversational interactions with an AI agent using WebSocket, creating an experience that closely mimics real-life interview settings. Achieved seamless differentiation between incoming and outgoing WebSocket messages, handling 'audio blobs' and 'coding prompts' through JavaScript’s typeof method. This setup provides users with an interactive, responsive practice environment for technical interviews.",
-        image: "/new/experience/preps/3.svg",
+          "Developed a sleek, single-page web application for our landing page using Next.js, leveraging its lightweight architecture for fast load times and seamless navigation. Optimized for search engines to maximize visibility, ensuring that our site reaches and engages our target audience effectively.",
+        image: "/new/experience/preps/1.svg",
       },
     ],
   },
@@ -100,13 +100,13 @@ export const experienceObj: IExperience[] = [
       {
         title: "Custom QR Code Generate & Scan",
         description:
-          "Developed a feature that generates unique QR codes for each wallet address, enabling easy wallet interactions through QR scanning. The app includes a user permission request for camera access, following standard protocols to ensure privacy and security during QR scanning.",
+          "Developed a feature that generates unique QR codes for each wallet address, enhancing usability by enabling effortless wallet interactions through QR scanning. This functionality streamlines transactions and improves the accessibility of wallet-related actions.",
         image: "/new/experience/mustadd/2.svg",
       },
       {
         title: "Real-Time Data w/ CoinGecko API",
         description:
-          "Built a dynamic asset section displaying real-time cryptocurrency prices fetched instantly upon page load. Leveraged CoinGecko’s free API to deliver accurate, up-to-date asset data, allowing users to track their holdings with ease.",
+          "Integrated CoinGecko’s free API to provide accurate and up-to-date asset data, allowing users to track their holdings easily. This feature ensures real-time updates on asset values and enhances the platform’s reliability for financial tracking.",
         image: "/new/experience/mustadd/3.svg",
       },
     ],
