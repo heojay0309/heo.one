@@ -28,7 +28,7 @@ export default function RootLayout({
       >
         <div className="relative mx-auto h-full w-full max-w-[1440px] px-[16px] py-[16px] tablet:px-[64px] tablet:py-[32px]">
           <Navbar />
-          <SideMenu />
+          {/* <SideMenu /> */}
           {children}
           <Footer />
         </div>
