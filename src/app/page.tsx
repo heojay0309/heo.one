@@ -1,11 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
-import Intro from "@/components/Introduction/Intro";
-import Container from "@/components/Container";
+import Hero from "@/components/Hero";
+import Card from "@/components/experience/Card";
 import { projectObj, experienceObj } from "@/constants/projectObj";
-import Contact from "@/components/Contact";
-import WaterRipple from "@/components/wrapper/WaterRipple";
-import SideMenu from "@/components/NavSection/SideMenu";
+import Contact from "@/components/contacts/Contact";
+import WaterRipple from "@/components/utils/WaterRipple";
+import SideMenu from "@/components/nav/SideMenu";
+import ExperienceContainer from "@/components/experience/ExperienceContainer";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -83,62 +84,49 @@ export default function Home() {
 
   return (
     <div className="relative flex flex-col gap-[32px] scroll-smooth">
-      {/* <div id="ripple-container">
-        <WaterRipple />
-      </div> */}
       <div className="relative flex flex-col gap-[16px] tablet:gap-[32px]">
         <section className="" id={activeSection !== "intro" ? "intro" : "top"}>
-          <Intro />
+          <Hero />
         </section>
         <div className="relative flex flex-col gap-[32px] scroll-smooth py-[32px]">
           {showSideMenu && <SideMenu activeSection={activeSection} />}
-          <section
-            id={"experiences"}
-            className="flex snap-end snap-always flex-col gap-[32px]"
-          >
-            <h1 className="text-shadow text-[40px] font-bold leading-[60px] drop-shadow-lg">
-              Experiences
-            </h1>
-            <div className="flex flex-col gap-[64px] self-center">
-              {experienceObj.map((exp, index) => {
+          <ExperienceContainer work="experiences">
+            {experienceObj.map((exp, index) => {
+              return (
+                <section
+                  className="text-shadow flex flex-col gap-[64px] py-[32px] drop-shadow-lg"
+                  id={exp.tag}
+                  key={index}
+                >
+                  <Card work={exp} project={true} />
+                </section>
+              );
+            })}
+          </ExperienceContainer>
+          <div className="flex flex-col gap-[32px]">
+            <ExperienceContainer work="projects">
+              {projectObj.map((proj, index) => {
                 return (
                   <section
                     className="text-shadow flex flex-col gap-[64px] py-[32px] drop-shadow-lg"
-                    id={exp.tag}
                     key={index}
+                    id={proj.tag}
                   >
-                    <Container work={exp} project={true} />
+                    <Card work={proj} project={false} />
                   </section>
                 );
               })}
-            </div>
-          </section>
-          <div className="flex flex-col gap-[32px]">
-            <section
-              id={"projects"}
-              className="flex flex-col gap-[32px] py-[64px]"
-            >
-              <h1 className="text-shadow scroll-smooth text-[40px] font-bold leading-[60px] drop-shadow-lg">
-                Projects
-              </h1>
-              <div className="flex flex-col gap-[64px] self-center">
-                {projectObj.map((proj, index) => {
-                  return (
-                    <section
-                      className="text-shadow flex flex-col gap-[64px] py-[32px] drop-shadow-lg"
-                      key={index}
-                      id={proj.tag}
-                    >
-                      <Container work={proj} project={false} />
-                    </section>
-                  );
-                })}
-              </div>
-            </section>
+            </ExperienceContainer>
           </div>
           <Contact />
         </div>
       </div>
     </div>
   );
+}
+
+{
+  /* <div id="ripple-container">
+        <WaterRipple />
+      </div> */
 }

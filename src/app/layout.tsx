@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/NavSection/Nav";
+import Navbar from "@/components/nav/Nav";
 import { Analytics } from "@vercel/analytics/next";
 import { Urbanist } from "next/font/google";
-import SideMenu from "@/components/NavSection/SideMenu";
-import Footer from "@/components/NavSection/Footer";
+import Footer from "@/components/nav/Footer";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -28,7 +27,6 @@ export default function RootLayout({
       >
         <div className="relative mx-auto h-full w-full max-w-[1440px] px-[16px] py-[16px] tablet:px-[64px] tablet:py-[32px]">
           <Navbar />
-          {/* <SideMenu /> */}
           {children}
           <Footer />
         </div>

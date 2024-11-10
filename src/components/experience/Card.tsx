@@ -51,7 +51,7 @@ const backgroundBadgeColors: any = {
   red: "bg-[#FF4646]",
 };
 
-const Container = ({ work, project }: IWork) => {
+const Card = ({ work, project }: IWork) => {
   // useEffect(() => {
   //   const hiddenTags = document.querySelectorAll(".hideText");
 
@@ -168,4 +168,4 @@ const Container = ({ work, project }: IWork) => {
   );
 };
 
-export default Container;
+export default Card;

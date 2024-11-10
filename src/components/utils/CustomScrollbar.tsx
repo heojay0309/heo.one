@@ -8,7 +8,6 @@ import {
   useCallback,
   MouseEventHandler,
 } from "react";
-import Card from "./Card";
 
 interface CustomScrollbarProps {
   children: React.ReactNode;

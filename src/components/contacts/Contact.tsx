@@ -1,9 +1,9 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { contactAction } from "@/actions/contactAction";
-import FormResult from "@/components/FormResult";
+import FormResult from "@/components/contacts/FormResult";
 
 const FormButton = ({
   isSending,

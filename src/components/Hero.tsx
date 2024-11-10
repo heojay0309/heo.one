@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Intro = () => {
+const Hero = () => {
   const describeMe = [
     "full-stack",
     "front-end",
@@ -137,4 +137,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default Hero;
