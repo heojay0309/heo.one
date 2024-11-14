@@ -8,7 +8,6 @@ interface SideMenuProps {
 
 const SideMenu = ({ activeSection }: SideMenuProps) => {
   const path = usePathname();
-  // Helper function to determine if a section is active
   const isActive = (sectionId: string) => {
     return activeSection === sectionId ? "bg-opacity-10" : "bg-opacity-0";
   };
