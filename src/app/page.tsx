@@ -4,7 +4,6 @@ import Hero from "@/components/Hero";
 import Card from "@/components/experience/Card";
 import { projectObj, experienceObj } from "@/constants/projectObj";
 import Contact from "@/components/contacts/Contact";
-import WaterRipple from "@/components/utils/WaterRipple";
 import SideMenu from "@/components/nav/SideMenu";
 import ExperienceContainer from "@/components/experience/ExperienceContainer";
 
@@ -21,7 +20,7 @@ export default function Home() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const sectionId = entry.target.id || "intro";
+            const sectionId = entry.target.id;
             setActiveSection(sectionId);
             if (sectionId !== "intro") {
               window.history.replaceState(null, "", `#${sectionId}`);
@@ -85,39 +84,37 @@ export default function Home() {
   return (
     <div className="relative flex flex-col gap-[32px] scroll-smooth">
       <div className="relative flex flex-col gap-[16px] tablet:gap-[32px]">
-        <section className="" id={activeSection !== "intro" ? "intro" : "top"}>
+        <section className="" id="intro">
           <Hero />
         </section>
         <div className="relative flex flex-col gap-[32px] scroll-smooth py-[32px]">
-          {showSideMenu && <SideMenu activeSection={activeSection} />}
           <ExperienceContainer work="experiences">
             {experienceObj.map((exp, index) => {
               return (
                 <section
                   className="text-shadow flex flex-col gap-[64px] py-[32px] drop-shadow-lg"
                   id={exp.tag}
-                  key={index}
+                  key={exp.tag}
                 >
                   <Card work={exp} project={true} />
                 </section>
               );
             })}
           </ExperienceContainer>
-          <div className="flex flex-col gap-[32px]">
-            <ExperienceContainer work="projects">
-              {projectObj.map((proj, index) => {
-                return (
-                  <section
-                    className="text-shadow flex flex-col gap-[64px] py-[32px] drop-shadow-lg"
-                    key={index}
-                    id={proj.tag}
-                  >
-                    <Card work={proj} project={false} />
-                  </section>
-                );
-              })}
-            </ExperienceContainer>
-          </div>
+          <ExperienceContainer work="projects">
+            {projectObj.map((proj, index) => {
+              return (
+                <section
+                  className="text-shadow flex flex-col gap-[64px] py-[32px] drop-shadow-lg"
+                  key={proj.tag}
+                  id={proj.tag}
+                >
+                  <Card work={proj} project={false} />
+                </section>
+              );
+            })}
+          </ExperienceContainer>
+          {showSideMenu && <SideMenu activeSection={activeSection} />}
           <Contact />
         </div>
       </div>

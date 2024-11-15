@@ -24,7 +24,7 @@ const Hero = () => {
       }, 1000); // Duration of fade-out
 
       return () => clearTimeout(fadeTimeout);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timeout);
   }, [describeMe.length, index]);
@@ -71,61 +71,61 @@ const Hero = () => {
           >
             <Link
               href={"#ShineResumes"}
-              className={`flex h-[40px] w-[40px] items-center justify-center rounded-full transition-transform duration-200 ${index === 0 ? "scale-150" : "scale-100"} bg-black bg-opacity-0 transition-transform hover:bg-opacity-5 active:bg-opacity-10`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full transition-transform duration-200 ${index === 0 ? "scale-150" : "scale-100"} bg-black bg-opacity-0 transition-transform hover:bg-opacity-5 active:bg-opacity-10`}
             >
               <Image
                 src={"/new/icons/project_shine.svg"}
                 alt={"ShineResumes"}
                 height={32}
                 width={32}
-                className={`h-[22px] w-[22px] select-none tablet:h-[32px] tablet:w-[32px]`}
+                className={`h-[32px] w-[32px] select-none tablet:h-[32px] tablet:w-[32px]`}
               />
             </Link>
             <Link
               href={"#Preps"}
-              className={`flex h-[36px] w-[36px] items-center justify-center rounded-full transition-transform duration-200 ${index === 1 ? "scale-150" : "scale-100"} bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full transition-transform duration-200 ${index === 1 ? "scale-150" : "scale-100"} bg-black bg-opacity-0 hover:bg-opacity-5 active:bg-opacity-10`}
             >
               <Image
                 src={"/new/icons/project_preps.svg"}
                 alt={"Preps AI"}
                 height={32}
                 width={32}
-                className={`h-[24px] w-[24px] select-none tablet:h-[32px] tablet:w-[32px]`}
+                className={`h-[32px] w-[32px] select-none tablet:h-[32px] tablet:w-[32px]`}
               />
             </Link>
 
             <Link
               href={"#Mustadd"}
-              className={`flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 transition-transform duration-200 ${index === 2 ? "scale-150" : "scale-100"} hover:bg-opacity-5 active:bg-opacity-10`}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full bg-black bg-opacity-0 transition-transform duration-200 ${index === 2 ? "scale-150" : "scale-100"} hover:bg-opacity-5 active:bg-opacity-10`}
             >
               <Image
                 src={"/new/icons/project_mustadd.svg"}
                 alt={"Mustadd"}
-                height={40}
-                width={40}
-                className={`h-[28px] w-[28px] select-none tablet:h-[40px] tablet:w-[40px]`}
+                height={32}
+                width={32}
+                className={`h-[32px] w-[32px] select-none tablet:h-[32px] tablet:w-[32px]`}
               />
             </Link>
             <Link
               href={"#Giverr"}
-              className={`flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 transition-transform duration-200 hover:bg-opacity-5 active:bg-opacity-10 ${index === 3 ? "scale-150" : "scale-100"} `}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full bg-black bg-opacity-0 transition-transform duration-200 hover:bg-opacity-5 active:bg-opacity-10 ${index === 3 ? "scale-150" : "scale-100"} `}
             >
               <Image
                 src={"/new/icons/project_giverr.svg"}
                 alt={"Giverr"}
                 height={32}
                 width={32}
-                className={`h-[22px] w-[22px] select-none tablet:h-[32px] tablet:w-[32px]`}
+                className={`h-[32px] w-[32px] select-none tablet:h-[32px] tablet:w-[32px]`}
               />
             </Link>
             <Link
               href={"#Mellow"}
-              className={`flex h-[36px] w-[36px] items-center justify-center rounded-full bg-black bg-opacity-0 transition-transform duration-200 hover:bg-opacity-5 active:bg-opacity-10 ${index === 4 ? "scale-150" : "scale-100"} `}
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-full bg-black bg-opacity-0 transition-transform duration-200 hover:bg-opacity-5 active:bg-opacity-10 ${index === 4 ? "scale-150" : "scale-100"} `}
             >
               <Image
                 src={"/new/icons/project_mellow.svg"}
                 alt={"Mellow"}
-                height={24}
+                height={32}
                 width={32}
                 className={`h-[24px] w-[24px] select-none tablet:h-[32px] tablet:w-[32px]`}
               />

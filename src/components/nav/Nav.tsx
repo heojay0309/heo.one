@@ -8,10 +8,10 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${path === "/resume" ? "" : "fixed px-[16px] tablet:px-[64px]"} left-0 z-10 h-[64px] w-full py-[8px] text-black tablet:h-[80px]`}
+      className={`${path === "/resume" ? "" : "fixed px-[16px] tablet:px-[64px]"} left-0 z-10 h-[70px] w-full text-black tablet:h-[72px]`}
     >
       <div
-        className={`mx-auto flex w-full max-w-[1312px] items-center justify-between gap-[8px] rounded-3xl bg-white bg-opacity-10 px-[16px] py-[8px] backdrop-blur-sm hover:bg-opacity-20 tablet:h-[80px] tablet:gap-[0px] tablet:px-[32px] tablet:py-[16px]`}
+        className={`mx-auto flex w-full items-center justify-between gap-[8px] rounded-3xl bg-white bg-opacity-10 px-[16px] py-[8px] backdrop-blur-sm hover:bg-opacity-20 tablet:h-[72px] tablet:gap-[0px] tablet:px-[32px] tablet:py-[16px]`}
       >
         <Link
           href={"/"}

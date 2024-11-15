@@ -115,7 +115,6 @@ const Card = ({ work, project }: IWork) => {
             )}
           </div>
         </div>
-
         <div className="flex flex-col gap-[16px]">
           <div className="flex w-full items-center gap-[8px]">
             <h2 className="text-[16px] font-[700] leading-[24px]">
@@ -143,8 +142,7 @@ const Card = ({ work, project }: IWork) => {
         return (
           <div
             key={index}
-            className={`hideText icon flex w-full flex-col gap-[64px] py-[32px] transition-transform tablet:flex-row ${index % 2 === 0 ? "tablet:flex-row" : "tablet:flex-row-reverse"}`}
-            // className={`hideText ${isOdd ? "translate-x-[100%]" : "-translate-x-[100%]"} icon flex w-full flex-col gap-[64px] py-[32px] transition-transform tablet:flex-row ${index % 2 === 0 ? "tablet:flex-row" : "tablet:flex-row-reverse"}`}
+            className={`hideText icon flex w-full flex-col gap-[64px] py-[32px] transition-transform tablet:flex-col-reverse ${index % 2 === 0 ? "laptop:flex-row" : "laptop:flex-row-reverse"}`}
           >
             <div className="flex min-w-[240px] flex-col items-center justify-center gap-[16px] tablet:items-start">
               <h1 className="text-[32px] font-semibold leading-[48px]">
