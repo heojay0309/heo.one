@@ -142,7 +142,7 @@ const Card = ({ work, project }: IWork) => {
         return (
           <div
             key={index}
-            className={`hideText icon flex w-full flex-col-reverse flex-wrap justify-center gap-[32px] py-[32px] transition-transform tablet:gap-[64px] laptop:flex-nowrap laptop:justify-start ${index % 2 === 0 ? "tablet:flex-row" : "tablet:flex-row-reverse"}`}
+            className={`hideText icon  flex w-full flex-col-reverse flex-wrap justify-center gap-[32px] py-[32px] transition-transform tablet:gap-[64px] laptop:flex-nowrap laptop:justify-start ${index % 2 === 0 ? "tablet:flex-row" : "tablet:flex-row-reverse"}`}
           >
             <div className="flex min-w-[240px] max-w-none flex-col items-center justify-center gap-[16px] tablet:max-w-[480px] tablet:items-start laptop:max-w-full">
               <h1 className="text-[32px] font-semibold leading-[48px]">

@@ -25,7 +25,7 @@ export default function RootLayout({
       <body
         className={`${urbanist.className} min-h-[100svh] min-w-[100vw] scroll-smooth text-white`}
       >
-        <div className="relative mx-auto h-full w-full max-w-[1440px] px-[16px] py-[16px] tablet:px-[64px] tablet:py-[32px]">
+        <div className="relative mx-auto h-full w-full px-[16px] py-[16px] tablet:px-[64px] tablet:py-[32px]">
           <Navbar />
           {children}
           <Footer />
