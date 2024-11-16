@@ -142,13 +142,13 @@ const Card = ({ work, project }: IWork) => {
         return (
           <div
             key={index}
-            className={`hideText icon flex w-full flex-col gap-[64px] py-[32px] transition-transform tablet:flex-col-reverse ${index % 2 === 0 ? "laptop:flex-row" : "laptop:flex-row-reverse"}`}
+            className={`hideText icon flex w-full flex-col-reverse flex-wrap justify-center gap-[32px] py-[32px] transition-transform tablet:gap-[64px] laptop:flex-nowrap laptop:justify-start ${index % 2 === 0 ? "tablet:flex-row" : "tablet:flex-row-reverse"}`}
           >
-            <div className="flex min-w-[240px] flex-col items-center justify-center gap-[16px] tablet:items-start">
+            <div className="flex min-w-[240px] max-w-none flex-col items-center justify-center gap-[16px] tablet:max-w-[480px] tablet:items-start laptop:max-w-full">
               <h1 className="text-[32px] font-semibold leading-[48px]">
                 {feature.title}
               </h1>
-              <p className="text-center text-[16px] font-medium leading-[24px] tablet:text-start">
+              <p className="text-balance text-center text-[16px] font-medium leading-[24px] tablet:text-start">
                 {feature.description}
               </p>
             </div>
@@ -157,7 +157,7 @@ const Card = ({ work, project }: IWork) => {
               alt={feature.title}
               height={359}
               width={624}
-              className={`w-full max-w-[480px] self-center rounded-[32px] object-contain drop-shadow-xl tablet:max-w-[360px] laptop:max-h-[359px] laptop:max-w-[624px]`}
+              className={`w-full max-w-[480px] self-center rounded-[32px] object-contain drop-shadow-xl tablet:max-w-[360px] laptop:max-h-[360px] laptop:max-w-[480px]`}
             />
           </div>
         );

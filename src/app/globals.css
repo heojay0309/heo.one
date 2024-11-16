@@ -10,11 +10,8 @@ html {
 }
 
 body {
-  background-image: radial-gradient(
-    circle farthest-corner at 48.4% 47.5%,
-    rgb(115, 165, 227) 0%,
-    rgb(29, 68, 115) 90%
-  );
+  /* background-image: linear-gradient(to bottom right, #f8fafc, #e2e8f0); */
+  background-image: linear-gradient(to bottom right, #1a202c, #2d3748);
 }
 
 ::-webkit-scrollbar {
