@@ -14,10 +14,10 @@ const SideMenu = ({ activeSection }: SideMenuProps) => {
 
   return (
     <div
-      className={`fixed top-[120px] hidden h-full tablet:right-[68px] tablet:block tablet:gap-[64px]`}
+      className={`fixed top-[160px] hidden h-full tablet:right-[68px] tablet:block tablet:gap-[64px]`}
     >
       <div
-        className={`${path === "/resume" && "hidden"} transition-all duration-700 ${activeSection === "intro" || activeSection === "top" ? "translate-x-[calc(100%+16px)] opacity-0" : "max-h-full translate-x-0 opacity-100"} flex flex-col items-center gap-[16px] rounded-lg bg-white bg-opacity-10 tablet:gap-[16px] tablet:px-[8px] tablet:py-[8px]`}
+        className={`${path === "/resume" && "hidden"} transition-all duration-700 ${activeSection === "intro" || activeSection === "top" ? "translate-x-[calc(100%+16px)] opacity-0 tablet:translate-x-[calc(100%+64px)]" : "max-h-full translate-x-0 opacity-100"} flex flex-col items-center gap-[16px] rounded-lg bg-white bg-opacity-10 tablet:gap-[16px] tablet:px-[8px] tablet:py-[8px]`}
       >
         <Link
           href={"#intro"}

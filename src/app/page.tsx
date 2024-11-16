@@ -84,7 +84,10 @@ export default function Home() {
   return (
     <div className="relative flex flex-col gap-[32px] scroll-smooth">
       <div className="relative flex flex-col gap-[16px] tablet:gap-[32px]">
-        <section className="" id="intro">
+        <section
+          className="w-screen self-center px-[16px] tablet:px-[64px]"
+          id="intro"
+        >
           <Hero />
         </section>
         <div className="relative flex flex-col gap-[32px] scroll-smooth py-[32px]">
