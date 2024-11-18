@@ -32,7 +32,7 @@ const Hero = () => {
   return (
     <div className="-z-10 flex h-full w-full select-none flex-row justify-start gap-[32px] overflow-x-clip text-white tablet:min-h-[100vh] tablet:flex-col tablet:gap-[64px]">
       <div className="mt-[72px] flex w-full flex-col items-center justify-center">
-        <div className="flex h-full w-full flex-col-reverse items-center justify-center tablet:flex-row">
+        <div className="flex h-full w-full flex-col-reverse items-center justify-center tablet:flex-row-reverse">
           <div className="flex min-h-[720px] w-full flex-col items-center justify-center">
             <div className="flex flex-col flex-wrap justify-center gap-[32px] text-nowrap text-center text-[32px] font-[500] leading-[48px] drop-shadow-lg tablet:flex-row tablet:text-[40px] tablet:leading-[60px]">
               <div className="text-shadow">I am a </div>
@@ -52,12 +52,12 @@ const Hero = () => {
           <div className="flex min-h-[720px] w-full flex-col items-center justify-center gap-[32px] text-center tablet:w-full tablet:gap-[64px] tablet:text-start">
             <div className="hideText flex flex-col gap-[16px]">
               <div className="text-shadow text-[32px] font-[600] leading-[48px] tracking-widest drop-shadow-lg tablet:text-[40px] tablet:leading-[60px]">
-                <div className="flex flex-col items-center justify-center text-wrap tablet:items-start">
+                <div className="flex flex-col items-center justify-center text-wrap tablet:items-center">
                   <span className="text-wrap">Hello,</span>
                   <span>I&apos;m Jay Heo.</span>
                 </div>
               </div>
-              <div className="text-shadow w-full text-center text-[16px] font-light leading-[24px] tracking-widest drop-shadow-lg tablet:text-start tablet:text-[22px] tablet:leading-[36px]">
+              <div className="text-shadow w-full text-center text-[16px] font-light leading-[24px] tracking-widest drop-shadow-lg tablet:text-center tablet:text-[22px] tablet:leading-[36px]">
                 Driven by complex challenges and innovation.
               </div>
             </div>
