@@ -67,7 +67,7 @@ const Navbar = () => {
             <span className="hidden tablet:block">Resume</span>
           </Link>
           <Link
-            href={"#contact"}
+            href={"/#contact"}
             className="text-shadow text-white transition-all duration-200 hover:scale-105 hover:text-opacity-80 hover:drop-shadow-lg active:text-opacity-60"
           >
             <Image

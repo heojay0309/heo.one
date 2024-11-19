@@ -11,6 +11,7 @@ html {
 
 body {
   /* background-image: linear-gradient(to bottom right, #f8fafc, #e2e8f0); */
+  background-color: #1a202c;
   background-image: linear-gradient(to bottom right, #1a202c, #2d3748);
 }
 

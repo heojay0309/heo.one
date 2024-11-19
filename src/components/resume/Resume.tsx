@@ -4,7 +4,7 @@ const ResumeComponent = ({ resumeUrl }: { resumeUrl: string | null }) => {
       {resumeUrl ? (
         <iframe
           src={resumeUrl}
-          className="h-[50vh] w-full border-none tablet:h-[73vh]"
+          className="h-[65vh] w-[100%] border-none tablet:h-[75vh] tablet:w-[75%]"
           title={"Jay Resume Preview"}
         />
       ) : (
