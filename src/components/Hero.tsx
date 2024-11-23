@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import PuzzleBackground from "./Background";
 
 const Hero = () => {
   const describeMe = [
@@ -30,8 +31,8 @@ const Hero = () => {
   }, [describeMe.length, index]);
 
   return (
-    <div className="-z-10 flex h-full w-full select-none flex-row justify-start gap-[32px] overflow-x-clip text-white tablet:min-h-[100vh] tablet:flex-col tablet:gap-[64px]">
-      <div className="mt-[80px] flex w-full flex-col items-center justify-center">
+    <div className="relative -z-10 flex h-full w-full select-none flex-row justify-start gap-[32px] overflow-x-clip bg-gradient-to-br text-white tablet:min-h-[100vh] tablet:flex-col tablet:gap-[64px]">
+      <div className="relative mt-[80px] flex w-full flex-col items-center justify-center">
         <div className="flex h-full w-full flex-col-reverse items-center justify-between tablet:flex-row">
           <div className="flex min-h-[720px] w-full flex-col items-center justify-center">
             <div className="flex flex-col flex-wrap justify-center gap-[32px] text-nowrap text-center text-[32px] font-[500] leading-[48px] drop-shadow-lg tablet:flex-row tablet:text-[40px] tablet:leading-[60px]">

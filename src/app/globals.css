@@ -16,14 +16,13 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 1px; /* Width of the scrollbar */
+  width: 1px;
   display: none;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ffffff; /* Color of the scrollbar thumb */
-  border-radius: 6px; /* Roundness of the thumb */
-  /* background-clip: content-box; Clipping to prevent thumb from being too big */
+  background-color: #ffffff;
+  border-radius: 6px;
   height: 150px;
 }
 ::-webkit-scrollbar-track {
@@ -59,7 +58,7 @@ body {
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust values for desired effect */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .icon:nth-child(2) {
@@ -180,4 +179,12 @@ h6 {
 }
 .p2 {
   @apply text-p2 font-normal leading-p2;
+}
+.puzzle-piece {
+  background-color: whitesmoke;
+  opacity: 5%;
+  clip-path: path(
+    "M 20 0 C 40 0, 40 20, 60 20 C 80 20, 80 0, 100 0 C 120 0, 120 20, 140 20 C 160 20, 160 0, 180 0 C 200 0, 200 20, 200 40 C 200 60, 180 60, 180 80 C 180 100, 200 100, 200 120 C 200 140, 200 160, 180 160 C 160 160, 160 180, 140 180 C 120 180, 120 200, 100 200 C 80 200, 80 180, 60 180 C 40 180, 40 200, 20 200 C 0 200, 0 180, 0 160 C 0 140, 20 140, 20 120 C 20 100, 0 100, 0 80 C 0 60, 0 40, 20 40 C 40 40, 40 20, 20 20 Z"
+  );
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
