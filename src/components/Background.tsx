@@ -1,6 +1,6 @@
 const PuzzleBackground = () => {
   return (
-    <div className="fixed top-[20%] scale-75 opacity-5 tablet:left-[0%] tablet:scale-125">
+    <div className="fixed top-[20%] scale-75 opacity-10 shadow tablet:left-[0%] tablet:scale-125">
       <div className="flex flex-col">
         {/* 1st */}
         <div className="flex gap-[1px]">
@@ -40,7 +40,7 @@ const PuzzleBackground = () => {
             <div className="innerCircle left-[40px] top-[-11px] rotate-[180deg]"></div>
             <div className="innerCircle left-[90px] top-[40px] rotate-[-90deg]"></div>
             <div className="outCircle left-[-31px] top-[40px] rotate-[220deg]"></div>
-            <div className="innerCircle left-[40px] top-[90px]"></div>
+            <div className="outCircle left-[41px] top-[112px] rotate-[135deg]"></div>
           </div>
           <div className="puzzle relative z-10">
             <div className="outCircle left-[41px] top-[-29px] z-auto rotate-[-45deg]"></div>
@@ -62,11 +62,11 @@ const PuzzleBackground = () => {
             <div className="outCircle left-[111px] top-[40px] rotate-[45deg]"></div>
           </div>
           <div className="relative z-[30] h-[120px] w-[120px] bg-transparent"></div>
-          <div className="puzzle relative overflow-clip">
+          <div className="puzzle relative z-[-30]">
             <div className="innerCircle left-[40px] top-[90px]"></div>
-            <div className="innerCircle left-[-10px] top-[40px] rotate-[90deg]"></div>
+            <div className="innerCircle left-[-30px] top-[40px] rotate-[-90deg]"></div>
             <div className="innerCircle left-[39px] top-[-11px] rotate-[180deg]"></div>
-            <div className="innerCircle left-[-11px] top-[30px] z-[-40] rotate-[90deg]"></div>
+            {/* <div className="innerCircle left-[-11px] top-[40px] z-[-40] rotate-[90deg]"></div> */}
           </div>
         </div>
         {/* 4th */}
@@ -80,8 +80,8 @@ const PuzzleBackground = () => {
             <div className="outCircle left-[-30px] top-[40px] rotate-[225deg]"></div>
             <div className="innerCircle left-[90px] top-[40px] rotate-[-90deg]"></div>
           </div>
-          <div className="puzzle relative z-10 overflow-y-clip">
-            <div className="innerCircle left-[41px] top-[-11px] rotate-[180deg]"></div>
+          <div className="puzzle relative z-10">
+            <div className="outCircle left-[41px] top-[-30px] rotate-[-45deg]"></div>
             <div className="outCircle left-[-30px] top-[41px] rotate-[225deg]"></div>
             <div className="outCircle left-[112px] top-[41px] rotate-[45deg]"></div>
           </div>

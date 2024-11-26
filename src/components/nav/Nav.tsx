@@ -8,10 +8,10 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${path === "/resume" ? "" : "fixed px-[16px] tablet:px-[64px]"} left-0 z-10 w-full text-black`}
+      className={`${path === "/resume" ? "" : "fixed px-[16px] tablet:px-[64px]"} left-0 z-20 w-full text-white`}
     >
       <div
-        className={`mx-auto flex w-full items-center justify-between gap-[8px] rounded-3xl bg-white bg-opacity-10 px-[16px] py-[8px] backdrop-blur-sm hover:bg-opacity-20 tablet:h-[72px] tablet:gap-[0px] tablet:px-[32px] tablet:py-[16px]`}
+        className={`mx-auto flex w-full items-center justify-between gap-[8px] rounded-3xl bg-white bg-opacity-10 px-[16px] py-[8px] backdrop-blur-sm hover:bg-opacity-20 tablet:h-[72px] tablet:gap-[0px] tablet:px-[32px] tablet:py-[16px] dark:border dark:border-[#2d3748] dark:border-opacity-40`}
       >
         <Link
           href={"/"}
@@ -29,7 +29,7 @@ const Navbar = () => {
         <div className="flex h-full items-center justify-between gap-[24px] text-[16px] leading-[24px] tablet:gap-[32px] tablet:text-[16px] tablet:leading-[24px]">
           <Link
             href={"https://www.github.com/heojay0309"}
-            className="text-shadow text-white text-opacity-100 transition-all duration-200 hover:scale-105 hover:text-opacity-80 hover:drop-shadow-lg active:text-opacity-60"
+            className="text-shadow text-opacity-100 transition-all duration-200 hover:scale-105 hover:text-opacity-80 hover:drop-shadow-lg active:text-opacity-60"
           >
             <Image
               src={"/new/icons/icon-github.svg"}
@@ -42,7 +42,7 @@ const Navbar = () => {
           </Link>
           <Link
             href={"https://www.linkedin.com/in/heo"}
-            className="text-shadow text-white transition-all duration-200 hover:scale-105 hover:text-opacity-80 hover:drop-shadow-lg active:text-opacity-60"
+            className="text-shadow transition-all duration-200 hover:scale-105 hover:text-opacity-80 hover:drop-shadow-lg active:text-opacity-60"
           >
             <Image
               src={"/new/icons/icon-linkedin.svg"}
@@ -55,7 +55,7 @@ const Navbar = () => {
           </Link>
           <Link
             href={"/resume"}
-            className="text-shadow text-white transition-all duration-200 hover:scale-105 hover:text-opacity-80 hover:drop-shadow-lg active:text-opacity-60"
+            className="text-shadow transition-all duration-200 hover:scale-105 hover:text-opacity-80 hover:drop-shadow-lg active:text-opacity-60"
           >
             <Image
               src={"/new/icons/icon-resume.svg"}
@@ -68,7 +68,7 @@ const Navbar = () => {
           </Link>
           <Link
             href={"/#contact"}
-            className="text-shadow text-white transition-all duration-200 hover:scale-105 hover:text-opacity-80 hover:drop-shadow-lg active:text-opacity-60"
+            className="text-shadow transition-all duration-200 hover:scale-105 hover:text-opacity-80 hover:drop-shadow-lg active:text-opacity-60"
           >
             <Image
               src={"/new/icons/icon-contact.svg"}

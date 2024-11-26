@@ -12,7 +12,7 @@ html {
 body {
   /* background-image: linear-gradient(to bottom right, #f8fafc, #e2e8f0); */
   background-color: #1a202c;
-  background-image: linear-gradient(to bottom right, #1a202c, #2d3748);
+  /* background-image: linear-gradient(to bottom right, #1a202c, #2d3748); */
 }
 
 ::-webkit-scrollbar {
@@ -187,7 +187,6 @@ h6 {
   width: 120px;
   place-self: center;
   border: 1px solid black;
-  border-right: 0px;
   border-left: 0px;
   border-radius: 10px;
 }
@@ -200,18 +199,15 @@ h6 {
   rotate: -45deg;
   border-top: 1px solid black;
   border-right: 1px solid black;
-  background: #2d3748;
+  background: white;
 }
 .outCircle {
   background: white;
-
   position: absolute;
   height: 38px;
   width: 38px;
   border-radius: 100%;
   border-bottom-left-radius: 9px;
-  /* border-top: 1px solid black; */
-  /* border-right: 1px solid black; */
 }
 .bottom {
   background: white;

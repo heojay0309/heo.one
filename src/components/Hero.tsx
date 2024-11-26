@@ -31,14 +31,12 @@ const Hero = () => {
   }, [describeMe.length, index]);
 
   return (
-    <div className="relative -z-10 flex h-full w-full select-none flex-row justify-start gap-[32px] overflow-x-clip bg-gradient-to-br text-white tablet:min-h-[100vh] tablet:flex-col tablet:gap-[64px]">
+    <div className="relative z-10 flex h-full w-full flex-row justify-start gap-[32px] overflow-x-clip bg-gradient-to-br text-white tablet:min-h-[100vh] tablet:flex-col tablet:gap-[64px]">
       <div className="relative mt-[80px] flex w-full flex-col items-center justify-center">
         <div className="flex h-full w-full flex-col-reverse items-center justify-between tablet:flex-row">
           <div className="flex min-h-[720px] w-full flex-col items-center justify-center">
             <div className="flex flex-col flex-wrap justify-center gap-[32px] text-nowrap text-center text-[32px] font-[500] leading-[48px] drop-shadow-lg tablet:flex-row tablet:text-[40px] tablet:leading-[60px]">
-              <div className="text-shadow text-white text-opacity-80">
-                I am a{" "}
-              </div>
+              <div className="text-shadow text-opacity-80">I am a </div>
               <div className="relative flex min-w-[160px] items-center justify-center gap-[16px] drop-shadow-lg tablet:min-w-[240px] tablet:items-start">
                 <div
                   className={`text-center text-[32px] font-[700] leading-[48px] tracking-wide text-yellow-300 transition-opacity duration-500 will-change-contents tablet:text-[44px] tablet:leading-[60px] ${
@@ -49,15 +47,13 @@ const Hero = () => {
                 </div>
                 <div className="absolute top-[48px] -z-10 h-[4px] w-full rounded-lg bg-white bg-opacity-80 shadow-lg tablet:top-[56px]"></div>{" "}
               </div>
-              <div className="text-shadow text-white text-opacity-80">
-                developer.
-              </div>
+              <div className="text-shadow text-opacity-80">developer.</div>
             </div>
           </div>
           <div className="flex min-h-[720px] w-full flex-col items-center justify-center gap-[32px] text-center tablet:w-full tablet:gap-[64px] tablet:text-start">
             <div className="hideText flex flex-col gap-[16px]">
               <div className="text-shadow text-[32px] font-[600] leading-[48px] tracking-widest drop-shadow-lg tablet:text-[40px] tablet:leading-[60px]">
-                <div className="flex flex-col items-center justify-center text-wrap text-white text-opacity-80 tablet:items-center">
+                <div className="flex flex-col items-center justify-center text-wrap text-opacity-80 tablet:items-center">
                   <span className="text-wrap">Hello,</span>
                   <span>I&apos;m Jay Heo.</span>
                 </div>
@@ -124,7 +120,7 @@ const Hero = () => {
           </Link>
           <Link
             href={"#Mellow"}
-            className={`flex h-[48px] w-[48px] items-center justify-center rounded-full bg-white bg-opacity-0 transition-transform duration-200 hover:bg-opacity-5 active:bg-opacity-10 ${index === 4 ? "scale-150" : "scale-100"} `}
+            className={`flex h-[40px] w-[40px] items-center justify-center rounded-full bg-white bg-opacity-0 transition-transform duration-200 hover:bg-opacity-5 active:bg-opacity-10 ${index === 4 ? "scale-150" : "scale-100"} `}
           >
             <Image
               src={"/new/icons/project_mellow.svg"}
