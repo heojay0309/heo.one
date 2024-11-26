@@ -1,6 +1,6 @@
 const PuzzleBackground = () => {
   return (
-    <div className="fixed top-[20%] scale-75 opacity-10 shadow tablet:left-[0%] tablet:scale-125">
+    <div className="fixed top-[20%] scale-50 opacity-5 shadow tablet:left-[75%] tablet:top-[0%] tablet:scale-50">
       <div className="flex flex-col">
         {/* 1st */}
         <div className="flex gap-[1px]">
@@ -66,7 +66,6 @@ const PuzzleBackground = () => {
             <div className="innerCircle left-[40px] top-[90px]"></div>
             <div className="innerCircle left-[-30px] top-[40px] rotate-[-90deg]"></div>
             <div className="innerCircle left-[39px] top-[-11px] rotate-[180deg]"></div>
-            {/* <div className="innerCircle left-[-11px] top-[40px] z-[-40] rotate-[90deg]"></div> */}
           </div>
         </div>
         {/* 4th */}
