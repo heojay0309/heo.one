@@ -180,6 +180,7 @@ h6 {
 .p2 {
   @apply text-p2 font-normal leading-p2;
 }
+
 .puzzle {
   background: white;
   height: 120px;
@@ -190,36 +191,27 @@ h6 {
   border-left: 0px;
   border-radius: 10px;
 }
-.circle {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  border-radius: 100%;
-  border-bottom-left-radius: 0px;
-  rotate: 45deg;
-  top: 40px;
-  left: -10px;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
-  border-left-width: 0px;
-}
-.circle:nth-child(2) {
-  rotate: 225deg;
-  left: 90px;
-}
-.top {
-  background: white;
+.innerCircle {
   position: absolute;
   height: 40px;
   width: 40px;
   border-radius: 100%;
   border-bottom-left-radius: 9px;
   rotate: -45deg;
-  top: -30px;
-  left: 40px;
-  z-index: 1;
   border-top: 1px solid black;
   border-right: 1px solid black;
+  background: #2d3748;
+}
+.outCircle {
+  background: white;
+
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  border-radius: 100%;
+  border-bottom-left-radius: 9px;
+  /* border-top: 1px solid black; */
+  /* border-right: 1px solid black; */
 }
 .bottom {
   background: white;
