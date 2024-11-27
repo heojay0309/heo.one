@@ -50,7 +50,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative z-10 flex h-full w-full select-none flex-row justify-start gap-[32px] overflow-x-clip bg-gradient-to-br text-white tablet:min-h-[100vh] tablet:flex-col tablet:gap-[64px]">
+    <div className="relative z-10 flex h-full w-full select-none flex-row justify-start gap-[32px] overflow-x-clip bg-linear-to-br text-white tablet:min-h-[100vh] tablet:flex-col tablet:gap-[64px]">
       <div className="absolute left-0 top-[128px] flex flex-col gap-[16px] text-white text-opacity-30 tablet:left-[18%] tablet:top-[0%] tablet:gap-[64px]">
         {array.map((str, index) => {
           let delayTime = `delay-[${index * 150}ms]`;

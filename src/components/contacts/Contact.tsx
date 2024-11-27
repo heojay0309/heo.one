@@ -99,7 +99,7 @@ const Contact = () => {
                   name="email"
                   value={email}
                   placeholder="Example@email.com"
-                  className="text-[16px] font-[400] leading-[24px] outline-none ring-0 placeholder:opacity-60"
+                  className="text-[16px] font-[400] leading-[24px] outline-hidden ring-0 placeholder:opacity-60"
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
@@ -111,7 +111,7 @@ const Contact = () => {
                   name="message"
                   value={message}
                   placeholder="Lorem"
-                  className="text-[16px] font-[400] leading-[24px] outline-none ring-0 placeholder:opacity-60"
+                  className="text-[16px] font-[400] leading-[24px] outline-hidden ring-0 placeholder:opacity-60"
                   onChange={(e) => setMessage(e.target.value)}
                 />
               </div>

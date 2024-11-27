@@ -1,6 +1,103 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1920px;
+  --breakpoint-mobile: 384px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 1440px;
+  --breakpoint-desktop: 1920px;
+
+  --text-*: initial;
+  --text-h1: 48px;
+  --text-h2: 32px;
+  --text-h3: 24px;
+  --text-h4: 20px;
+  --text-h5: 16px;
+  --text-h6: 12px;
+  --text-p1: 16px;
+  --text-p2: 12px;
+  --text-button: 16px;
+  --text-dropdown1: 16px;
+  --text-dropdown2: 12px;
+
+  --leading-*: initial;
+  --leading-h1: 56px;
+  --leading-h2: 40px;
+  --leading-h3: 32px;
+  --leading-h4: 24px;
+  --leading-h5: 24px;
+  --leading-h6: 16px;
+  --leading-p1: 24px;
+  --leading-p2: 16px;
+  --leading-button: 24px;
+  --leading-dropdown1: 24px;
+  --leading-dropdown2: 16px;
+
+  --order-*: initial;
+  --order-1: 1;
+  --order-2: 2;
+  --order-3: 3;
+  --order-4: 4;
+  --order-5: 5;
+  --order-6: 6;
+  --order-7: 7;
+  --order-8: 8;
+  --order-9: 9;
+  --order-10: 10;
+  --order-11: 11;
+  --order-12: 12;
+  --order-13: 13;
+  --order-14: 14;
+  --order-15: 15;
+  --order-16: 16;
+  --order-17: 17;
+  --order-18: 18;
+  --order-19: 19;
+  --order-20: 20;
+  --order-21: 21;
+  --order-22: 22;
+  --order-23: 23;
+  --order-24: 24;
+
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+
+  --animate-bounce-slow: bounce 2s infinite;
+  --animate-scroll: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 html {
   scroll-behavior: smooth;
