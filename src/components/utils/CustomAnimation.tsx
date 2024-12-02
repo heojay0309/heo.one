@@ -1,31 +1,19 @@
 "use client";
-import {
-  motion,
-  useTransform,
-  delay,
-  useTime,
-  useSpring,
-  MotionValue,
-} from "motion/react";
-import { useState, useEffect } from "react";
+import { motion, useTransform, useTime, useSpring } from "motion/react";
 
 const CustomAnimation = ({
-  delay,
-  rowIndex,
-  charIndex,
+  delay = 0,
   children,
 }: {
-  delay: number;
-  rowIndex: number;
-  charIndex: number;
+  delay?: number;
   children: React.ReactNode;
 }) => {
   const time = useTime();
   const delayedTime = useTransform(time, (t) => t - delay);
-  const x = useTransform(delayedTime, (latest) => Math.cos(latest / 500) * 20);
-  const y = useTransform(delayedTime, (latest) => Math.sin(latest / 1000) * 5);
+  const x = useTransform(delayedTime, (latest) => Math.cos(latest / 3000) * 30);
+  const y = useTransform(delayedTime, (latest) => Math.sin(latest / 3000) * 30);
   const scale = useTransform(delayedTime, (latest) =>
-    Math.abs(Math.cos(latest / 800)),
+    Math.abs(Math.cos(latest / 1000) * 1.5),
   );
   const springX = useSpring(x, { stiffness: 50, damping: 20 });
   const springY = useSpring(y, { stiffness: 50, damping: 20 });
@@ -35,7 +23,7 @@ const CustomAnimation = ({
   });
 
   return (
-    <motion.div
+    <motion.p
       style={{
         x: springX || 0,
         y: springY || 0,
@@ -50,7 +38,7 @@ const CustomAnimation = ({
       }}
     >
       {children}
-    </motion.div>
+    </motion.p>
   );
 };
 

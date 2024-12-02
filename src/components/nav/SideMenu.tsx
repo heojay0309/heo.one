@@ -2,6 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { track } from "@vercel/analytics";
+
 interface SideMenuProps {
   activeSection?: string | null;
 }
@@ -34,6 +36,7 @@ const SideMenu = ({ activeSection }: SideMenuProps) => {
         <div className="w-[24px] border border-black border-opacity-10 tablet:w-[40px]"></div>
         <Link
           href={"#ShineResumes"}
+          onClick={() => track("shine_link_clicked")}
           className={`flex h-[40px] w-[40px] items-center justify-center rounded-full bg-white transition-all duration-200 ${isActive("ShineResumes")} hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[48px] tablet:w-[48px]`}
         >
           <Image
@@ -48,6 +51,7 @@ const SideMenu = ({ activeSection }: SideMenuProps) => {
 
         <Link
           href={"#Preps"}
+          onClick={() => track("preps_link_clicked")}
           className={`flex h-[40px] w-[40px] items-center justify-center rounded-full bg-white transition-all duration-200 ${isActive("Preps")} hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[48px] tablet:w-[48px]`}
         >
           <Image
@@ -62,6 +66,7 @@ const SideMenu = ({ activeSection }: SideMenuProps) => {
 
         <Link
           href={"#Mustadd"}
+          onClick={() => track("mustadd_link_clicked")}
           className={`flex h-[40px] w-[40px] items-center justify-center rounded-full bg-white transition-all duration-200 ${isActive("Mustadd")} hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[48px] tablet:w-[48px]`}
         >
           <Image
@@ -76,6 +81,7 @@ const SideMenu = ({ activeSection }: SideMenuProps) => {
 
         <Link
           href={"#Giverr"}
+          onClick={() => track("giverr_link_clicked")}
           className={`flex h-[40px] w-[40px] items-center justify-center rounded-full bg-white transition-all duration-200 ${isActive("Giverr")} hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[48px] tablet:w-[48px]`}
         >
           <Image
@@ -90,6 +96,7 @@ const SideMenu = ({ activeSection }: SideMenuProps) => {
 
         <Link
           href={"#Mellow"}
+          onClick={() => track("mellow_link_clicked")}
           className={`flex h-[40px] w-[40px] items-center justify-center rounded-full bg-white transition-all duration-200 ${isActive("Mellow")} hover:bg-opacity-5 active:bg-opacity-10 tablet:h-[48px] tablet:w-[48px]`}
         >
           <Image

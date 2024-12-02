@@ -10,6 +10,7 @@ import ExperienceContainer from "@/components/experience/ExperienceContainer";
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [showSideMenu, setShowSideMenu] = useState<boolean>(false);
+
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const mainProjectsSection = document.getElementById("projects");
@@ -32,7 +33,6 @@ export default function Home() {
       },
       { threshold: 0.1 },
     );
-
     // Observer for menu visibility
     const menuObserver = new IntersectionObserver(
       (entries) => {

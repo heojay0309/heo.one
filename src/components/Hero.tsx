@@ -2,6 +2,9 @@
 
 import { stringText } from "@/constants/stringText";
 import dynamic from "next/dynamic";
+import { animate } from "motion/mini";
+import { spring } from "motion";
+import { useEffect } from "react";
 const CustomAnimation = dynamic(
   () => import("../components/utils/CustomAnimation"),
   {
@@ -9,33 +12,55 @@ const CustomAnimation = dynamic(
   },
 );
 const Hero = () => {
+  useEffect(() => {
+    const sections = document.querySelectorAll("#animation");
+    const generator = spring({ keyframes: [25, 75], stiffness: 400 });
+    const output = [];
+
+    let isDone = false;
+    let time = 0;
+    const sampleDuration = 20;
+
+    while (!isDone) {
+      const { value, done } = generator.next(time);
+
+      output.push(value);
+
+      time += sampleDuration;
+
+      if (done) isDone = true;
+    }
+    animate(sections, {}, { type: spring, bounce: 0.3, duration: 0.8 });
+  }, []);
+
   return (
     <div className="bg-linear-to-br relative z-10 flex h-full w-full select-none flex-row justify-start gap-[32px] overflow-clip text-white tablet:min-h-[100vh] tablet:flex-col tablet:gap-[64px]">
-      <div className="absolute flex w-full flex-col items-center justify-center gap-[16px] rounded-full text-white text-opacity-30 tablet:gap-[64px]">
-        {stringText.map((arr, rowIndex) => {
-          return (
-            <div
-              key={rowIndex}
-              className={`inline-flex font-bold tracking-[0.8em] transition-transform`}
-            >
-              {arr.map((char, charIndex) => {
-                const delay = (rowIndex * 10 + charIndex) * 100;
-                return (
-                  <CustomAnimation
-                    key={`${char}-${rowIndex}-${charIndex}`}
-                    delay={delay}
-                    rowIndex={rowIndex}
-                    charIndex={charIndex}
-                  >
-                    {char}
-                  </CustomAnimation>
-                );
-              })}
-            </div>
-          );
-        })}
-      </div>
       <div className="relative flex w-full flex-col items-center justify-center tablet:mt-[80px]">
+        <div
+          id="animation"
+          className="absolute flex w-full flex-col gap-[16px] self-center overflow-clip rounded-full text-white text-opacity-30 tablet:mt-[80px] tablet:w-1/2 tablet:gap-[64px]"
+        >
+          {stringText.map((arr, rowIndex) => {
+            return (
+              <div
+                key={rowIndex}
+                className={`inline-flex font-bold tracking-[0.8em] transition-transform`}
+              >
+                {arr.map((char, charIndex) => {
+                  const delay = (rowIndex * 10 + charIndex) * 100;
+                  return (
+                    <CustomAnimation
+                      key={`${char}-${rowIndex}-${charIndex}`}
+                      delay={delay}
+                    >
+                      <span className={`text-wrap`}>{char}</span>
+                    </CustomAnimation>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </div>
         <div className="flex h-full w-full flex-col-reverse items-center justify-between tablet:flex-row">
           <div className="flex min-h-[720px] w-full flex-col items-center justify-center gap-[32px] text-center tablet:w-full tablet:gap-[64px] tablet:text-start">
             <div className="hideText flex flex-col gap-[16px]">

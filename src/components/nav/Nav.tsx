@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { track } from "@vercel/analytics";
 
 const Navbar = () => {
   const path = usePathname();
@@ -29,6 +30,7 @@ const Navbar = () => {
         <div className="flex h-full items-center justify-between gap-[24px] text-[16px] leading-[24px] tablet:gap-[32px] tablet:text-[16px] tablet:leading-[24px]">
           <Link
             href={"https://www.github.com/heojay0309"}
+            onClick={() => track("github_link_clicked")}
             className="text-shadow text-opacity-100 transition-all duration-200 hover:scale-105 hover:text-opacity-80 hover:drop-shadow-lg active:text-opacity-60"
           >
             <Image
@@ -42,6 +44,7 @@ const Navbar = () => {
           </Link>
           <Link
             href={"https://www.linkedin.com/in/heo"}
+            onClick={() => track("linkedin_link_clicked")}
             className="text-shadow transition-all duration-200 hover:scale-105 hover:text-opacity-80 hover:drop-shadow-lg active:text-opacity-60"
           >
             <Image
@@ -55,6 +58,7 @@ const Navbar = () => {
           </Link>
           <Link
             href={"/resume"}
+            onClick={() => track("resume_link_clicked")}
             className="text-shadow transition-all duration-200 hover:scale-105 hover:text-opacity-80 hover:drop-shadow-lg active:text-opacity-60"
           >
             <Image
@@ -68,6 +72,7 @@ const Navbar = () => {
           </Link>
           <Link
             href={"/#contact"}
+            onClick={() => track("contact_link_clicked")}
             className="text-shadow transition-all duration-200 hover:scale-105 hover:text-opacity-80 hover:drop-shadow-lg active:text-opacity-60"
           >
             <Image
