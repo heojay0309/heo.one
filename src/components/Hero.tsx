@@ -1,66 +1,36 @@
 "use client";
-import { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import PuzzleBackground from "./Background";
 
+import { stringText } from "@/constants/stringText";
+import dynamic from "next/dynamic";
+const CustomAnimation = dynamic(
+  () => import("../components/utils/CustomAnimation"),
+  {
+    ssr: false,
+  },
+);
 const Hero = () => {
-  const describeMe = [
-    "full-stack",
-    "front-end",
-    "observant",
-    "scalable",
-    "innovative",
-  ];
-  const [index, setIndex] = useState(0);
-  const [fade, setFade] = useState(true);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setFade(false); // Start fading out
-      // Wait until the fade-out animation is complete before changing the text
-      const fadeTimeout = setTimeout(() => {
-        setIndex((prev) => (prev === describeMe.length - 1 ? 0 : prev + 1));
-        setFade(true); // Start fading in with new text
-      }, 1000); // Duration of fade-out
-
-      return () => clearTimeout(fadeTimeout);
-    }, 1000);
-
-    return () => clearTimeout(timeout);
-  }, [describeMe.length, index]);
-
-  const array = new Array(10).fill("");
-  const [transitionPoint, setTransitionPoint] = useState(
-    "translate-y-[40px] tablet:translate-y-[64px]",
-  );
-  const [isGoingDown, setIsGoingDown] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTransitionPoint((prev) =>
-        prev === "translate-y-[40px] tablet:translate-y-[64px]"
-          ? "translate-y-[0px] tablet:translate-y-[0px]"
-          : "translate-y-[40px] tablet:translate-y-[64px]",
-      );
-      setIsGoingDown((prev) => !prev);
-    }, 1500); // Change direction every 1 second
-
-    return () => clearInterval(interval); // Cleanup the interval on unmount
-  }, []);
-
   return (
-    <div className="relative z-10 flex h-full w-full select-none flex-row justify-start gap-[32px] overflow-x-clip bg-linear-to-br text-white tablet:min-h-[100vh] tablet:flex-col tablet:gap-[64px]">
-      <div className="absolute left-0 top-[128px] flex flex-col gap-[16px] text-white text-opacity-30 tablet:left-[18%] tablet:top-[0%] tablet:gap-[64px]">
-        {array.map((str, index) => {
-          let delayTime = `delay-[${index * 150}ms]`;
+    <div className="bg-linear-to-br relative z-10 flex h-full w-full select-none flex-row justify-start gap-[32px] overflow-clip text-white tablet:min-h-[100vh] tablet:flex-col tablet:gap-[64px]">
+      <div className="absolute flex w-full flex-col items-center justify-center gap-[16px] rounded-full text-white text-opacity-30 tablet:gap-[64px]">
+        {stringText.map((arr, rowIndex) => {
           return (
             <div
-              key={index}
-              className={`font-bold tracking-[0.8em] transition-transform duration-500 tablet:tracking-[1.3em] ${transitionPoint} ${delayTime}`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              key={rowIndex}
+              className={`inline-flex font-bold tracking-[0.8em] transition-transform`}
             >
-              buildwithapurposebuildwithapurpose
+              {arr.map((char, charIndex) => {
+                const delay = (rowIndex * 10 + charIndex) * 100;
+                return (
+                  <CustomAnimation
+                    key={`${char}-${rowIndex}-${charIndex}`}
+                    delay={delay}
+                    rowIndex={rowIndex}
+                    charIndex={charIndex}
+                  >
+                    {char}
+                  </CustomAnimation>
+                );
+              })}
             </div>
           );
         })}
