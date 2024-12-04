@@ -34,11 +34,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="bg-linear-to-br relative z-10 flex h-full w-full select-none flex-row justify-start gap-[32px] overflow-clip text-white tablet:min-h-[100vh] tablet:flex-col tablet:gap-[64px]">
-      <div className="relative flex w-full flex-col items-center justify-center tablet:mt-[80px]">
+    <div className="relative z-10 flex h-full w-full select-none flex-row justify-start gap-[32px] overflow-clip text-white tablet:min-h-[100vh] tablet:flex-col tablet:gap-[64px]">
+      <div className="relative flex w-full flex-col items-center justify-center tablet:mt-[128px]">
         <div
           id="animation"
-          className="absolute flex w-full flex-col gap-[16px] self-center overflow-clip rounded-full text-white text-opacity-30 tablet:mt-[80px] tablet:w-1/2 tablet:gap-[64px]"
+          className="absolute flex w-full flex-col gap-[16px] self-center overflow-clip rounded-full text-white text-opacity-30 tablet:w-1/2 tablet:gap-[56px]"
         >
           {stringText.map((arr, rowIndex) => {
             return (

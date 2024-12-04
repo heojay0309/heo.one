@@ -85,7 +85,7 @@ export default function Home() {
     <div className="relative flex flex-col gap-[32px] scroll-smooth">
       <div className="relative flex flex-col gap-[16px] tablet:gap-[32px]">
         <section
-          className="w-screen self-center px-[16px] tablet:px-[64px]"
+          className="w-screen self-center bg-gradient-radial from-[#2d3748] via-[#1a202c] to-[#1a202c] px-[16px] tablet:via-[60%] tablet:px-[64px]"
           id="intro"
         >
           <Hero />
