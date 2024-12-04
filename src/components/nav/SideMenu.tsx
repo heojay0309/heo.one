@@ -3,23 +3,61 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { track } from "@vercel/analytics";
-
+import { motion, useScroll, useTransform } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 interface SideMenuProps {
   activeSection?: string | null;
 }
 
 const SideMenu = ({ activeSection }: SideMenuProps) => {
   const path = usePathname();
+  const menuContentRef = useRef<HTMLDivElement>(null);
+  const [menuHeight, setMenuHeight] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0);
+  const { scrollY } = useScroll();
+  const [scrollHeight, setScrollHeight] = useState(0);
+
+  useEffect(() => {
+    setScrollHeight(document.documentElement.scrollHeight);
+  }, []);
+  const translateY = useTransform(
+    scrollY,
+    [0, Math.max(0, scrollHeight - windowHeight)],
+    [0, Math.max(0, windowHeight - menuHeight - 144)],
+    {
+      clamp: true,
+    },
+  );
   const isActive = (sectionId: string) => {
     return activeSection === sectionId ? "bg-opacity-10" : "bg-opacity-0";
   };
+  useEffect(() => {
+    const updateHeights = () => {
+      if (menuContentRef.current) {
+        const height = menuContentRef.current.offsetHeight;
+        setMenuHeight(height);
+        setWindowHeight(window.innerHeight);
+      }
+    };
+
+    updateHeights();
+    window.addEventListener("resize", updateHeights);
+    return () => window.removeEventListener("resize", updateHeights);
+  }, []);
 
   return (
     <div
-      className={`fixed top-[160px] hidden h-full tablet:right-[0px] tablet:block tablet:gap-[64px]`}
+      className={`fixed top-[144px] hidden h-full flex-col tablet:right-[0px] tablet:block`}
     >
-      <div
-        className={`${path === "/resume" && "hidden"} transition-all duration-700 ${activeSection === "intro" || activeSection === "top" ? "translate-x-[calc(100%+16px)] opacity-0 tablet:translate-x-[calc(100%+64px)]" : "max-h-full translate-x-0 opacity-100"} flex flex-col items-center gap-[16px] rounded-lg bg-white bg-opacity-10 tablet:gap-[16px] tablet:px-[8px] tablet:py-[8px]`}
+      <motion.div
+        ref={menuContentRef}
+        style={{
+          translateY,
+          transition: "transform 0.1s ease-out",
+        }}
+        className={`${path === "/resume" && "hidden"} flex flex-col items-center gap-[16px] rounded-lg bg-white bg-opacity-10 transition-all duration-500 tablet:px-[8px] tablet:py-[8px]`}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
       >
         <Link
           href={"#intro"}
@@ -107,7 +145,7 @@ const SideMenu = ({ activeSection }: SideMenuProps) => {
             className="select-none tablet:h-[32px] tablet:w-[32px]"
           />
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 };
